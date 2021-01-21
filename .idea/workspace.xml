@@ -1,17 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="387df3c6-cab3-4ce6-af6d-abafd05e3875" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/color pallet.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/test.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/test.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/css/app.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/app.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/sass/_variables.scss" beforeDir="false" afterPath="$PROJECT_DIR$/resources/sass/_variables.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/sass/app.scss" beforeDir="false" afterPath="$PROJECT_DIR$/resources/sass/app.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/layouts/template.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/template.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/shared/navigation.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/shared/navigation.blade.php" afterDir="false" />
-    </list>
+    <list default="true" id="387df3c6-cab3-4ce6-af6d-abafd05e3875" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -22,12 +12,7 @@
     <execution />
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_BRANCH_BY_REPOSITORY">
-      <map>
-        <entry key="$PROJECT_DIR$" value="main" />
-      </map>
-    </option>
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
   <component name="PhpWorkspaceProjectConfiguration">
     <include_path>
@@ -159,41 +144,24 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../vinyl_shop" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="web-ide.project.structure" />
+    <property name="settings.editor.selected.configurable" value="Laravel.SettingsForm" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\sites_laravel\SenseIT\test\resources\views" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\sites_laravel\SenseIT\test\resources\views" />
     </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\sites_laravel\SenseIT" />
-      <recent name="C:\sites_laravel\SenseIT\test\resources\views" />
-    </key>
   </component>
-  <component name="RunManager" selected="PHPUnit.phpunit.xml">
+  <component name="RunManager">
     <configuration name="phpunit.xml" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
       <TestRunner scope="XML" />
       <method v="2" />
     </configuration>
-    <configuration name="watch" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
-      <package-json value="$PROJECT_DIR$/package.json" />
-      <command value="run" />
-      <scripts>
-        <script value="watch" />
-      </scripts>
-      <node-interpreter value="project" />
-      <envs />
-      <method v="2" />
-    </configuration>
-    <recent_temporary>
-      <list>
-        <item itemvalue="npm.watch" />
-        <item itemvalue="npm.watch" />
-      </list>
-    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -206,59 +174,11 @@
       <workItem from="1611219891255" duration="1574000" />
       <workItem from="1611221542933" duration="309000" />
       <workItem from="1611222014651" duration="842000" />
-      <workItem from="1611223569475" duration="13615000" />
     </task>
-    <task id="LOCAL-00001" summary="material design toevoegend">
-      <created>1611234361469</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1611234361469</updated>
-    </task>
-    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
-  </component>
-  <component name="VcsManagerConfiguration">
-    <option name="CHECK_CODE_CLEANUP_BEFORE_PROJECT_COMMIT" value="true" />
-    <ignored-roots>
-      <path value="$PROJECT_DIR$/.." />
-    </ignored-roots>
-    <MESSAGE value="material design toevoegend" />
-    <option name="LAST_COMMIT_MESSAGE" value="material design toevoegend" />
-    <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
-  </component>
-  <component name="WindowStateProjectService">
-    <state x="905" y="123" key="CommitChangelistDialog2" timestamp="1611234360954">
-      <screen x="0" y="30" width="2560" height="1050" />
-    </state>
-    <state x="905" y="123" key="CommitChangelistDialog2/0.30.2560.1050/2560.-125.1080.1890@0.30.2560.1050" timestamp="1611234360954" />
-    <state width="1258" height="203" key="GridCell.Tab.0.bottom" timestamp="1611234183829">
-      <screen x="0" y="30" width="2560" height="1050" />
-    </state>
-    <state width="1258" height="203" key="GridCell.Tab.0.bottom/0.30.2560.1050/2560.-125.1080.1890@0.30.2560.1050" timestamp="1611234183829" />
-    <state width="1258" height="203" key="GridCell.Tab.0.center" timestamp="1611234183829">
-      <screen x="0" y="30" width="2560" height="1050" />
-    </state>
-    <state width="1258" height="203" key="GridCell.Tab.0.center/0.30.2560.1050/2560.-125.1080.1890@0.30.2560.1050" timestamp="1611234183829" />
-    <state width="1258" height="203" key="GridCell.Tab.0.left" timestamp="1611234183828">
-      <screen x="0" y="30" width="2560" height="1050" />
-    </state>
-    <state width="1258" height="203" key="GridCell.Tab.0.left/0.30.2560.1050/2560.-125.1080.1890@0.30.2560.1050" timestamp="1611234183828" />
-    <state width="1258" height="203" key="GridCell.Tab.0.right" timestamp="1611234183829">
-      <screen x="0" y="30" width="2560" height="1050" />
-    </state>
-    <state width="1258" height="203" key="GridCell.Tab.0.right/0.30.2560.1050/2560.-125.1080.1890@0.30.2560.1050" timestamp="1611234183829" />
-    <state x="781" y="200" width="996" height="710" key="SettingsEditor" timestamp="1611231959608">
-      <screen x="0" y="30" width="2560" height="1050" />
-    </state>
-    <state x="781" y="200" width="996" height="710" key="SettingsEditor/0.30.2560.1050/2560.-125.1080.1890@0.30.2560.1050" timestamp="1611231959608" />
-    <state x="872" y="288" key="Vcs.Push.Dialog.v2" timestamp="1611234618941">
-      <screen x="0" y="30" width="2560" height="1050" />
-    </state>
-    <state x="872" y="288" key="Vcs.Push.Dialog.v2/0.30.2560.1050/2560.-125.1080.1890@0.30.2560.1050" timestamp="1611234618941" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
