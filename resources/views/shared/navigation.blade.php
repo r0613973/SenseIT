@@ -1,48 +1,46 @@
-<nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
-    <div class="container">
-        <a class="navbar-brand" href="/">SenseIT</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsNav">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="collapsNav">
-            <ul class="navbar-nav mr-auto">
-                <li class="nav-item">
-                    <a class="nav-link" href="/">Home</a>
-                </li>
-
-            </ul>
-            {{--  Admin navigation  --}}
-            <ul class="navbar-nav ml-auto">
-                @guest
-                    <li class="nav-item">
-                        <a class="nav-link" href="/login"><i class="fas fa-sign-in-alt"></i>Login</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="/register"><i class="fas fa-signature"></i>Register</a>
-                    </li>
-                @endguest
-                @auth
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#!" data-toggle="dropdown">
-                            {{ auth()->user()->name }} <span class="caret"></span>
-                        </a>
-                        <div class="dropdown-menu dropdown-menu-right">
-                            <a class="dropdown-item" href="/user/profile"><i class="fas fa-user-cog"></i>Update Profile</a>
-                            <a class="dropdown-item" href="/user/password"><i class="fas fa-key"></i>New Password</a>
-                            <a class="dropdown-item" href="/user/history"><i class="fas fa-box-open"></i>Order history</a>
-                            <div class="dropdown-divider"></div>
-                            <a class="dropdown-item" href="/logout"><i class="fas fa-sign-out-alt"></i>Logout</a>
-                            @if(auth()->user()->admin)
-                                <div class="dropdown-divider"></div>
-                                <a class="dropdown-item" href="/admin/genres"><i class="fas fa-microphone-alt"></i>Genres</a>
-                                <a class="dropdown-item" href="/admin/records"><i class="fas fa-compact-disc"></i>Records</a>
-                                <a class="dropdown-item" href="/admin/users"><i class="fas fa-users-cog"></i>Users</a>
-                                <a class="dropdown-item" href="/admin/orders"><i class="fas fa-box-open"></i>Orders</a>
-                            @endif
-                        </div>
-                    </li>
-                @endauth
-            </ul>
-        </div>
+<aside class="mdc-drawer shrine-drawer">
+    <div class="mdc-drawer__header">
+        <svg class="shrine-logo-drawer" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+             width="48px" height="48px" viewBox="0 0 24 24" enable-background="new 0 0 24 24" xml:space="preserve" fill="#000000" focusable="false">
+      <g>
+          <g>
+              <path d="M17,2H7L2,6.62L12,22L22,6.62L17,2z M16.5,3.58l3.16,2.92H16.5V3.58z M7.59,3.5H15v3H4.34L7.59,3.5z
+             M11.25,18.1L7.94,13h3.31V18.1z M11.25,11.5H6.96L4.69,8h6.56V11.5z M16.5,12.32 M12.75,18.09V8h6.56L12.75,18.09z"/>
+          </g>
+          <rect fill="none" width="24" height="24"/>
+      </g>
+    </svg>
+        <h1 class="shrine-title">Sense It</h1>
     </div>
-</nav>
+    <div class="mdc-drawer__content">
+        <nav class="mdc-list">
+            <a class="mdc-list-item mdc-list-item--activated" aria-selected="true" tabindex="0" href="#">
+                <span class="mdc-list-item__text">Featured</span>
+            </a>
+            <div class="shrine-select-item-divider mdc-list-divider" role="separator"></div>
+
+            <a class="mdc-list-item" href="#">
+                <span class="mdc-list-item__text">Apartment</span>
+            </a>
+            <a class="mdc-list-item" href="#">
+                <span class="mdc-list-item__text">Accessories</span>
+            </a>
+            <a class="mdc-list-item" href="#">
+                <span class="mdc-list-item__text">Shoes</span>
+            </a>
+            <a class="mdc-list-item" href="#">
+                <span class="mdc-list-item__text">Tops</span>
+            </a>
+            <a class="mdc-list-item" href="#">
+                <span class="mdc-list-item__text">Bottoms</span>
+            </a>
+            <a class="mdc-list-item" href="#">
+                <span class="mdc-list-item__text">Dresses</span>
+            </a>
+            <a class="mdc-list-item" href="#">
+                <span class="mdc-list-item__text">My Account</span>
+            </a>
+        </nav>
+    </div>
+</aside>
+
