@@ -1,0 +1,60 @@
+{
+  "_from": "@material/form-field@^9.0.0",
+  "_id": "@material/form-field@9.0.0",
+  "_inBundle": false,
+  "_integrity": "sha512-W67mI9GMRefM6kx3S3LOPMw6hagTFNTKTjHIAAXFJBPeNANsXYuUnwD7SlJyXwrQi7hZMPehyBrsdk/oQlo8QA==",
+  "_location": "/@material/form-field",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "range",
+    "registry": true,
+    "raw": "@material/form-field@^9.0.0",
+    "name": "@material/form-field",
+    "escapedName": "@material%2fform-field",
+    "scope": "@material",
+    "rawSpec": "^9.0.0",
+    "saveSpec": null,
+    "fetchSpec": "^9.0.0"
+  },
+  "_requiredBy": [
+    "/material-components-web"
+  ],
+  "_resolved": "https://registry.npmjs.org/@material/form-field/-/form-field-9.0.0.tgz",
+  "_shasum": "3d104d416c4d71cac57ad014d2ad26dafc72de3a",
+  "_spec": "@material/form-field@^9.0.0",
+  "_where": "C:\\sites_laravel\\SenseIT\\node_modules\\material-components-web",
+  "bugs": {
+    "url": "https://github.com/material-components/material-components-web/issues"
+  },
+  "bundleDependencies": false,
+  "dependencies": {
+    "@material/base": "^9.0.0",
+    "@material/feature-targeting": "^9.0.0",
+    "@material/ripple": "^9.0.0",
+    "@material/rtl": "^9.0.0",
+    "@material/theme": "^9.0.0",
+    "@material/typography": "^9.0.0",
+    "tslib": "^1.9.3"
+  },
+  "deprecated": false,
+  "description": "Material Components for the web wrapper for laying out form fields and labels next to one another",
+  "gitHead": "555aecce59125bc3f162b065dca47384bb5822b1",
+  "homepage": "https://github.com/material-components/material-components-web#readme",
+  "keywords": [
+    "material components",
+    "material design",
+    "form"
+  ],
+  "license": "MIT",
+  "main": "dist/mdc.formField.js",
+  "module": "index.js",
+  "name": "@material/form-field",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/material-components/material-components-web.git",
+    "directory": "packages/mdc-form-field"
+  },
+  "sideEffects": false,
+  "types": "dist/mdc.formField.d.ts",
+  "version": "9.0.0"
+}

@@ -1,0 +1,59 @@
+{
+  "_from": "@material/circular-progress@^9.0.0",
+  "_id": "@material/circular-progress@9.0.0",
+  "_inBundle": false,
+  "_integrity": "sha512-B77m1OjD9B6qgTfwkGOrOGzsugdqDLy0i6kpBPfjdJGJK4DGCU79NoBJCCe+Z0koOeZqPF75INphvUrt3hN/bg==",
+  "_location": "/@material/circular-progress",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "range",
+    "registry": true,
+    "raw": "@material/circular-progress@^9.0.0",
+    "name": "@material/circular-progress",
+    "escapedName": "@material%2fcircular-progress",
+    "scope": "@material",
+    "rawSpec": "^9.0.0",
+    "saveSpec": null,
+    "fetchSpec": "^9.0.0"
+  },
+  "_requiredBy": [
+    "/material-components-web"
+  ],
+  "_resolved": "https://registry.npmjs.org/@material/circular-progress/-/circular-progress-9.0.0.tgz",
+  "_shasum": "a3151d5dee56034cd6a548e98435dfc4dbff9b89",
+  "_spec": "@material/circular-progress@^9.0.0",
+  "_where": "C:\\sites_laravel\\SenseIT\\node_modules\\material-components-web",
+  "bugs": {
+    "url": "https://github.com/material-components/material-components-web/issues"
+  },
+  "bundleDependencies": false,
+  "dependencies": {
+    "@material/animation": "^9.0.0",
+    "@material/base": "^9.0.0",
+    "@material/feature-targeting": "^9.0.0",
+    "@material/progress-indicator": "^9.0.0",
+    "@material/theme": "^9.0.0",
+    "tslib": "^1.9.3"
+  },
+  "deprecated": false,
+  "description": "The Material Components for the web circular progress component",
+  "gitHead": "555aecce59125bc3f162b065dca47384bb5822b1",
+  "homepage": "https://github.com/material-components/material-components-web#readme",
+  "keywords": [
+    "material components",
+    "material design",
+    "circular-progress"
+  ],
+  "license": "MIT",
+  "main": "dist/mdc.circularProgress.js",
+  "module": "./index.js",
+  "name": "@material/circular-progress",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/material-components/material-components-web.git",
+    "directory": "packages/mdc-circular-progress"
+  },
+  "sideEffects": false,
+  "types": "dist/mdc.circularProgress.d.ts",
+  "version": "9.0.0"
+}

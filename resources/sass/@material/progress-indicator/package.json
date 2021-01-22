@@ -1,0 +1,50 @@
+{
+  "_from": "@material/progress-indicator@^9.0.0",
+  "_id": "@material/progress-indicator@9.0.0",
+  "_inBundle": false,
+  "_integrity": "sha512-gxweWEuly67n9CpEBd+bsJ3cjnvYZy86WTXUUvUXCxA+IFnEjnFpcxqjz5VyIQgaKKL3GNkEjfVyXOnyZ++tkg==",
+  "_location": "/@material/progress-indicator",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "range",
+    "registry": true,
+    "raw": "@material/progress-indicator@^9.0.0",
+    "name": "@material/progress-indicator",
+    "escapedName": "@material%2fprogress-indicator",
+    "scope": "@material",
+    "rawSpec": "^9.0.0",
+    "saveSpec": null,
+    "fetchSpec": "^9.0.0"
+  },
+  "_requiredBy": [
+    "/@material/circular-progress",
+    "/@material/linear-progress"
+  ],
+  "_resolved": "https://registry.npmjs.org/@material/progress-indicator/-/progress-indicator-9.0.0.tgz",
+  "_shasum": "9a5525845bc47bd30a6fbf93ab5d0522202a6fd2",
+  "_spec": "@material/progress-indicator@^9.0.0",
+  "_where": "C:\\sites_laravel\\SenseIT\\node_modules\\@material\\circular-progress",
+  "bugs": {
+    "url": "https://github.com/material-components/material-components-web/issues"
+  },
+  "bundleDependencies": false,
+  "dependencies": {
+    "tslib": "^1.9.3"
+  },
+  "deprecated": false,
+  "description": "The Material Components for the web interface for Progress Indicators",
+  "gitHead": "555aecce59125bc3f162b065dca47384bb5822b1",
+  "homepage": "https://github.com/material-components/material-components-web#readme",
+  "license": "MIT",
+  "name": "@material/progress-indicator",
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/material-components/material-components-web.git",
+    "directory": "packages/mdc-progress-indicator"
+  },
+  "sideEffects": false,
+  "version": "9.0.0"
+}

@@ -1,0 +1,73 @@
+{
+  "_from": "@material/data-table@^9.0.0",
+  "_id": "@material/data-table@9.0.0",
+  "_inBundle": false,
+  "_integrity": "sha512-iW50R+mfecjnHjEHeodDis5bkZRqL2Agzfb+5hdiWQ2m4i+6L0IY91MP9js8AmOsQsyIfWWem2/tka+aouSRuA==",
+  "_location": "/@material/data-table",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "range",
+    "registry": true,
+    "raw": "@material/data-table@^9.0.0",
+    "name": "@material/data-table",
+    "escapedName": "@material%2fdata-table",
+    "scope": "@material",
+    "rawSpec": "^9.0.0",
+    "saveSpec": null,
+    "fetchSpec": "^9.0.0"
+  },
+  "_requiredBy": [
+    "/material-components-web"
+  ],
+  "_resolved": "https://registry.npmjs.org/@material/data-table/-/data-table-9.0.0.tgz",
+  "_shasum": "e671f3129daf04347e0cbb4a7ec6035bbaccc6d8",
+  "_spec": "@material/data-table@^9.0.0",
+  "_where": "C:\\sites_laravel\\SenseIT\\node_modules\\material-components-web",
+  "bugs": {
+    "url": "https://github.com/material-components/material-components-web/issues"
+  },
+  "bundleDependencies": false,
+  "dependencies": {
+    "@material/animation": "^9.0.0",
+    "@material/base": "^9.0.0",
+    "@material/checkbox": "^9.0.0",
+    "@material/density": "^9.0.0",
+    "@material/dom": "^9.0.0",
+    "@material/elevation": "^9.0.0",
+    "@material/feature-targeting": "^9.0.0",
+    "@material/icon-button": "^9.0.0",
+    "@material/linear-progress": "^9.0.0",
+    "@material/list": "^9.0.0",
+    "@material/menu": "^9.0.0",
+    "@material/rtl": "^9.0.0",
+    "@material/select": "^9.0.0",
+    "@material/shape": "^9.0.0",
+    "@material/theme": "^9.0.0",
+    "@material/touch-target": "^9.0.0",
+    "@material/typography": "^9.0.0",
+    "tslib": "^1.10.0"
+  },
+  "deprecated": false,
+  "description": "The Material Components Web data table component",
+  "gitHead": "555aecce59125bc3f162b065dca47384bb5822b1",
+  "homepage": "https://github.com/material-components/material-components-web#readme",
+  "keywords": [
+    "material components",
+    "material design",
+    "data table"
+  ],
+  "license": "MIT",
+  "main": "dist/mdc.dataTable.js",
+  "module": "index.js",
+  "name": "@material/data-table",
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/material-components/material-components-web.git"
+  },
+  "sideEffects": false,
+  "types": "dist/mdc.dataTable.d.ts",
+  "version": "9.0.0"
+}

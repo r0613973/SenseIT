@@ -1,0 +1,61 @@
+{
+  "_from": "@material/fab@^9.0.0",
+  "_id": "@material/fab@9.0.0",
+  "_inBundle": false,
+  "_integrity": "sha512-A7Z6TamNazWoyI3ruhtXYc6YZASoED1DFt7cO8rx5TXGFcOVfgKJSgrxoQGZl9kDRRa5Y0kUAhNHqLIzy/MBtQ==",
+  "_location": "/@material/fab",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "range",
+    "registry": true,
+    "raw": "@material/fab@^9.0.0",
+    "name": "@material/fab",
+    "escapedName": "@material%2ffab",
+    "scope": "@material",
+    "rawSpec": "^9.0.0",
+    "saveSpec": null,
+    "fetchSpec": "^9.0.0"
+  },
+  "_requiredBy": [
+    "/material-components-web"
+  ],
+  "_resolved": "https://registry.npmjs.org/@material/fab/-/fab-9.0.0.tgz",
+  "_shasum": "d316b89f855d5a1f312563ba85720ccfd4f8ddd2",
+  "_spec": "@material/fab@^9.0.0",
+  "_where": "C:\\sites_laravel\\SenseIT\\node_modules\\material-components-web",
+  "bugs": {
+    "url": "https://github.com/material-components/material-components-web/issues"
+  },
+  "bundleDependencies": false,
+  "dependencies": {
+    "@material/animation": "^9.0.0",
+    "@material/dom": "^9.0.0",
+    "@material/elevation": "^9.0.0",
+    "@material/feature-targeting": "^9.0.0",
+    "@material/ripple": "^9.0.0",
+    "@material/rtl": "^9.0.0",
+    "@material/shape": "^9.0.0",
+    "@material/theme": "^9.0.0",
+    "@material/touch-target": "^9.0.0",
+    "@material/typography": "^9.0.0"
+  },
+  "deprecated": false,
+  "description": "The Material Components for the web floating action button component",
+  "gitHead": "555aecce59125bc3f162b065dca47384bb5822b1",
+  "homepage": "https://github.com/material-components/material-components-web#readme",
+  "keywords": [
+    "material components",
+    "material design",
+    "floating action button",
+    "fab"
+  ],
+  "license": "MIT",
+  "name": "@material/fab",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/material-components/material-components-web.git",
+    "directory": "packages/mdc-fab"
+  },
+  "sideEffects": false,
+  "version": "9.0.0"
+}

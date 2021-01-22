@@ -1,0 +1,64 @@
+{
+  "_from": "@material/tab-bar@^9.0.0",
+  "_id": "@material/tab-bar@9.0.0",
+  "_inBundle": false,
+  "_integrity": "sha512-kHYTqfmAIyu2Wue/bBlwHMgkzXdZLCEfLyulmM9P9CHRB/It11ofT3q3VtJBmtogh8bmA0PSZ7NaOtl2r6YiVQ==",
+  "_location": "/@material/tab-bar",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "range",
+    "registry": true,
+    "raw": "@material/tab-bar@^9.0.0",
+    "name": "@material/tab-bar",
+    "escapedName": "@material%2ftab-bar",
+    "scope": "@material",
+    "rawSpec": "^9.0.0",
+    "saveSpec": null,
+    "fetchSpec": "^9.0.0"
+  },
+  "_requiredBy": [
+    "/material-components-web"
+  ],
+  "_resolved": "https://registry.npmjs.org/@material/tab-bar/-/tab-bar-9.0.0.tgz",
+  "_shasum": "f0a8c8067e11bf52679482ba30a60f3eadbf3098",
+  "_spec": "@material/tab-bar@^9.0.0",
+  "_where": "C:\\sites_laravel\\SenseIT\\node_modules\\material-components-web",
+  "bugs": {
+    "url": "https://github.com/material-components/material-components-web/issues"
+  },
+  "bundleDependencies": false,
+  "dependencies": {
+    "@material/animation": "^9.0.0",
+    "@material/base": "^9.0.0",
+    "@material/density": "^9.0.0",
+    "@material/feature-targeting": "^9.0.0",
+    "@material/tab": "^9.0.0",
+    "@material/tab-scroller": "^9.0.0",
+    "tslib": "^1.9.3"
+  },
+  "deprecated": false,
+  "description": "The Material Components for the web tab bar component",
+  "gitHead": "555aecce59125bc3f162b065dca47384bb5822b1",
+  "homepage": "https://github.com/material-components/material-components-web#readme",
+  "keywords": [
+    "material components",
+    "material design",
+    "tab",
+    "bar"
+  ],
+  "license": "MIT",
+  "main": "dist/mdc.tabBar.js",
+  "module": "index.js",
+  "name": "@material/tab-bar",
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/material-components/material-components-web.git",
+    "directory": "packages/mdc-tab-bar"
+  },
+  "sideEffects": false,
+  "types": "dist/mdc.tabBar.d.ts",
+  "version": "9.0.0"
+}

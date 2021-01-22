@@ -1,0 +1,72 @@
+{
+  "_from": "@material/select@^9.0.0",
+  "_id": "@material/select@9.0.0",
+  "_inBundle": false,
+  "_integrity": "sha512-IIjDD7I10q8U7ZRnhHOApy3jpPZ8Dz4i9KthZz4o3j+maFVOXhwoySqtsc5g97BUPruiFZnDzZQuO8Lo7GSoLA==",
+  "_location": "/@material/select",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "range",
+    "registry": true,
+    "raw": "@material/select@^9.0.0",
+    "name": "@material/select",
+    "escapedName": "@material%2fselect",
+    "scope": "@material",
+    "rawSpec": "^9.0.0",
+    "saveSpec": null,
+    "fetchSpec": "^9.0.0"
+  },
+  "_requiredBy": [
+    "/@material/data-table",
+    "/material-components-web"
+  ],
+  "_resolved": "https://registry.npmjs.org/@material/select/-/select-9.0.0.tgz",
+  "_shasum": "1b6ce9fbbb2245587abb51e3b931f54604463a7b",
+  "_spec": "@material/select@^9.0.0",
+  "_where": "C:\\sites_laravel\\SenseIT\\node_modules\\material-components-web",
+  "bugs": {
+    "url": "https://github.com/material-components/material-components-web/issues"
+  },
+  "bundleDependencies": false,
+  "dependencies": {
+    "@material/animation": "^9.0.0",
+    "@material/base": "^9.0.0",
+    "@material/density": "^9.0.0",
+    "@material/dom": "^9.0.0",
+    "@material/feature-targeting": "^9.0.0",
+    "@material/floating-label": "^9.0.0",
+    "@material/line-ripple": "^9.0.0",
+    "@material/list": "^9.0.0",
+    "@material/menu": "^9.0.0",
+    "@material/menu-surface": "^9.0.0",
+    "@material/notched-outline": "^9.0.0",
+    "@material/ripple": "^9.0.0",
+    "@material/rtl": "^9.0.0",
+    "@material/shape": "^9.0.0",
+    "@material/theme": "^9.0.0",
+    "@material/typography": "^9.0.0",
+    "tslib": "^1.9.3"
+  },
+  "deprecated": false,
+  "description": "The Material Components web select (text field drop-down) component",
+  "gitHead": "555aecce59125bc3f162b065dca47384bb5822b1",
+  "homepage": "https://github.com/material-components/material-components-web#readme",
+  "keywords": [
+    "material components",
+    "material design",
+    "select",
+    "multi select"
+  ],
+  "license": "MIT",
+  "main": "dist/mdc.select.js",
+  "module": "index.js",
+  "name": "@material/select",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/material-components/material-components-web.git",
+    "directory": "packages/mdc-select"
+  },
+  "sideEffects": false,
+  "types": "dist/mdc.select.d.ts",
+  "version": "9.0.0"
+}

@@ -1,0 +1,67 @@
+{
+  "_from": "@material/list@^9.0.0",
+  "_id": "@material/list@9.0.0",
+  "_inBundle": false,
+  "_integrity": "sha512-lLJRAjOusHwX7xhhjaIHdh+DFQAcxsfBA2Q0OtzHTUKLLFEk1UXvybxjn/i4vCwwGWe5LoLkA3QbQq7xB086Qg==",
+  "_location": "/@material/list",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "range",
+    "registry": true,
+    "raw": "@material/list@^9.0.0",
+    "name": "@material/list",
+    "escapedName": "@material%2flist",
+    "scope": "@material",
+    "rawSpec": "^9.0.0",
+    "saveSpec": null,
+    "fetchSpec": "^9.0.0"
+  },
+  "_requiredBy": [
+    "/@material/data-table",
+    "/@material/drawer",
+    "/@material/menu",
+    "/@material/select",
+    "/material-components-web"
+  ],
+  "_resolved": "https://registry.npmjs.org/@material/list/-/list-9.0.0.tgz",
+  "_shasum": "bbfd8e8613036f5b71f40a847baf183dd8e28c01",
+  "_spec": "@material/list@^9.0.0",
+  "_where": "C:\\sites_laravel\\SenseIT\\node_modules\\material-components-web",
+  "bugs": {
+    "url": "https://github.com/material-components/material-components-web/issues"
+  },
+  "bundleDependencies": false,
+  "dependencies": {
+    "@material/base": "^9.0.0",
+    "@material/density": "^9.0.0",
+    "@material/dom": "^9.0.0",
+    "@material/feature-targeting": "^9.0.0",
+    "@material/ripple": "^9.0.0",
+    "@material/rtl": "^9.0.0",
+    "@material/shape": "^9.0.0",
+    "@material/theme": "^9.0.0",
+    "@material/typography": "^9.0.0",
+    "tslib": "^1.9.3"
+  },
+  "deprecated": false,
+  "description": "The Material Components for the web list component",
+  "gitHead": "555aecce59125bc3f162b065dca47384bb5822b1",
+  "homepage": "https://github.com/material-components/material-components-web#readme",
+  "keywords": [
+    "material components",
+    "material design",
+    "list"
+  ],
+  "license": "MIT",
+  "main": "dist/mdc.list.js",
+  "module": "index.js",
+  "name": "@material/list",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/material-components/material-components-web.git",
+    "directory": "packages/mdc-list"
+  },
+  "sideEffects": false,
+  "types": "dist/mdc.list.d.ts",
+  "version": "9.0.0"
+}
