@@ -3,9 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="387df3c6-cab3-4ce6-af6d-abafd05e3875" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/sass/_home.scss" beforeDir="false" afterPath="$PROJECT_DIR$/resources/sass/_home.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/layouts/template.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/template.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/shared/navigation.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/shared/navigation.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -196,7 +193,7 @@
       <workItem from="1611219891255" duration="1574000" />
       <workItem from="1611221542933" duration="309000" />
       <workItem from="1611222014651" duration="842000" />
-      <workItem from="1611301650784" duration="10440000" />
+      <workItem from="1611301650784" duration="11000000" />
     </task>
     <task id="LOCAL-00001" summary="implement basic template">
       <created>1611309593022</created>
@@ -205,7 +202,14 @@
       <option name="project" value="LOCAL" />
       <updated>1611309593022</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="fix material">
+      <created>1611318372477</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1611318372477</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -213,37 +217,46 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="implement basic template" />
-    <option name="LAST_COMMIT_MESSAGE" value="implement basic template" />
+    <MESSAGE value="fix material" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix material" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="905" y="123" key="CommitChangelistDialog2" timestamp="1611309592402">
+    <state x="905" y="123" key="CommitChangelistDialog2" timestamp="1611318370513">
       <screen x="0" y="30" width="2560" height="1050" />
     </state>
-    <state x="905" y="123" key="CommitChangelistDialog2/0.30.2560.1050/2560.-125.1080.1890@0.30.2560.1050" timestamp="1611309592402" />
+    <state x="905" y="123" key="CommitChangelistDialog2/0.30.2560.1050/2560.-125.1080.1890@0.30.2560.1050" timestamp="1611318370513" />
+    <state x="248" y="117" key="DiffContextDialog" timestamp="1611317970064">
+      <screen x="0" y="30" width="2560" height="1050" />
+    </state>
+    <state x="248" y="117" key="DiffContextDialog/0.30.2560.1050/2560.-125.1080.1890@0.30.2560.1050" timestamp="1611317970064" />
     <state x="949" y="333" key="EditFileWatcherDialog" timestamp="1611316072629">
       <screen x="0" y="30" width="2560" height="1050" />
     </state>
     <state x="949" y="333" key="EditFileWatcherDialog/0.30.2560.1050/2560.-125.1080.1890@0.30.2560.1050" timestamp="1611316072629" />
-    <state width="2517" height="203" key="GridCell.Tab.0.bottom" timestamp="1611309233694">
+    <state width="2517" height="203" key="GridCell.Tab.0.bottom" timestamp="1611318037204">
       <screen x="0" y="30" width="2560" height="1050" />
     </state>
-    <state width="2517" height="203" key="GridCell.Tab.0.bottom/0.30.2560.1050/2560.-125.1080.1890@0.30.2560.1050" timestamp="1611309233694" />
-    <state width="2517" height="203" key="GridCell.Tab.0.center" timestamp="1611309233694">
+    <state width="2517" height="203" key="GridCell.Tab.0.bottom/0.30.2560.1050/2560.-125.1080.1890@0.30.2560.1050" timestamp="1611318037204" />
+    <state width="2517" height="203" key="GridCell.Tab.0.center" timestamp="1611318037204">
       <screen x="0" y="30" width="2560" height="1050" />
     </state>
-    <state width="2517" height="203" key="GridCell.Tab.0.center/0.30.2560.1050/2560.-125.1080.1890@0.30.2560.1050" timestamp="1611309233694" />
-    <state width="2517" height="203" key="GridCell.Tab.0.left" timestamp="1611309233694">
+    <state width="2517" height="203" key="GridCell.Tab.0.center/0.30.2560.1050/2560.-125.1080.1890@0.30.2560.1050" timestamp="1611318037204" />
+    <state width="2517" height="203" key="GridCell.Tab.0.left" timestamp="1611318037203">
       <screen x="0" y="30" width="2560" height="1050" />
     </state>
-    <state width="2517" height="203" key="GridCell.Tab.0.left/0.30.2560.1050/2560.-125.1080.1890@0.30.2560.1050" timestamp="1611309233694" />
-    <state width="2517" height="203" key="GridCell.Tab.0.right" timestamp="1611309233694">
+    <state width="2517" height="203" key="GridCell.Tab.0.left/0.30.2560.1050/2560.-125.1080.1890@0.30.2560.1050" timestamp="1611318037203" />
+    <state width="2517" height="203" key="GridCell.Tab.0.right" timestamp="1611318037204">
       <screen x="0" y="30" width="2560" height="1050" />
     </state>
-    <state width="2517" height="203" key="GridCell.Tab.0.right/0.30.2560.1050/2560.-125.1080.1890@0.30.2560.1050" timestamp="1611309233694" />
-    <state x="872" y="288" key="Vcs.Push.Dialog.v2" timestamp="1611309599490">
+    <state width="2517" height="203" key="GridCell.Tab.0.right/0.30.2560.1050/2560.-125.1080.1890@0.30.2560.1050" timestamp="1611318037204" />
+    <state x="872" y="288" key="Vcs.Push.Dialog.v2" timestamp="1611318375798">
       <screen x="0" y="30" width="2560" height="1050" />
     </state>
-    <state x="872" y="288" key="Vcs.Push.Dialog.v2/0.30.2560.1050/2560.-125.1080.1890@0.30.2560.1050" timestamp="1611309599490" />
+    <state x="872" y="288" key="Vcs.Push.Dialog.v2/0.30.2560.1050/2560.-125.1080.1890@0.30.2560.1050" timestamp="1611318375798" />
+    <state x="1146" y="288" key="com.intellij.openapi.vcs.changes.SpecificFilesViewDialog" timestamp="1611318107789">
+      <screen x="0" y="30" width="2560" height="1050" />
+    </state>
+    <state x="1146" y="288" key="com.intellij.openapi.vcs.changes.SpecificFilesViewDialog/0.30.2560.1050/2560.-125.1080.1890@0.30.2560.1050" timestamp="1611318107789" />
     <state x="1097" y="469" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1611240269399">
       <screen x="0" y="30" width="2560" height="1050" />
     </state>
