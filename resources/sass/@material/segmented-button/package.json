@@ -1,0 +1,59 @@
+{
+  "_from": "@material/segmented-button@^9.0.0",
+  "_id": "@material/segmented-button@9.0.0",
+  "_inBundle": false,
+  "_integrity": "sha512-vALiAo2VIGm+5Sd3QzVyZZcdW3Mn7XyadErk9dG3HXt4VNUBrvK6ltRC4v2CC/RF5VZ85MN6r7yoqB3G1PjY0Q==",
+  "_location": "/@material/segmented-button",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "range",
+    "registry": true,
+    "raw": "@material/segmented-button@^9.0.0",
+    "name": "@material/segmented-button",
+    "escapedName": "@material%2fsegmented-button",
+    "scope": "@material",
+    "rawSpec": "^9.0.0",
+    "saveSpec": null,
+    "fetchSpec": "^9.0.0"
+  },
+  "_requiredBy": [
+    "/material-components-web"
+  ],
+  "_resolved": "https://registry.npmjs.org/@material/segmented-button/-/segmented-button-9.0.0.tgz",
+  "_shasum": "1808a2948bd3fcdb19a0388549f8ac861f06f7f6",
+  "_spec": "@material/segmented-button@^9.0.0",
+  "_where": "C:\\sites_laravel\\SenseIT\\node_modules\\material-components-web",
+  "bugs": {
+    "url": "https://github.com/material-components/material-components-web/issues"
+  },
+  "bundleDependencies": false,
+  "dependencies": {
+    "@material/base": "^9.0.0",
+    "@material/elevation": "^9.0.0",
+    "@material/feature-targeting": "^9.0.0",
+    "@material/ripple": "^9.0.0",
+    "@material/theme": "^9.0.0",
+    "@material/touch-target": "^9.0.0",
+    "@material/typography": "^9.0.0"
+  },
+  "deprecated": false,
+  "description": "The Material Components for the web segmented button component",
+  "gitHead": "555aecce59125bc3f162b065dca47384bb5822b1",
+  "homepage": "https://github.com/material-components/material-components-web#readme",
+  "keywords": [
+    "material components",
+    "material design",
+    "segmented button"
+  ],
+  "license": "MIT",
+  "name": "@material/segmented-button",
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/material-components/material-components-web.git",
+    "directory": "packages/mdc-segmented-button"
+  },
+  "version": "9.0.0"
+}

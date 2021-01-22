@@ -1,0 +1,63 @@
+{
+  "_from": "@material/tab-indicator@^9.0.0",
+  "_id": "@material/tab-indicator@9.0.0",
+  "_inBundle": false,
+  "_integrity": "sha512-4gjbdMq+bgRsegle8pckT0NBHYYoPCfOPJwrwWn3zPVsy/0Nm+XCbseXUDyLXRyCxaytqA7zEsIgBOufkdnB1g==",
+  "_location": "/@material/tab-indicator",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "range",
+    "registry": true,
+    "raw": "@material/tab-indicator@^9.0.0",
+    "name": "@material/tab-indicator",
+    "escapedName": "@material%2ftab-indicator",
+    "scope": "@material",
+    "rawSpec": "^9.0.0",
+    "saveSpec": null,
+    "fetchSpec": "^9.0.0"
+  },
+  "_requiredBy": [
+    "/@material/tab",
+    "/material-components-web"
+  ],
+  "_resolved": "https://registry.npmjs.org/@material/tab-indicator/-/tab-indicator-9.0.0.tgz",
+  "_shasum": "adcad3621d5c35bad7a7983dad8b6fb6aed3ef61",
+  "_spec": "@material/tab-indicator@^9.0.0",
+  "_where": "C:\\sites_laravel\\SenseIT\\node_modules\\material-components-web",
+  "bugs": {
+    "url": "https://github.com/material-components/material-components-web/issues"
+  },
+  "bundleDependencies": false,
+  "dependencies": {
+    "@material/animation": "^9.0.0",
+    "@material/base": "^9.0.0",
+    "@material/feature-targeting": "^9.0.0",
+    "@material/theme": "^9.0.0",
+    "tslib": "^1.9.3"
+  },
+  "deprecated": false,
+  "description": "The Material Components for the web tab indicator component",
+  "gitHead": "555aecce59125bc3f162b065dca47384bb5822b1",
+  "homepage": "https://github.com/material-components/material-components-web#readme",
+  "keywords": [
+    "material components",
+    "material design",
+    "tab",
+    "indicator"
+  ],
+  "license": "MIT",
+  "main": "dist/mdc.tabIndicator.js",
+  "module": "index.js",
+  "name": "@material/tab-indicator",
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/material-components/material-components-web.git",
+    "directory": "packages/mdc-tab-indicator"
+  },
+  "sideEffects": false,
+  "types": "dist/mdc.tabIndicator.d.ts",
+  "version": "9.0.0"
+}

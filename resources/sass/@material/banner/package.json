@@ -1,0 +1,66 @@
+{
+  "_from": "@material/banner@^9.0.0",
+  "_id": "@material/banner@9.0.0",
+  "_inBundle": false,
+  "_integrity": "sha512-CFXfjYqUS7RWNxp9Zri99puLmmKP1+4DIO8gck71ZO0n5e0FZoTMdlMODW6Xd13p91np2ULTbvN8pSpBvWUHoQ==",
+  "_location": "/@material/banner",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "range",
+    "registry": true,
+    "raw": "@material/banner@^9.0.0",
+    "name": "@material/banner",
+    "escapedName": "@material%2fbanner",
+    "scope": "@material",
+    "rawSpec": "^9.0.0",
+    "saveSpec": null,
+    "fetchSpec": "^9.0.0"
+  },
+  "_requiredBy": [
+    "/material-components-web"
+  ],
+  "_resolved": "https://registry.npmjs.org/@material/banner/-/banner-9.0.0.tgz",
+  "_shasum": "eaa28fc4003977d16960842cf6de4e7504a1162b",
+  "_spec": "@material/banner@^9.0.0",
+  "_where": "C:\\sites_laravel\\SenseIT\\node_modules\\material-components-web",
+  "bugs": {
+    "url": "https://github.com/material-components/material-components-web/issues"
+  },
+  "bundleDependencies": false,
+  "dependencies": {
+    "@material/base": "^9.0.0",
+    "@material/button": "^9.0.0",
+    "@material/dom": "^9.0.0",
+    "@material/feature-targeting": "^9.0.0",
+    "@material/ripple": "^9.0.0",
+    "@material/rtl": "^9.0.0",
+    "@material/shape": "^9.0.0",
+    "@material/theme": "^9.0.0",
+    "@material/typography": "^9.0.0",
+    "tslib": "^1.9.3"
+  },
+  "deprecated": false,
+  "description": "The Material Components Web banner component.",
+  "gitHead": "555aecce59125bc3f162b065dca47384bb5822b1",
+  "homepage": "https://github.com/material-components/material-components-web#readme",
+  "keywords": [
+    "material components",
+    "material design",
+    "banner"
+  ],
+  "license": "MIT",
+  "main": "dist/mdc.banner.js",
+  "module": "index.js",
+  "name": "@material/banner",
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/material-components/material-components-web.git",
+    "directory": "packages/mdc-banner"
+  },
+  "sideEffects": false,
+  "types": "dist/mdc.banner.d.ts",
+  "version": "9.0.0"
+}

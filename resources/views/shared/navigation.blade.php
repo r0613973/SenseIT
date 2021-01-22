@@ -1,4 +1,4 @@
-<aside class="mdc-drawer shrine-drawer">
+<aside class="mdc-drawer shrine-drawer" >
     <div class="mdc-drawer__header">
         <svg class="shrine-logo-drawer" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
              width="48px" height="48px" viewBox="0 0 24 24" enable-background="new 0 0 24 24" xml:space="preserve" fill="#000000" focusable="false">

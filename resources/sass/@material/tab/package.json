@@ -1,0 +1,66 @@
+{
+  "_from": "@material/tab@^9.0.0",
+  "_id": "@material/tab@9.0.0",
+  "_inBundle": false,
+  "_integrity": "sha512-fXO5/n1i9Os6u9+vmgEvdMAIpTMnZpvlye9QD2rbiMBj5Q7oQIcorlJ9V9N2DlmV+cpIylyZI9SGo2/8muaLEA==",
+  "_location": "/@material/tab",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "range",
+    "registry": true,
+    "raw": "@material/tab@^9.0.0",
+    "name": "@material/tab",
+    "escapedName": "@material%2ftab",
+    "scope": "@material",
+    "rawSpec": "^9.0.0",
+    "saveSpec": null,
+    "fetchSpec": "^9.0.0"
+  },
+  "_requiredBy": [
+    "/@material/tab-bar",
+    "/@material/tab-scroller",
+    "/material-components-web"
+  ],
+  "_resolved": "https://registry.npmjs.org/@material/tab/-/tab-9.0.0.tgz",
+  "_shasum": "00ebc1c8f1d31cc87a56426b1dbc40c0c0888fab",
+  "_spec": "@material/tab@^9.0.0",
+  "_where": "C:\\sites_laravel\\SenseIT\\node_modules\\material-components-web",
+  "bugs": {
+    "url": "https://github.com/material-components/material-components-web/issues"
+  },
+  "bundleDependencies": false,
+  "dependencies": {
+    "@material/base": "^9.0.0",
+    "@material/feature-targeting": "^9.0.0",
+    "@material/ripple": "^9.0.0",
+    "@material/rtl": "^9.0.0",
+    "@material/tab-indicator": "^9.0.0",
+    "@material/theme": "^9.0.0",
+    "@material/typography": "^9.0.0",
+    "tslib": "^1.9.3"
+  },
+  "deprecated": false,
+  "description": "The Material Components for the web tab component",
+  "gitHead": "555aecce59125bc3f162b065dca47384bb5822b1",
+  "homepage": "https://github.com/material-components/material-components-web#readme",
+  "keywords": [
+    "material components",
+    "material design",
+    "tab"
+  ],
+  "license": "MIT",
+  "main": "dist/mdc.tab.js",
+  "module": "index.js",
+  "name": "@material/tab",
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/material-components/material-components-web.git",
+    "directory": "packages/mdc-tab"
+  },
+  "sideEffects": false,
+  "types": "dist/mdc.tab.d.ts",
+  "version": "9.0.0"
+}

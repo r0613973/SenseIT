@@ -1,0 +1,65 @@
+{
+  "_from": "@material/menu@^9.0.0",
+  "_id": "@material/menu@9.0.0",
+  "_inBundle": false,
+  "_integrity": "sha512-tvyFVa3lqjonHJf326Q1j7VMN+Du3guIvrhm72QwXjwVPHJBIkEysI2+ZW5IgjHKC2KkP4WzOP5+uVbqnlitlw==",
+  "_location": "/@material/menu",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "range",
+    "registry": true,
+    "raw": "@material/menu@^9.0.0",
+    "name": "@material/menu",
+    "escapedName": "@material%2fmenu",
+    "scope": "@material",
+    "rawSpec": "^9.0.0",
+    "saveSpec": null,
+    "fetchSpec": "^9.0.0"
+  },
+  "_requiredBy": [
+    "/@material/data-table",
+    "/@material/select",
+    "/material-components-web"
+  ],
+  "_resolved": "https://registry.npmjs.org/@material/menu/-/menu-9.0.0.tgz",
+  "_shasum": "c15d85f2ca9f3d70dac4f29eafa6596c5be05051",
+  "_spec": "@material/menu@^9.0.0",
+  "_where": "C:\\sites_laravel\\SenseIT\\node_modules\\material-components-web",
+  "bugs": {
+    "url": "https://github.com/material-components/material-components-web/issues"
+  },
+  "bundleDependencies": false,
+  "dependencies": {
+    "@material/base": "^9.0.0",
+    "@material/dom": "^9.0.0",
+    "@material/elevation": "^9.0.0",
+    "@material/feature-targeting": "^9.0.0",
+    "@material/list": "^9.0.0",
+    "@material/menu-surface": "^9.0.0",
+    "@material/ripple": "^9.0.0",
+    "@material/rtl": "^9.0.0",
+    "@material/theme": "^9.0.0",
+    "tslib": "^1.9.3"
+  },
+  "deprecated": false,
+  "description": "The Material Components for the web menu component",
+  "gitHead": "555aecce59125bc3f162b065dca47384bb5822b1",
+  "homepage": "https://github.com/material-components/material-components-web#readme",
+  "keywords": [
+    "material components",
+    "material design",
+    "menu"
+  ],
+  "license": "MIT",
+  "main": "dist/mdc.menu.js",
+  "module": "index.js",
+  "name": "@material/menu",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/material-components/material-components-web.git",
+    "directory": "packages/mdc-menu"
+  },
+  "sideEffects": false,
+  "types": "dist/mdc.menu.d.ts",
+  "version": "9.0.0"
+}

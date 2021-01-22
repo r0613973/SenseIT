@@ -1,0 +1,50 @@
+{
+  "_from": "@material/auto-init@^9.0.0",
+  "_id": "@material/auto-init@9.0.0",
+  "_inBundle": false,
+  "_integrity": "sha512-Fn3EUApNuQSloxl+Q7bQp4rScKatODF3HyHzjfMDR5/mCM4Ih5hdcokbvGrycw6Tqaai6BHeMOxK2kFzH0Pe5w==",
+  "_location": "/@material/auto-init",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "range",
+    "registry": true,
+    "raw": "@material/auto-init@^9.0.0",
+    "name": "@material/auto-init",
+    "escapedName": "@material%2fauto-init",
+    "scope": "@material",
+    "rawSpec": "^9.0.0",
+    "saveSpec": null,
+    "fetchSpec": "^9.0.0"
+  },
+  "_requiredBy": [
+    "/material-components-web"
+  ],
+  "_resolved": "https://registry.npmjs.org/@material/auto-init/-/auto-init-9.0.0.tgz",
+  "_shasum": "afc96c11f45f73fc083a64a415d3b1537186c8f4",
+  "_spec": "@material/auto-init@^9.0.0",
+  "_where": "C:\\sites_laravel\\SenseIT\\node_modules\\material-components-web",
+  "bugs": {
+    "url": "https://github.com/material-components/material-components-web/issues"
+  },
+  "bundleDependencies": false,
+  "dependencies": {
+    "@material/base": "^9.0.0",
+    "tslib": "^1.9.3"
+  },
+  "deprecated": false,
+  "description": "Declarative, easy-to-use auto-initialization for Material Components for the web",
+  "gitHead": "555aecce59125bc3f162b065dca47384bb5822b1",
+  "homepage": "https://github.com/material-components/material-components-web#readme",
+  "license": "MIT",
+  "main": "dist/mdc.autoInit.js",
+  "module": "index.js",
+  "name": "@material/auto-init",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/material-components/material-components-web.git",
+    "directory": "packages/mdc-auto-init"
+  },
+  "sideEffects": false,
+  "types": "dist/mdc.autoInit.d.ts",
+  "version": "9.0.0"
+}
