@@ -1,16 +1,25 @@
 @extends('layouts.template')
 
 @section('main')
-    <h1>SenseIT</h1>
 
-    <p>Wees welgekomen</p>
-    <button class="mdc-button foo-button">
-        <div class="mdc-button__ripple"></div>
-        <span class="mdc-button__label">Button</span>
-    </button>
+        <ul class="mdc-image-list product-list">
+            <li class="mdc-image-list__item">
+                <img class="mdc-image-list__image" src="assets/weave-keyring.jpg">
+                <div class="mdc-image-list__supporting">
+                    <span class="mdc-image-list__label">Weave keyring</span>
+                </div>
+            </li>
+        </ul>
 
+
+
+
+
+@endsection
+@section('script')
     <script>
-        mdc.ripple.MDCRipple.attachTo(document.querySelector('.foo-button'));
-    </script>
+       const MDCList= mdc.list.MDCList;
+       new MDCList(document.querySelector('.mdc-list'));
 
+    </script>
 @endsection

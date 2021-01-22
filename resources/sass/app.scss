@@ -1,13 +1,31 @@
 // Fonts
 
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans&display=swap');
-
+//@import '~bootstrap/scss/bootstrap';
 // Variables
+
+// material design
 @import 'variables';
+@import "@material/drawer/mdc-drawer";
+@import "@material/list/mdc-list";
+
+@import "@material/textfield/mdc-text-field";
+
+@import "@material/ripple/mixins";
+
+
+
+
+
+@import "main";
+@import "login";
+@import "home";
+@import "shrine-Drawer";
+
 
 //
 
-@import '~bootstrap/scss/bootstrap';
+
 
 
 

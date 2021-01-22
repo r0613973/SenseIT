@@ -1,0 +1,24 @@
+.shrine-drawer {
+    @include mdc-drawer-fill-color-accessible($mdc-theme-primary);
+    // Drawer defaults to a higher z-index, but we aren't overlaying it over anything
+    @include mdc-drawer-z-index(0);
+
+
+
+    text-transform: uppercase;
+
+    .mdc-list {
+        margin: 70px 5px auto 5px;
+    }
+
+    .mdc-list-item {
+        border-radius: 6px;
+        justify-content: center;
+    }
+
+    // This needs 3-class specificity to override MDC Drawer styles
+    .mdc-list .mdc-list-item {
+        @include mdc-states-activated(#fff);
+    }
+}
+

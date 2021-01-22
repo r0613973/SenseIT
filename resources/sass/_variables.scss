@@ -6,14 +6,19 @@ $font-family: 'DM Sans', sans-serif;
 $font-size-base: 0.9rem;
 $line-height-base: 1.6;
 
-// Colors
-$blue: #3490dc;
-$indigo: #6574cd;
-$purple: #9561e2;
-$pink: #f66d9b;
-$red: #e3342f;
-$orange: #f6993f;
-$yellow: #ffed4a;
-$green: #38c172;
-$teal: #4dc0b5;
-$cyan: #6cb2eb;
+$mdc-theme-primary: #037971;
+$mdc-theme-on-primary: #023436;
+$mdc-theme-secondary: #e8fee6;
+$mdc-theme-on-secondary: #023436;
+$mdc-theme-surface: #EFFFEF;
+$mdc-theme-on-surface: #023436;
+$mdc-theme-background: #FFFFFF;
+$mdc-theme-on-background: #023436;
+
+
+@use "@material/theme" with (
+  $primary: $mdc-theme-primary,
+  $on-primary: $mdc-theme-on-primary,
+  $secondary: $mdc-theme-secondary,
+  $on-secondary: $mdc-theme-on-secondary
+);
