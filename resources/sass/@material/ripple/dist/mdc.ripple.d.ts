@@ -27,13 +27,13 @@ declare module '@material/ripple' {
       * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
       * THE SOFTWARE.
       */
-    import * as util from '@material/ripple/util';
+    import * as util from 'resources/sass/@material/ripple/util';
     export { util };
-    export * from '@material/ripple/adapter';
-    export * from '@material/ripple/component';
-    export * from '@material/ripple/constants';
-    export * from '@material/ripple/foundation';
-    export * from '@material/ripple/types';
+    export * from 'resources/sass/@material/ripple/adapter';
+    export * from 'resources/sass/@material/ripple/component';
+    export * from 'resources/sass/@material/ripple/constants';
+    export * from 'resources/sass/@material/ripple/foundation';
+    export * from 'resources/sass/@material/ripple/types';
 }
 
 declare module '@material/ripple/util' {
@@ -59,7 +59,7 @@ declare module '@material/ripple/util' {
       * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
       * THE SOFTWARE.
       */
-    import { MDCRipplePoint } from '@material/ripple/types';
+    import { MDCRipplePoint } from 'resources/sass/@material/ripple/types';
     export function supportsCssVariables(windowObj: typeof globalThis, forceRefresh?: boolean): boolean;
     export function getNormalizedEventCoords(evt: Event | undefined, pageOffset: MDCRipplePoint, clientRect: ClientRect): MDCRipplePoint;
 }
@@ -87,8 +87,8 @@ declare module '@material/ripple/adapter' {
         * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
         * THE SOFTWARE.
         */
-    import { EventType, SpecificEventListener } from '@material/base/types';
-    import { MDCRipplePoint } from '@material/ripple/types';
+    import { EventType, SpecificEventListener } from 'resources/sass/@material/base/types';
+    import { MDCRipplePoint } from 'resources/sass/@material/ripple/types';
     /**
         * Defines the shape of the adapter expected by the foundation.
         * Implement this adapter for your framework of choice to delegate updates to
@@ -139,10 +139,10 @@ declare module '@material/ripple/component' {
         * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
         * THE SOFTWARE.
         */
-    import { MDCComponent } from '@material/base/component';
-    import { MDCRippleAdapter } from '@material/ripple/adapter';
-    import { MDCRippleFoundation } from '@material/ripple/foundation';
-    import { MDCRippleAttachOpts, MDCRippleCapableSurface } from '@material/ripple/types';
+    import { MDCComponent } from 'resources/sass/@material/base/component';
+    import { MDCRippleAdapter } from 'resources/sass/@material/ripple/adapter';
+    import { MDCRippleFoundation } from 'resources/sass/@material/ripple/foundation';
+    import { MDCRippleAttachOpts, MDCRippleCapableSurface } from 'resources/sass/@material/ripple/types';
     export type MDCRippleFactory = (el: Element, foundation?: MDCRippleFoundation) => MDCRipple;
     export class MDCRipple extends MDCComponent<MDCRippleFoundation> implements MDCRippleCapableSurface {
             static attachTo(root: Element, opts?: MDCRippleAttachOpts): MDCRipple;
@@ -228,8 +228,8 @@ declare module '@material/ripple/foundation' {
         * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
         * THE SOFTWARE.
         */
-    import { MDCFoundation } from '@material/base/foundation';
-    import { MDCRippleAdapter } from '@material/ripple/adapter';
+    import { MDCFoundation } from 'resources/sass/@material/base/foundation';
+    import { MDCRippleAdapter } from 'resources/sass/@material/ripple/adapter';
     export class MDCRippleFoundation extends MDCFoundation<MDCRippleAdapter> {
             static get cssClasses(): {
                     BG_FOCUSED: string;

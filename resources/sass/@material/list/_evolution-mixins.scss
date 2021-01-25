@@ -9,7 +9,7 @@
 @use '@material/typography/typography';
 @use '@material/feature-targeting/feature-targeting';
 @use '@material/theme/theme-color';
-@use './evolution-variables' as variables;
+@use 'evolution-variables' as variables;
 
 @mixin without-ripple($query: feature-targeting.all()) {
   $feat-color: feature-targeting.create-target($query, color);

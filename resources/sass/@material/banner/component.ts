@@ -21,9 +21,9 @@
  * THE SOFTWARE.
  */
 
-import {MDCComponent} from '@material/base/component';
-import {SpecificEventListener} from '@material/base/types';
-import {closest} from '@material/dom/ponyfill';
+import {MDCComponent} from 'resources/sass/@material/base/component';
+import {SpecificEventListener} from 'resources/sass/@material/base/types';
+import {closest} from 'resources/sass/@material/dom/ponyfill';
 
 import {MDCBannerAdapter} from './adapter';
 import {CloseReason, events, MDCBannerCloseEventDetail, selectors} from './constants';

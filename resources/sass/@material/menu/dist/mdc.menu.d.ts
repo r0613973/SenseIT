@@ -31,12 +31,12 @@ declare module '@material/menu' {
       * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
       * THE SOFTWARE.
       */
-    export { Corner } from '@material/menu-surface/constants';
-    export * from '@material/menu/adapter';
-    export * from '@material/menu/component';
-    export * from '@material/menu/constants';
-    export * from '@material/menu/foundation';
-    export * from '@material/menu/types';
+    export { Corner } from 'resources/sass/@material/menu-surface/constants';
+    export * from 'resources/sass/@material/menu/adapter';
+    export * from 'resources/sass/@material/menu/component';
+    export * from 'resources/sass/@material/menu/constants';
+    export * from 'resources/sass/@material/menu/foundation';
+    export * from 'resources/sass/@material/menu/types';
 }
 
 declare module '@material/menu/adapter' {
@@ -62,7 +62,7 @@ declare module '@material/menu/adapter' {
         * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
         * THE SOFTWARE.
         */
-    import { MDCMenuItemEventDetail } from '@material/menu/types';
+    import { MDCMenuItemEventDetail } from 'resources/sass/@material/menu/types';
     /**
         * Implement this adapter for your framework of choice to delegate updates to
         * the component in your framework of choice. See architecture documentation
@@ -150,14 +150,14 @@ declare module '@material/menu/component' {
         * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
         * THE SOFTWARE.
         */
-    import { MDCComponent } from '@material/base/component';
-    import { MDCListFactory } from '@material/list/component';
-    import { MDCListIndex } from '@material/list/types';
-    import { MDCMenuSurfaceFactory } from '@material/menu-surface/component';
-    import { Corner } from '@material/menu-surface/constants';
-    import { MDCMenuDistance } from '@material/menu-surface/types';
-    import { DefaultFocusState } from '@material/menu/constants';
-    import { MDCMenuFoundation } from '@material/menu/foundation';
+    import { MDCComponent } from 'resources/sass/@material/base/component';
+    import { MDCListFactory } from 'resources/sass/@material/list/component';
+    import { MDCListIndex } from 'resources/sass/@material/list/types';
+    import { MDCMenuSurfaceFactory } from 'resources/sass/@material/menu-surface/component';
+    import { Corner } from 'resources/sass/@material/menu-surface/constants';
+    import { MDCMenuDistance } from 'resources/sass/@material/menu-surface/types';
+    import { DefaultFocusState } from 'resources/sass/@material/menu/constants';
+    import { MDCMenuFoundation } from 'resources/sass/@material/menu/foundation';
     export type MDCMenuFactory = (el: Element, foundation?: MDCMenuFoundation) => MDCMenu;
     export class MDCMenu extends MDCComponent<MDCMenuFoundation> {
             static attachTo(root: Element): MDCMenu;
@@ -335,9 +335,9 @@ declare module '@material/menu/foundation' {
         * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
         * THE SOFTWARE.
         */
-    import { MDCFoundation } from '@material/base/foundation';
-    import { MDCMenuAdapter } from '@material/menu/adapter';
-    import { DefaultFocusState } from '@material/menu/constants';
+    import { MDCFoundation } from 'resources/sass/@material/base/foundation';
+    import { MDCMenuAdapter } from 'resources/sass/@material/menu/adapter';
+    import { DefaultFocusState } from 'resources/sass/@material/menu/constants';
     export class MDCMenuFoundation extends MDCFoundation<MDCMenuAdapter> {
             static get cssClasses(): {
                     MENU_SELECTED_LIST_ITEM: string;

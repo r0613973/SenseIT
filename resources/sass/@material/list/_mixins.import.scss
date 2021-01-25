@@ -10,4 +10,4 @@
 @forward "@material/ripple" as mdc-ripple-* hide $mdc-ripple-states-wash-duration, mdc-ripple-states-base-color, mdc-ripple-states-opacities, mdc-ripple-states-hover-opacity, mdc-ripple-states-focus-opacity, mdc-ripple-states-focus-opacity-properties-, mdc-ripple-states-press-opacity, mdc-ripple-states, mdc-ripple-states-activated, mdc-ripple-states-selected, mdc-ripple-states-interactions-, mdc-ripple-states-opacity, mdc-ripple-states-opacities-;
 @forward "@material/typography" as mdc-typography-* hide mdc-typography-typography;
 @forward "@material/typography" as mdc-* hide mdc-base, mdc-baseline-bottom, mdc-baseline-strut-, mdc-baseline-top, mdc-core-styles, mdc-overflow-ellipsis, mdc-get-global-variable-, mdc-set-styles-, mdc-get-letter-spacing-;
-@forward "./index" as mdc-list-*;
+@forward "index" as mdc-list-*;

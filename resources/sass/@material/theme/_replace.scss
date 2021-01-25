@@ -23,7 +23,7 @@
 @use 'sass:list';
 @use 'sass:meta';
 @use 'sass:string';
-@use './custom-properties';
+@use 'custom-properties';
 
 /// Replaces all name instances in the provided string with values from the
 /// provided replacement Map whose keys correspond to the name instances.

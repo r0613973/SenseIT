@@ -25,7 +25,7 @@
 @use '@material/button/mixins' as button-mixins;
 @use '@material/ripple/ripple-theme';
 @use '@material/rtl/mixins' as rtl-mixins;
-@use './banner-theme';
+@use 'banner-theme';
 
 $_text-type-scale: body2;
 $_min-width: 344px;

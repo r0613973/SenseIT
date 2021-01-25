@@ -32,13 +32,13 @@ declare module '@material/select' {
       * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
       * THE SOFTWARE.
       */
-    export * from '@material/select/adapter';
-    export * from '@material/select/component';
-    export * from '@material/select/constants';
-    export * from '@material/select/foundation';
-    export * from '@material/select/types';
-    export * from '@material/select/helper-text/index';
-    export * from '@material/select/icon/index';
+    export * from 'resources/sass/@material/select/adapter';
+    export * from 'resources/sass/@material/select/component';
+    export * from 'resources/sass/@material/select/constants';
+    export * from 'resources/sass/@material/select/foundation';
+    export * from 'resources/sass/@material/select/types';
+    export * from 'resources/sass/@material/select/helper-text';
+    export * from 'resources/sass/@material/select/icon';
 }
 
 declare module '@material/select/adapter' {
@@ -64,7 +64,7 @@ declare module '@material/select/adapter' {
         * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
         * THE SOFTWARE.
         */
-    import { Corner } from '@material/menu-surface/constants';
+    import { Corner } from 'resources/sass/@material/menu-surface/constants';
     /**
         * Defines the shape of the adapter expected by the foundation.
         * Implement this adapter for your framework of choice to delegate updates to
@@ -240,14 +240,14 @@ declare module '@material/select/component' {
         * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
         * THE SOFTWARE.
         */
-    import { MDCComponent } from '@material/base/component';
-    import { MDCFloatingLabelFactory } from '@material/floating-label/component';
-    import { MDCLineRippleFactory } from '@material/line-ripple/component';
-    import { MDCMenuFactory } from '@material/menu/component';
-    import { MDCNotchedOutlineFactory } from '@material/notched-outline/component';
-    import { MDCSelectFoundation } from '@material/select/foundation';
-    import { MDCSelectHelperTextFactory } from '@material/select/helper-text/component';
-    import { MDCSelectIconFactory } from '@material/select/icon/component';
+    import { MDCComponent } from 'resources/sass/@material/base/component';
+    import { MDCFloatingLabelFactory } from 'resources/sass/@material/floating-label/component';
+    import { MDCLineRippleFactory } from 'resources/sass/@material/line-ripple/component';
+    import { MDCMenuFactory } from 'resources/sass/@material/menu/component';
+    import { MDCNotchedOutlineFactory } from 'resources/sass/@material/notched-outline/component';
+    import { MDCSelectFoundation } from 'resources/sass/@material/select/foundation';
+    import { MDCSelectHelperTextFactory } from 'resources/sass/@material/select/helper-text/component';
+    import { MDCSelectIconFactory } from 'resources/sass/@material/select/icon/component';
     export class MDCSelect extends MDCComponent<MDCSelectFoundation> {
             static attachTo(root: Element): MDCSelect;
             initialize(labelFactory?: MDCFloatingLabelFactory, lineRippleFactory?: MDCLineRippleFactory, outlineFactory?: MDCNotchedOutlineFactory, menuFactory?: MDCMenuFactory, iconFactory?: MDCSelectIconFactory, helperTextFactory?: MDCSelectHelperTextFactory): void;
@@ -389,9 +389,9 @@ declare module '@material/select/foundation' {
         * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
         * THE SOFTWARE.
         */
-    import { MDCFoundation } from '@material/base/foundation';
-    import { MDCSelectAdapter } from '@material/select/adapter';
-    import { MDCSelectFoundationMap } from '@material/select/types';
+    import { MDCFoundation } from 'resources/sass/@material/base/foundation';
+    import { MDCSelectAdapter } from 'resources/sass/@material/select/adapter';
+    import { MDCSelectFoundationMap } from 'resources/sass/@material/select/types';
     export class MDCSelectFoundation extends MDCFoundation<MDCSelectAdapter> {
             static get cssClasses(): {
                     ACTIVATED: string;
@@ -522,8 +522,8 @@ declare module '@material/select/types' {
       * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
       * THE SOFTWARE.
       */
-    import { MDCSelectHelperTextFoundation } from '@material/select/helper-text/foundation';
-    import { MDCSelectIconFoundation } from '@material/select/icon/foundation';
+    import { MDCSelectHelperTextFoundation } from 'resources/sass/@material/select/helper-text/foundation';
+    import { MDCSelectIconFoundation } from 'resources/sass/@material/select/icon/foundation';
     export interface MDCSelectFoundationMap {
         leadingIcon: MDCSelectIconFoundation;
         helperText: MDCSelectHelperTextFoundation;
@@ -560,10 +560,10 @@ declare module '@material/select/helper-text/index' {
       * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
       * THE SOFTWARE.
       */
-    export * from '@material/select/helper-text/adapter';
-    export * from '@material/select/helper-text/component';
-    export * from '@material/select/helper-text/foundation';
-    export { cssClasses as helperTextCssClasses, strings as helperTextStrings } from '@material/select/helper-text/constants';
+    export * from 'resources/sass/@material/select/helper-text/adapter';
+    export * from 'resources/sass/@material/select/helper-text/component';
+    export * from 'resources/sass/@material/select/helper-text/foundation';
+    export { cssClasses as helperTextCssClasses, strings as helperTextStrings } from 'resources/sass/@material/select/helper-text/constants';
 }
 
 declare module '@material/select/icon/index' {
@@ -589,10 +589,10 @@ declare module '@material/select/icon/index' {
       * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
       * THE SOFTWARE.
       */
-    export * from '@material/select/icon/adapter';
-    export * from '@material/select/icon/component';
-    export * from '@material/select/icon/foundation';
-    export { strings as iconStrings } from '@material/select/icon/constants';
+    export * from 'resources/sass/@material/select/icon/adapter';
+    export * from 'resources/sass/@material/select/icon/component';
+    export * from 'resources/sass/@material/select/icon/foundation';
+    export { strings as iconStrings } from 'resources/sass/@material/select/icon/constants';
 }
 
 declare module '@material/select/helper-text/component' {
@@ -618,8 +618,8 @@ declare module '@material/select/helper-text/component' {
       * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
       * THE SOFTWARE.
       */
-    import { MDCComponent } from '@material/base/component';
-    import { MDCSelectHelperTextFoundation } from '@material/select/helper-text/foundation';
+    import { MDCComponent } from 'resources/sass/@material/base/component';
+    import { MDCSelectHelperTextFoundation } from 'resources/sass/@material/select/helper-text/foundation';
     export type MDCSelectHelperTextFactory = (el: Element, foundation?: MDCSelectHelperTextFoundation) => MDCSelectHelperText;
     export class MDCSelectHelperText extends MDCComponent<MDCSelectHelperTextFoundation> {
         static attachTo(root: Element): MDCSelectHelperText;
@@ -651,8 +651,8 @@ declare module '@material/select/icon/component' {
       * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
       * THE SOFTWARE.
       */
-    import { MDCComponent } from '@material/base/component';
-    import { MDCSelectIconFoundation } from '@material/select/icon/foundation';
+    import { MDCComponent } from 'resources/sass/@material/base/component';
+    import { MDCSelectIconFoundation } from 'resources/sass/@material/select/icon/foundation';
     export type MDCSelectIconFactory = (el: Element, foundation?: MDCSelectIconFoundation) => MDCSelectIcon;
     export class MDCSelectIcon extends MDCComponent<MDCSelectIconFoundation> {
         static attachTo(root: Element): MDCSelectIcon;
@@ -684,8 +684,8 @@ declare module '@material/select/helper-text/foundation' {
         * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
         * THE SOFTWARE.
         */
-    import { MDCFoundation } from '@material/base/foundation';
-    import { MDCSelectHelperTextAdapter } from '@material/select/helper-text/adapter';
+    import { MDCFoundation } from 'resources/sass/@material/base/foundation';
+    import { MDCSelectHelperTextAdapter } from 'resources/sass/@material/select/helper-text/adapter';
     export class MDCSelectHelperTextFoundation extends MDCFoundation<MDCSelectHelperTextAdapter> {
             static get cssClasses(): {
                     HELPER_TEXT_VALIDATION_MSG: string;
@@ -759,8 +759,8 @@ declare module '@material/select/icon/foundation' {
         * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
         * THE SOFTWARE.
         */
-    import { MDCFoundation } from '@material/base/foundation';
-    import { MDCSelectIconAdapter } from '@material/select/icon/adapter';
+    import { MDCFoundation } from 'resources/sass/@material/base/foundation';
+    import { MDCSelectIconAdapter } from 'resources/sass/@material/select/icon/adapter';
     export class MDCSelectIconFoundation extends MDCFoundation<MDCSelectIconAdapter> {
             static get strings(): {
                     ICON_EVENT: string;
@@ -878,7 +878,7 @@ declare module '@material/select/icon/adapter' {
         * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
         * THE SOFTWARE.
         */
-    import { EventType, SpecificEventListener } from '@material/base/types';
+    import { EventType, SpecificEventListener } from 'resources/sass/@material/base/types';
     /**
         * Defines the shape of the adapter expected by the foundation.
         * Implement this adapter for your framework of choice to delegate updates to

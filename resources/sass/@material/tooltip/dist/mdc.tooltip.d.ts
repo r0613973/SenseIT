@@ -27,11 +27,11 @@ declare module '@material/tooltip' {
       * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
       * THE SOFTWARE.
       */
-    export * from '@material/tooltip/adapter';
-    export * from '@material/tooltip/component';
-    export * from '@material/tooltip/foundation';
-    export * from '@material/tooltip/constants';
-    export * from '@material/tooltip/types';
+    export * from 'resources/sass/@material/tooltip/adapter';
+    export * from 'resources/sass/@material/tooltip/component';
+    export * from 'resources/sass/@material/tooltip/foundation';
+    export * from 'resources/sass/@material/tooltip/constants';
+    export * from 'resources/sass/@material/tooltip/types';
 }
 
 declare module '@material/tooltip/adapter' {
@@ -57,8 +57,8 @@ declare module '@material/tooltip/adapter' {
         * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
         * THE SOFTWARE.
         */
-    import { EventType, SpecificEventListener } from '@material/base/types';
-    import { CssClasses } from '@material/tooltip/constants';
+    import { EventType, SpecificEventListener } from 'resources/sass/@material/base/types';
+    import { CssClasses } from 'resources/sass/@material/tooltip/constants';
     /**
         * Implement this adapter for your framework of choice to delegate updates to
         * the component in your framework of choice. See architecture documentation
@@ -190,9 +190,9 @@ declare module '@material/tooltip/component' {
       * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
       * THE SOFTWARE.
       */
-    import { MDCComponent } from '@material/base/component';
-    import { AnchorBoundaryType, XPosition, YPosition } from '@material/tooltip/constants';
-    import { MDCTooltipFoundation } from '@material/tooltip/foundation';
+    import { MDCComponent } from 'resources/sass/@material/base/component';
+    import { AnchorBoundaryType, XPosition, YPosition } from 'resources/sass/@material/tooltip/constants';
+    import { MDCTooltipFoundation } from 'resources/sass/@material/tooltip/foundation';
     export class MDCTooltip extends MDCComponent<MDCTooltipFoundation> {
         static attachTo(root: Element): MDCTooltip;
         initialize(): void;
@@ -230,9 +230,9 @@ declare module '@material/tooltip/foundation' {
         * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
         * THE SOFTWARE.
         */
-    import { MDCFoundation } from '@material/base/foundation';
-    import { MDCTooltipAdapter } from '@material/tooltip/adapter';
-    import { AnchorBoundaryType, XPosition, YPosition } from '@material/tooltip/constants';
+    import { MDCFoundation } from 'resources/sass/@material/base/foundation';
+    import { MDCTooltipAdapter } from 'resources/sass/@material/tooltip/adapter';
+    import { AnchorBoundaryType, XPosition, YPosition } from 'resources/sass/@material/tooltip/constants';
     export class MDCTooltipFoundation extends MDCFoundation<MDCTooltipAdapter> {
             static get defaultAdapter(): MDCTooltipAdapter;
             constructor(adapter?: Partial<MDCTooltipAdapter>);

@@ -23,7 +23,7 @@
 export * from './component';
 export * from './constants';
 export * from './foundation';
-export * from './character-counter/index';
-export * from './helper-text/index';
-export * from './icon/index';
+export * from './character-counter';
+export * from './helper-text';
+export * from './icon';
 //# sourceMappingURL=index.js.map

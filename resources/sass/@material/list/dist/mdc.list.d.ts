@@ -26,11 +26,11 @@ declare module '@material/list' {
       * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
       * THE SOFTWARE.
       */
-    export * from '@material/list/adapter';
-    export * from '@material/list/component';
-    export * from '@material/list/constants';
-    export * from '@material/list/foundation';
-    export * from '@material/list/types';
+    export * from 'resources/sass/@material/list/adapter';
+    export * from 'resources/sass/@material/list/component';
+    export * from 'resources/sass/@material/list/constants';
+    export * from 'resources/sass/@material/list/foundation';
+    export * from 'resources/sass/@material/list/types';
 }
 
 declare module '@material/list/adapter' {
@@ -124,9 +124,9 @@ declare module '@material/list/component' {
         * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
         * THE SOFTWARE.
         */
-    import { MDCComponent } from '@material/base/component';
-    import { MDCListFoundation } from '@material/list/foundation';
-    import { MDCListIndex } from '@material/list/types';
+    import { MDCComponent } from 'resources/sass/@material/base/component';
+    import { MDCListFoundation } from 'resources/sass/@material/list/foundation';
+    import { MDCListIndex } from 'resources/sass/@material/list/types';
     export type MDCListFactory = (el: Element, foundation?: MDCListFoundation) => MDCList;
     export class MDCList extends MDCComponent<MDCListFoundation> {
             set vertical(value: boolean);
@@ -258,9 +258,9 @@ declare module '@material/list/foundation' {
         * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
         * THE SOFTWARE.
         */
-    import { MDCFoundation } from '@material/base/foundation';
-    import { MDCListAdapter } from '@material/list/adapter';
-    import { MDCListIndex } from '@material/list/types';
+    import { MDCFoundation } from 'resources/sass/@material/base/foundation';
+    import { MDCListAdapter } from 'resources/sass/@material/list/adapter';
+    import { MDCListIndex } from 'resources/sass/@material/list/types';
     export class MDCListFoundation extends MDCFoundation<MDCListAdapter> {
             static get strings(): {
                     ACTION_EVENT: string;

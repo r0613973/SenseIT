@@ -20,7 +20,7 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
  * THE SOFTWARE.
  */
-import { MDCFoundation } from '@material/base/foundation';
+import { MDCFoundation } from 'resources/sass/@material/base/foundation';
 import { MDCTextFieldIconAdapter } from './adapter';
 export declare class MDCTextFieldIconFoundation extends MDCFoundation<MDCTextFieldIconAdapter> {
     static get strings(): {

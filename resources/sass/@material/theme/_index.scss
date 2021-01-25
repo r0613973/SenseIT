@@ -1,4 +1,4 @@
-@forward './theme-color' show
+@forward 'theme-color' show
   $background,
   $error,
   $primary,
@@ -14,5 +14,5 @@
   luminance,
   text-emphasis,
   tone;
-@forward './theme' show core-styles, property;
-@forward './color-palette';
+@forward 'theme' show core-styles, property;
+@forward 'color-palette';

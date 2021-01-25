@@ -29,11 +29,11 @@ declare module '@material/tab-bar' {
       * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
       * THE SOFTWARE.
       */
-    export * from '@material/tab-bar/adapter';
-    export * from '@material/tab-bar/component';
-    export * from '@material/tab-bar/constants';
-    export * from '@material/tab-bar/foundation';
-    export * from '@material/tab-bar/types';
+    export * from 'resources/sass/@material/tab-bar/adapter';
+    export * from 'resources/sass/@material/tab-bar/component';
+    export * from 'resources/sass/@material/tab-bar/constants';
+    export * from 'resources/sass/@material/tab-bar/foundation';
+    export * from 'resources/sass/@material/tab-bar/types';
 }
 
 declare module '@material/tab-bar/adapter' {
@@ -59,7 +59,7 @@ declare module '@material/tab-bar/adapter' {
         * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
         * THE SOFTWARE.
         */
-    import { MDCTabDimensions } from '@material/tab/types';
+    import { MDCTabDimensions } from 'resources/sass/@material/tab/types';
     /**
         * Defines the shape of the adapter expected by the foundation.
         * Implement this adapter for your framework of choice to delegate updates to
@@ -173,10 +173,10 @@ declare module '@material/tab-bar/component' {
         * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
         * THE SOFTWARE.
         */
-    import { MDCComponent } from '@material/base/component';
-    import { MDCTabScrollerFactory } from '@material/tab-scroller/component';
-    import { MDCTabFactory } from '@material/tab/component';
-    import { MDCTabBarFoundation } from '@material/tab-bar/foundation';
+    import { MDCComponent } from 'resources/sass/@material/base/component';
+    import { MDCTabScrollerFactory } from 'resources/sass/@material/tab-scroller/component';
+    import { MDCTabFactory } from 'resources/sass/@material/tab/component';
+    import { MDCTabBarFoundation } from 'resources/sass/@material/tab-bar/foundation';
     export class MDCTabBar extends MDCComponent<MDCTabBarFoundation> {
             static attachTo(root: Element): MDCTabBar;
             set focusOnActivate(focusOnActivate: boolean);
@@ -267,9 +267,9 @@ declare module '@material/tab-bar/foundation' {
         * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
         * THE SOFTWARE.
         */
-    import { MDCFoundation } from '@material/base/foundation';
-    import { MDCTabInteractionEvent } from '@material/tab/types';
-    import { MDCTabBarAdapter } from '@material/tab-bar/adapter';
+    import { MDCFoundation } from 'resources/sass/@material/base/foundation';
+    import { MDCTabInteractionEvent } from 'resources/sass/@material/tab/types';
+    import { MDCTabBarAdapter } from 'resources/sass/@material/tab-bar/adapter';
     export class MDCTabBarFoundation extends MDCFoundation<MDCTabBarAdapter> {
             static get strings(): {
                     ARROW_LEFT_KEY: string;

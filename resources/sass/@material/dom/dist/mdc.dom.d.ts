@@ -23,10 +23,10 @@ declare module '@material/dom' {
       * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
       * THE SOFTWARE.
       */
-    import * as events from '@material/dom/events';
-    import * as focusTrap from '@material/dom/focus-trap';
-    import * as keyboard from '@material/dom/keyboard';
-    import * as ponyfill from '@material/dom/ponyfill';
+    import * as events from 'resources/sass/@material/dom/events';
+    import * as focusTrap from 'resources/sass/@material/dom/focus-trap';
+    import * as keyboard from 'resources/sass/@material/dom/keyboard';
+    import * as ponyfill from 'resources/sass/@material/dom/ponyfill';
     export { events, focusTrap, keyboard, ponyfill };
 }
 

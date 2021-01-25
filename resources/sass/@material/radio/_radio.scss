@@ -31,7 +31,7 @@
 @use '@material/ripple/ripple-theme';
 @use '@material/touch-target/mixins' as touch-target-mixins;
 @use '@material/touch-target/variables' as touch-target-variables;
-@use './radio-theme';
+@use 'radio-theme';
 
 $ripple-target: '.mdc-radio__ripple';
 
