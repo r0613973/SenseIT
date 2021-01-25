@@ -41,6 +41,7 @@
 
     @include('shared.navigation')
 
+
     <div class="shrine-body">
         <main class="mdc-top-app-bar--fixed-adjust container">
             @endif
@@ -77,6 +78,7 @@
 
 
     </script>
+
 
 </body>
 </html>
