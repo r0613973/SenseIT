@@ -20,7 +20,7 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
  * THE SOFTWARE.
  */
-import { MDCComponent } from '@material/base/component';
+import { MDCComponent } from 'resources/sass/@material/base/component';
 import { MDCDialogFoundation } from './foundation';
 import { MDCDialogFocusTrapFactory } from './util';
 export declare class MDCDialog extends MDCComponent<MDCDialogFoundation> {

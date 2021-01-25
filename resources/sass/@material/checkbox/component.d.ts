@@ -20,9 +20,9 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
  * THE SOFTWARE.
  */
-import { MDCComponent } from '@material/base/component';
-import { MDCRipple } from '@material/ripple/component';
-import { MDCRippleCapableSurface } from '@material/ripple/types';
+import { MDCComponent } from 'resources/sass/@material/base/component';
+import { MDCRipple } from 'resources/sass/@material/ripple/component';
+import { MDCRippleCapableSurface } from 'resources/sass/@material/ripple/types';
 import { MDCCheckboxFoundation } from './foundation';
 export declare type MDCCheckboxFactory = (el: Element, foundation?: MDCCheckboxFoundation) => MDCCheckbox;
 export declare class MDCCheckbox extends MDCComponent<MDCCheckboxFoundation> implements MDCRippleCapableSurface {

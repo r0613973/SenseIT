@@ -22,7 +22,7 @@
 
 @use 'sass:map';
 @use 'sass:meta';
-@use './custom-properties';
+@use 'custom-properties';
 
 /// Retrieves the default state from the provided parameter. The parameter may
 /// be the state's default value or a state Map. A state Map has individual keys

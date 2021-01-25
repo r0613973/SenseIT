@@ -32,14 +32,14 @@ declare module '@material/textfield' {
       * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
       * THE SOFTWARE.
       */
-    export * from '@material/textfield/adapter';
-    export * from '@material/textfield/component';
-    export * from '@material/textfield/constants';
-    export * from '@material/textfield/foundation';
-    export * from '@material/textfield/types';
-    export * from '@material/textfield/character-counter/index';
-    export * from '@material/textfield/helper-text/index';
-    export * from '@material/textfield/icon/index';
+    export * from 'resources/sass/@material/textfield/adapter';
+    export * from 'resources/sass/@material/textfield/component';
+    export * from 'resources/sass/@material/textfield/constants';
+    export * from 'resources/sass/@material/textfield/foundation';
+    export * from 'resources/sass/@material/textfield/types';
+    export * from 'resources/sass/@material/textfield/character-counter';
+    export * from 'resources/sass/@material/textfield/helper-text';
+    export * from 'resources/sass/@material/textfield/icon';
 }
 
 declare module '@material/textfield/adapter' {
@@ -65,8 +65,8 @@ declare module '@material/textfield/adapter' {
         * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
         * THE SOFTWARE.
         */
-    import { EventType, SpecificEventListener } from '@material/base/types';
-    import { MDCTextFieldNativeInputElement } from '@material/textfield/types';
+    import { EventType, SpecificEventListener } from 'resources/sass/@material/base/types';
+    import { MDCTextFieldNativeInputElement } from 'resources/sass/@material/textfield/types';
     /**
         * Defines the shape of the adapter expected by the foundation.
         * Implement this adapter for your framework of choice to delegate updates to
@@ -214,16 +214,16 @@ declare module '@material/textfield/component' {
         * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
         * THE SOFTWARE.
         */
-    import { MDCComponent } from '@material/base/component';
-    import { MDCFloatingLabelFactory } from '@material/floating-label/component';
-    import { MDCLineRippleFactory } from '@material/line-ripple/component';
-    import { MDCNotchedOutlineFactory } from '@material/notched-outline/component';
-    import { MDCRipple, MDCRippleFactory } from '@material/ripple/component';
-    import { MDCRippleCapableSurface } from '@material/ripple/types';
-    import { MDCTextFieldCharacterCounterFactory } from '@material/textfield/character-counter/component';
-    import { MDCTextFieldFoundation } from '@material/textfield/foundation';
-    import { MDCTextFieldHelperTextFactory } from '@material/textfield/helper-text/component';
-    import { MDCTextFieldIconFactory } from '@material/textfield/icon/component';
+    import { MDCComponent } from 'resources/sass/@material/base/component';
+    import { MDCFloatingLabelFactory } from 'resources/sass/@material/floating-label/component';
+    import { MDCLineRippleFactory } from 'resources/sass/@material/line-ripple/component';
+    import { MDCNotchedOutlineFactory } from 'resources/sass/@material/notched-outline/component';
+    import { MDCRipple, MDCRippleFactory } from 'resources/sass/@material/ripple/component';
+    import { MDCRippleCapableSurface } from 'resources/sass/@material/ripple/types';
+    import { MDCTextFieldCharacterCounterFactory } from 'resources/sass/@material/textfield/character-counter/component';
+    import { MDCTextFieldFoundation } from 'resources/sass/@material/textfield/foundation';
+    import { MDCTextFieldHelperTextFactory } from 'resources/sass/@material/textfield/helper-text/component';
+    import { MDCTextFieldIconFactory } from 'resources/sass/@material/textfield/icon/component';
     export class MDCTextField extends MDCComponent<MDCTextFieldFoundation> implements MDCRippleCapableSurface {
             static attachTo(root: Element): MDCTextField;
             ripple: MDCRipple | null;
@@ -423,9 +423,9 @@ declare module '@material/textfield/foundation' {
         * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
         * THE SOFTWARE.
         */
-    import { MDCFoundation } from '@material/base/foundation';
-    import { MDCTextFieldAdapter } from '@material/textfield/adapter';
-    import { MDCTextFieldFoundationMap } from '@material/textfield/types';
+    import { MDCFoundation } from 'resources/sass/@material/base/foundation';
+    import { MDCTextFieldAdapter } from 'resources/sass/@material/textfield/adapter';
+    import { MDCTextFieldFoundationMap } from 'resources/sass/@material/textfield/types';
     export class MDCTextFieldFoundation extends MDCFoundation<MDCTextFieldAdapter> {
             static get cssClasses(): {
                     DISABLED: string;
@@ -586,9 +586,9 @@ declare module '@material/textfield/types' {
       * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
       * THE SOFTWARE.
       */
-    import { MDCTextFieldCharacterCounterFoundation } from '@material/textfield/character-counter/foundation';
-    import { MDCTextFieldHelperTextFoundation } from '@material/textfield/helper-text/foundation';
-    import { MDCTextFieldIconFoundation } from '@material/textfield/icon/foundation';
+    import { MDCTextFieldCharacterCounterFoundation } from 'resources/sass/@material/textfield/character-counter/foundation';
+    import { MDCTextFieldHelperTextFoundation } from 'resources/sass/@material/textfield/helper-text/foundation';
+    import { MDCTextFieldIconFoundation } from 'resources/sass/@material/textfield/icon/foundation';
     export type MDCTextFieldNativeInputElement = Pick<HTMLInputElement, 'disabled' | 'maxLength' | 'type' | 'value' | 'required'> & {
         validity: Pick<ValidityState, 'badInput' | 'valid'>;
     };
@@ -623,10 +623,10 @@ declare module '@material/textfield/character-counter/index' {
       * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
       * THE SOFTWARE.
       */
-    export * from '@material/textfield/character-counter/adapter';
-    export * from '@material/textfield/character-counter/component';
-    export * from '@material/textfield/character-counter/foundation';
-    export { cssClasses as characterCountCssClasses, strings as characterCountStrings } from '@material/textfield/character-counter/constants';
+    export * from 'resources/sass/@material/textfield/character-counter/adapter';
+    export * from 'resources/sass/@material/textfield/character-counter/component';
+    export * from 'resources/sass/@material/textfield/character-counter/foundation';
+    export { cssClasses as characterCountCssClasses, strings as characterCountStrings } from 'resources/sass/@material/textfield/character-counter/constants';
 }
 
 declare module '@material/textfield/helper-text/index' {
@@ -652,10 +652,10 @@ declare module '@material/textfield/helper-text/index' {
       * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
       * THE SOFTWARE.
       */
-    export * from '@material/textfield/helper-text/adapter';
-    export * from '@material/textfield/helper-text/component';
-    export * from '@material/textfield/helper-text/foundation';
-    export { cssClasses as helperTextCssClasses, strings as helperTextStrings } from '@material/textfield/helper-text/constants';
+    export * from 'resources/sass/@material/textfield/helper-text/adapter';
+    export * from 'resources/sass/@material/textfield/helper-text/component';
+    export * from 'resources/sass/@material/textfield/helper-text/foundation';
+    export { cssClasses as helperTextCssClasses, strings as helperTextStrings } from 'resources/sass/@material/textfield/helper-text/constants';
 }
 
 declare module '@material/textfield/icon/index' {
@@ -681,10 +681,10 @@ declare module '@material/textfield/icon/index' {
       * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
       * THE SOFTWARE.
       */
-    export * from '@material/textfield/icon/adapter';
-    export * from '@material/textfield/icon/component';
-    export * from '@material/textfield/icon/foundation';
-    export { cssClasses as iconCssClasses, strings as iconStrings } from '@material/textfield/icon/constants';
+    export * from 'resources/sass/@material/textfield/icon/adapter';
+    export * from 'resources/sass/@material/textfield/icon/component';
+    export * from 'resources/sass/@material/textfield/icon/foundation';
+    export { cssClasses as iconCssClasses, strings as iconStrings } from 'resources/sass/@material/textfield/icon/constants';
 }
 
 declare module '@material/textfield/character-counter/component' {
@@ -710,8 +710,8 @@ declare module '@material/textfield/character-counter/component' {
       * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
       * THE SOFTWARE.
       */
-    import { MDCComponent } from '@material/base/component';
-    import { MDCTextFieldCharacterCounterFoundation } from '@material/textfield/character-counter/foundation';
+    import { MDCComponent } from 'resources/sass/@material/base/component';
+    import { MDCTextFieldCharacterCounterFoundation } from 'resources/sass/@material/textfield/character-counter/foundation';
     export type MDCTextFieldCharacterCounterFactory = (el: Element, foundation?: MDCTextFieldCharacterCounterFoundation) => MDCTextFieldCharacterCounter;
     export class MDCTextFieldCharacterCounter extends MDCComponent<MDCTextFieldCharacterCounterFoundation> {
         static attachTo(root: Element): MDCTextFieldCharacterCounter;
@@ -743,8 +743,8 @@ declare module '@material/textfield/helper-text/component' {
       * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
       * THE SOFTWARE.
       */
-    import { MDCComponent } from '@material/base/component';
-    import { MDCTextFieldHelperTextFoundation } from '@material/textfield/helper-text/foundation';
+    import { MDCComponent } from 'resources/sass/@material/base/component';
+    import { MDCTextFieldHelperTextFoundation } from 'resources/sass/@material/textfield/helper-text/foundation';
     export type MDCTextFieldHelperTextFactory = (el: Element, foundation?: MDCTextFieldHelperTextFoundation) => MDCTextFieldHelperText;
     export class MDCTextFieldHelperText extends MDCComponent<MDCTextFieldHelperTextFoundation> {
         static attachTo(root: Element): MDCTextFieldHelperText;
@@ -776,8 +776,8 @@ declare module '@material/textfield/icon/component' {
       * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
       * THE SOFTWARE.
       */
-    import { MDCComponent } from '@material/base/component';
-    import { MDCTextFieldIconFoundation } from '@material/textfield/icon/foundation';
+    import { MDCComponent } from 'resources/sass/@material/base/component';
+    import { MDCTextFieldIconFoundation } from 'resources/sass/@material/textfield/icon/foundation';
     export type MDCTextFieldIconFactory = (el: Element, foundation?: MDCTextFieldIconFoundation) => MDCTextFieldIcon;
     export class MDCTextFieldIcon extends MDCComponent<MDCTextFieldIconFoundation> {
         static attachTo(root: Element): MDCTextFieldIcon;
@@ -809,8 +809,8 @@ declare module '@material/textfield/character-counter/foundation' {
         * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
         * THE SOFTWARE.
         */
-    import { MDCFoundation } from '@material/base/foundation';
-    import { MDCTextFieldCharacterCounterAdapter } from '@material/textfield/character-counter/adapter';
+    import { MDCFoundation } from 'resources/sass/@material/base/foundation';
+    import { MDCTextFieldCharacterCounterAdapter } from 'resources/sass/@material/textfield/character-counter/adapter';
     export class MDCTextFieldCharacterCounterFoundation extends MDCFoundation<MDCTextFieldCharacterCounterAdapter> {
             static get cssClasses(): {
                     ROOT: string;
@@ -851,8 +851,8 @@ declare module '@material/textfield/helper-text/foundation' {
         * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
         * THE SOFTWARE.
         */
-    import { MDCFoundation } from '@material/base/foundation';
-    import { MDCTextFieldHelperTextAdapter } from '@material/textfield/helper-text/adapter';
+    import { MDCFoundation } from 'resources/sass/@material/base/foundation';
+    import { MDCTextFieldHelperTextAdapter } from 'resources/sass/@material/textfield/helper-text/adapter';
     export class MDCTextFieldHelperTextFoundation extends MDCFoundation<MDCTextFieldHelperTextAdapter> {
             static get cssClasses(): {
                     HELPER_TEXT_PERSISTENT: string;
@@ -923,8 +923,8 @@ declare module '@material/textfield/icon/foundation' {
         * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
         * THE SOFTWARE.
         */
-    import { MDCFoundation } from '@material/base/foundation';
-    import { MDCTextFieldIconAdapter } from '@material/textfield/icon/adapter';
+    import { MDCFoundation } from 'resources/sass/@material/base/foundation';
+    import { MDCTextFieldIconAdapter } from 'resources/sass/@material/textfield/icon/adapter';
     export class MDCTextFieldIconFoundation extends MDCFoundation<MDCTextFieldIconAdapter> {
             static get strings(): {
                     ICON_EVENT: string;
@@ -1095,7 +1095,7 @@ declare module '@material/textfield/icon/adapter' {
         * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
         * THE SOFTWARE.
         */
-    import { EventType, SpecificEventListener } from '@material/base/types';
+    import { EventType, SpecificEventListener } from 'resources/sass/@material/base/types';
     /**
         * Defines the shape of the adapter expected by the foundation.
         * Implement this adapter for your framework of choice to delegate updates to

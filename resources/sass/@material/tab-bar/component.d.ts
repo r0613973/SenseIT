@@ -20,9 +20,9 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
  * THE SOFTWARE.
  */
-import { MDCComponent } from '@material/base/component';
-import { MDCTabScrollerFactory } from '@material/tab-scroller/component';
-import { MDCTabFactory } from '@material/tab/component';
+import { MDCComponent } from 'resources/sass/@material/base/component';
+import { MDCTabScrollerFactory } from 'resources/sass/@material/tab-scroller/component';
+import { MDCTabFactory } from 'resources/sass/@material/tab/component';
 import { MDCTabBarFoundation } from './foundation';
 export declare class MDCTabBar extends MDCComponent<MDCTabBarFoundation> {
     static attachTo(root: Element): MDCTabBar;

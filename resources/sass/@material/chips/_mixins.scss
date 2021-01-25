@@ -39,10 +39,10 @@
 @use '@material/typography/typography';
 @use '@material/shape/mixins' as shape-mixins;
 @use '@material/shape/functions' as shape-functions;
-@use './variables';
+@use 'variables';
 @use '@material/elevation/functions' as elevation-functions;
 @use '@material/theme/theme-color';
-@use './trailingaction/mixins' as trailing-action-mixins;
+@use 'trailingaction/mixins' as trailing-action-mixins;
 
 $ripple-target: '.mdc-chip__ripple';
 

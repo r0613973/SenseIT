@@ -28,9 +28,9 @@ declare module '@material/chips' {
       * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
       * THE SOFTWARE.
       */
-    export * from '@material/chips/trailingaction/index';
-    export * from '@material/chips/chip/index';
-    export * from '@material/chips/chip-set/index';
+    export * from 'resources/sass/@material/chips/trailingaction';
+    export * from 'resources/sass/@material/chips/chip';
+    export * from 'resources/sass/@material/chips/chip-set';
 }
 
 declare module '@material/chips/trailingaction/index' {
@@ -56,11 +56,11 @@ declare module '@material/chips/trailingaction/index' {
       * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
       * THE SOFTWARE.
       */
-    export * from '@material/chips/trailingaction/adapter';
-    export * from '@material/chips/trailingaction/component';
-    export * from '@material/chips/trailingaction/foundation';
-    export * from '@material/chips/trailingaction/types';
-    export { strings as trailingActionStrings } from '@material/chips/trailingaction/constants';
+    export * from 'resources/sass/@material/chips/trailingaction/adapter';
+    export * from 'resources/sass/@material/chips/trailingaction/component';
+    export * from 'resources/sass/@material/chips/trailingaction/foundation';
+    export * from 'resources/sass/@material/chips/trailingaction/types';
+    export { strings as trailingActionStrings } from 'resources/sass/@material/chips/trailingaction/constants';
 }
 
 declare module '@material/chips/chip/index' {
@@ -86,11 +86,11 @@ declare module '@material/chips/chip/index' {
       * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
       * THE SOFTWARE.
       */
-    export * from '@material/chips/chip/adapter';
-    export * from '@material/chips/chip/component';
-    export * from '@material/chips/chip/foundation';
-    export * from '@material/chips/chip/types';
-    export { cssClasses as chipCssClasses, strings as chipStrings } from '@material/chips/chip/constants';
+    export * from 'resources/sass/@material/chips/chip/adapter';
+    export * from 'resources/sass/@material/chips/chip/component';
+    export * from 'resources/sass/@material/chips/chip/foundation';
+    export * from 'resources/sass/@material/chips/chip/types';
+    export { cssClasses as chipCssClasses, strings as chipStrings } from 'resources/sass/@material/chips/chip/constants';
 }
 
 declare module '@material/chips/chip-set/index' {
@@ -116,10 +116,10 @@ declare module '@material/chips/chip-set/index' {
       * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
       * THE SOFTWARE.
       */
-    export * from '@material/chips/chip-set/adapter';
-    export * from '@material/chips/chip-set/component';
-    export * from '@material/chips/chip-set/foundation';
-    export { cssClasses as chipSetCssClasses, strings as chipSetStrings } from '@material/chips/chip-set/constants';
+    export * from 'resources/sass/@material/chips/chip-set/adapter';
+    export * from 'resources/sass/@material/chips/chip-set/component';
+    export * from 'resources/sass/@material/chips/chip-set/foundation';
+    export { cssClasses as chipSetCssClasses, strings as chipSetStrings } from 'resources/sass/@material/chips/chip-set/constants';
 }
 
 declare module '@material/chips/trailingaction/adapter' {
@@ -145,7 +145,7 @@ declare module '@material/chips/trailingaction/adapter' {
         * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
         * THE SOFTWARE.
         */
-    import { InteractionTrigger } from '@material/chips/trailingaction/constants';
+    import { InteractionTrigger } from 'resources/sass/@material/chips/trailingaction/constants';
     /**
         * Defines the shape of the adapter expected by the foundation.
         * Implement this adapter for your framework of choice to delegate updates to
@@ -185,10 +185,10 @@ declare module '@material/chips/trailingaction/component' {
         * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
         * THE SOFTWARE.
         */
-    import { MDCComponent } from '@material/base/component';
-    import { MDCRipple, MDCRippleFactory } from '@material/ripple/component';
-    import { MDCRippleCapableSurface } from '@material/ripple/types';
-    import { MDCChipTrailingActionFoundation } from '@material/chips/trailingaction/foundation';
+    import { MDCComponent } from 'resources/sass/@material/base/component';
+    import { MDCRipple, MDCRippleFactory } from 'resources/sass/@material/ripple/component';
+    import { MDCRippleCapableSurface } from 'resources/sass/@material/ripple/types';
+    import { MDCChipTrailingActionFoundation } from 'resources/sass/@material/chips/trailingaction/foundation';
     /**
         * Creates a trailing action component on the given element.
         */
@@ -229,8 +229,8 @@ declare module '@material/chips/trailingaction/foundation' {
       * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
       * THE SOFTWARE.
       */
-    import { MDCFoundation } from '@material/base/foundation';
-    import { MDCChipTrailingActionAdapter } from '@material/chips/trailingaction/adapter';
+    import { MDCFoundation } from 'resources/sass/@material/base/foundation';
+    import { MDCChipTrailingActionAdapter } from 'resources/sass/@material/chips/trailingaction/adapter';
     export class MDCChipTrailingActionFoundation extends MDCFoundation<MDCChipTrailingActionAdapter> {
         static get strings(): {
             ARIA_HIDDEN: string;
@@ -272,7 +272,7 @@ declare module '@material/chips/trailingaction/types' {
       * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
       * THE SOFTWARE.
       */
-    import { InteractionTrigger } from '@material/chips/trailingaction/constants';
+    import { InteractionTrigger } from 'resources/sass/@material/chips/trailingaction/constants';
     export interface MDCChipTrailingActionInteractionEventDetail {
         trigger: InteractionTrigger;
     }
@@ -349,7 +349,7 @@ declare module '@material/chips/chip/adapter' {
         * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
         * THE SOFTWARE.
         */
-    import { EventSource } from '@material/chips/chip/constants';
+    import { EventSource } from 'resources/sass/@material/chips/chip/constants';
     /**
         * Defines the shape of the adapter expected by the foundation.
         * Implement this adapter for your framework of choice to delegate updates to
@@ -487,11 +487,11 @@ declare module '@material/chips/chip/component' {
         * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
         * THE SOFTWARE.
         */
-    import { MDCComponent } from '@material/base/component';
-    import { MDCRipple, MDCRippleFactory } from '@material/ripple/component';
-    import { MDCRippleCapableSurface } from '@material/ripple/types';
-    import { MDCChipTrailingActionFactory } from '@material/chips/trailingaction/component';
-    import { MDCChipFoundation } from '@material/chips/chip/foundation';
+    import { MDCComponent } from 'resources/sass/@material/base/component';
+    import { MDCRipple, MDCRippleFactory } from 'resources/sass/@material/ripple/component';
+    import { MDCRippleCapableSurface } from 'resources/sass/@material/ripple/types';
+    import { MDCChipTrailingActionFactory } from 'resources/sass/@material/chips/trailingaction/component';
+    import { MDCChipFoundation } from 'resources/sass/@material/chips/chip/foundation';
     export type MDCChipFactory = (el: Element, foundation?: MDCChipFoundation) => MDCChip;
     export class MDCChip extends MDCComponent<MDCChipFoundation> implements MDCRippleCapableSurface {
             /**
@@ -556,9 +556,9 @@ declare module '@material/chips/chip/foundation' {
         * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
         * THE SOFTWARE.
         */
-    import { MDCFoundation } from '@material/base/foundation';
-    import { MDCChipTrailingActionNavigationEvent } from '@material/chips/trailingaction/types';
-    import { MDCChipAdapter } from '@material/chips/chip/adapter';
+    import { MDCFoundation } from 'resources/sass/@material/base/foundation';
+    import { MDCChipTrailingActionNavigationEvent } from 'resources/sass/@material/chips/trailingaction/types';
+    import { MDCChipAdapter } from 'resources/sass/@material/chips/chip/adapter';
     export class MDCChipFoundation extends MDCFoundation<MDCChipAdapter> {
             static get strings(): {
                     ADDED_ANNOUNCEMENT_ATTRIBUTE: string;
@@ -681,7 +681,7 @@ declare module '@material/chips/chip/types' {
       * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
       * THE SOFTWARE.
       */
-    import { EventSource } from '@material/chips/chip/constants';
+    import { EventSource } from 'resources/sass/@material/chips/chip/constants';
     export interface MDCChipInteractionEventDetail {
         chipId: string;
     }
@@ -874,9 +874,9 @@ declare module '@material/chips/chip-set/component' {
         * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
         * THE SOFTWARE.
         */
-    import { MDCComponent } from '@material/base/component';
-    import { MDCChip, MDCChipFactory } from '@material/chips/chip/component';
-    import { MDCChipSetFoundation } from '@material/chips/chip-set/foundation';
+    import { MDCComponent } from 'resources/sass/@material/base/component';
+    import { MDCChip, MDCChipFactory } from 'resources/sass/@material/chips/chip/component';
+    import { MDCChipSetFoundation } from 'resources/sass/@material/chips/chip-set/foundation';
     export class MDCChipSet extends MDCComponent<MDCChipSetFoundation> {
             static attachTo(root: Element): MDCChipSet;
             get chips(): ReadonlyArray<MDCChip>;
@@ -921,9 +921,9 @@ declare module '@material/chips/chip-set/foundation' {
         * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
         * THE SOFTWARE.
         */
-    import { MDCFoundation } from '@material/base/foundation';
-    import { MDCChipInteractionEventDetail, MDCChipNavigationEventDetail, MDCChipRemovalEventDetail, MDCChipSelectionEventDetail } from '@material/chips/chip/types';
-    import { MDCChipSetAdapter } from '@material/chips/chip-set/adapter';
+    import { MDCFoundation } from 'resources/sass/@material/base/foundation';
+    import { MDCChipInteractionEventDetail, MDCChipNavigationEventDetail, MDCChipRemovalEventDetail, MDCChipSelectionEventDetail } from 'resources/sass/@material/chips/chip/types';
+    import { MDCChipSetAdapter } from 'resources/sass/@material/chips/chip-set/adapter';
     export class MDCChipSetFoundation extends MDCFoundation<MDCChipSetAdapter> {
             static get strings(): {
                     CHIP_SELECTOR: string;

@@ -30,9 +30,9 @@
 @use '@material/ripple/ripple-theme';
 @use '@material/typography/typography';
 @use '@material/feature-targeting/feature-targeting';
-@use './variables';
+@use 'variables';
 @use '@material/theme/theme-color';
-@use './evolution-mixins';
+@use 'evolution-mixins';
 
 //
 // Public

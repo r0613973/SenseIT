@@ -20,10 +20,10 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
  * THE SOFTWARE.
  */
-import { MDCComponent } from '@material/base/component';
-import { MDCRippleFactory } from '@material/ripple/component';
-import { MDCRippleCapableSurface } from '@material/ripple/types';
-import { MDCTabIndicatorFactory } from '@material/tab-indicator/component';
+import { MDCComponent } from 'resources/sass/@material/base/component';
+import { MDCRippleFactory } from 'resources/sass/@material/ripple/component';
+import { MDCRippleCapableSurface } from 'resources/sass/@material/ripple/types';
+import { MDCTabIndicatorFactory } from 'resources/sass/@material/tab-indicator/component';
 import { MDCTabFoundation } from './foundation';
 import { MDCTabDimensions } from './types';
 export declare type MDCTabFactory = (el: Element, foundation?: MDCTabFoundation) => MDCTab;

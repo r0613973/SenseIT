@@ -20,7 +20,7 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
  * THE SOFTWARE.
  */
-import { MDCComponent } from '@material/base/component';
+import { MDCComponent } from 'resources/sass/@material/base/component';
 import { MDCSelectHelperTextFoundation } from './foundation';
 export declare type MDCSelectHelperTextFactory = (el: Element, foundation?: MDCSelectHelperTextFoundation) => MDCSelectHelperText;
 export declare class MDCSelectHelperText extends MDCComponent<MDCSelectHelperTextFoundation> {

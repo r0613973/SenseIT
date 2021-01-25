@@ -1,6 +1,7 @@
 // Fonts
 
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans&display=swap');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css');
 //@import '~bootstrap/scss/bootstrap';
 // Variables
 
@@ -13,7 +14,10 @@
 
 @import "@material/ripple/mixins";
 
-
+@import "@material/tab-bar/mdc-tab-bar";
+@import "@material/tab-scroller/mdc-tab-scroller";
+@import "@material/tab-indicator/mdc-tab-indicator";
+@import "@material/tab/mdc-tab";
 
 
 
@@ -21,6 +25,7 @@
 @import "login";
 @import "home";
 @import "shrine-Drawer";
+@import "bottomnav";
 
 
 //

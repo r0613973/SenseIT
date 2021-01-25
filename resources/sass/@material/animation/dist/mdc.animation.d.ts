@@ -23,11 +23,11 @@ declare module '@material/animation' {
       * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
       * THE SOFTWARE.
       */
-    import * as util from '@material/animation/util';
+    import * as util from 'resources/sass/@material/animation/util';
     export { util };
-    export * from '@material/animation/animationframe';
-    export * from '@material/animation/types';
-    export * from '@material/animation/util';
+    export * from 'resources/sass/@material/animation/animationframe';
+    export * from 'resources/sass/@material/animation/types';
+    export * from 'resources/sass/@material/animation/util';
 }
 
 declare module '@material/animation/util' {
@@ -53,7 +53,7 @@ declare module '@material/animation/util' {
       * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
       * THE SOFTWARE.
       */
-    import { PrefixedCssPropertyName, PrefixedJsEventType, StandardCssPropertyName, StandardJsEventType } from '@material/animation/types';
+    import { PrefixedCssPropertyName, PrefixedJsEventType, StandardCssPropertyName, StandardJsEventType } from 'resources/sass/@material/animation/types';
     export function getCorrectPropertyName(windowObj: Window, cssProperty: StandardCssPropertyName): StandardCssPropertyName | PrefixedCssPropertyName;
     export function getCorrectEventName(windowObj: Window, eventType: StandardJsEventType): StandardJsEventType | PrefixedJsEventType;
 }

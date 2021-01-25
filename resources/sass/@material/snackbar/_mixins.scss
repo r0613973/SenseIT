@@ -30,7 +30,7 @@
 @use '@material/elevation/mixins' as elevation-mixins;
 @use '@material/shape/mixins' as shape-mixins;
 @use '@material/theme/theme';
-@use './variables';
+@use 'variables';
 
 @mixin core-styles($query: feature-targeting.all()) {
   $feat-structure: feature-targeting.create-target($query, structure);

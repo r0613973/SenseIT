@@ -28,10 +28,10 @@ declare module '@material/checkbox' {
       * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
       * THE SOFTWARE.
       */
-    export * from '@material/checkbox/adapter';
-    export * from '@material/checkbox/component';
-    export * from '@material/checkbox/constants';
-    export * from '@material/checkbox/foundation';
+    export * from 'resources/sass/@material/checkbox/adapter';
+    export * from 'resources/sass/@material/checkbox/component';
+    export * from 'resources/sass/@material/checkbox/constants';
+    export * from 'resources/sass/@material/checkbox/foundation';
 }
 
 declare module '@material/checkbox/adapter' {
@@ -79,10 +79,10 @@ declare module '@material/checkbox/component' {
       * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
       * THE SOFTWARE.
       */
-    import { MDCComponent } from '@material/base/component';
-    import { MDCRipple } from '@material/ripple/component';
-    import { MDCRippleCapableSurface } from '@material/ripple/types';
-    import { MDCCheckboxFoundation } from '@material/checkbox/foundation';
+    import { MDCComponent } from 'resources/sass/@material/base/component';
+    import { MDCRipple } from 'resources/sass/@material/ripple/component';
+    import { MDCRippleCapableSurface } from 'resources/sass/@material/ripple/types';
+    import { MDCCheckboxFoundation } from 'resources/sass/@material/checkbox/foundation';
     export type MDCCheckboxFactory = (el: Element, foundation?: MDCCheckboxFoundation) => MDCCheckbox;
     export class MDCCheckbox extends MDCComponent<MDCCheckboxFoundation> implements MDCRippleCapableSurface {
         static attachTo(root: Element): MDCCheckbox;
@@ -182,8 +182,8 @@ declare module '@material/checkbox/foundation' {
         * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
         * THE SOFTWARE.
         */
-    import { MDCFoundation } from '@material/base/foundation';
-    import { MDCCheckboxAdapter } from '@material/checkbox/adapter';
+    import { MDCFoundation } from 'resources/sass/@material/base/foundation';
+    import { MDCCheckboxAdapter } from 'resources/sass/@material/checkbox/adapter';
     export class MDCCheckboxFoundation extends MDCFoundation<MDCCheckboxAdapter> {
             static get cssClasses(): {
                     ANIM_CHECKED_INDETERMINATE: string;

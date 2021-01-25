@@ -28,10 +28,10 @@ declare module '@material/radio' {
       * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
       * THE SOFTWARE.
       */
-    export * from '@material/radio/adapter';
-    export * from '@material/radio/component';
-    export * from '@material/radio/constants';
-    export * from '@material/radio/foundation';
+    export * from 'resources/sass/@material/radio/adapter';
+    export * from 'resources/sass/@material/radio/component';
+    export * from 'resources/sass/@material/radio/constants';
+    export * from 'resources/sass/@material/radio/foundation';
 }
 
 declare module '@material/radio/adapter' {
@@ -72,10 +72,10 @@ declare module '@material/radio/component' {
       * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
       * THE SOFTWARE.
       */
-    import { MDCComponent } from '@material/base/component';
-    import { MDCRipple } from '@material/ripple/component';
-    import { MDCRippleCapableSurface } from '@material/ripple/types';
-    import { MDCRadioFoundation } from '@material/radio/foundation';
+    import { MDCComponent } from 'resources/sass/@material/base/component';
+    import { MDCRipple } from 'resources/sass/@material/ripple/component';
+    import { MDCRippleCapableSurface } from 'resources/sass/@material/ripple/types';
+    import { MDCRadioFoundation } from 'resources/sass/@material/radio/foundation';
     export class MDCRadio extends MDCComponent<MDCRadioFoundation> implements MDCRippleCapableSurface {
         static attachTo(root: Element): MDCRadio;
         get checked(): boolean;
@@ -146,8 +146,8 @@ declare module '@material/radio/foundation' {
       * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
       * THE SOFTWARE.
       */
-    import { MDCFoundation } from '@material/base/foundation';
-    import { MDCRadioAdapter } from '@material/radio/adapter';
+    import { MDCFoundation } from 'resources/sass/@material/base/foundation';
+    import { MDCRadioAdapter } from 'resources/sass/@material/radio/adapter';
     export class MDCRadioFoundation extends MDCFoundation<MDCRadioAdapter> {
         static get cssClasses(): {
             DISABLED: string;

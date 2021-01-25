@@ -28,7 +28,7 @@
 @use '@material/feature-targeting/feature-targeting';
 @use '@material/theme/theme';
 @use '@material/theme/theme-color';
-@use './elevation-theme';
+@use 'elevation-theme';
 
 @mixin core-styles($query: feature-targeting.all()) {
   $feat-animation: feature-targeting.create-target($query, animation);

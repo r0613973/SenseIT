@@ -25,5 +25,5 @@ export * from './component';
 export * from './constants';
 export * from './foundation';
 export * from './types';
-export * from './helper-text/index';
-export * from './icon/index';
+export * from './helper-text';
+export * from './icon';

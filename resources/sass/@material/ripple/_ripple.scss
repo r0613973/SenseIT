@@ -32,7 +32,7 @@
 @use '@material/feature-targeting/feature-targeting';
 @use '@material/theme/theme';
 @use '@material/theme/theme-color';
-@use './ripple-theme';
+@use 'ripple-theme';
 
 @mixin core-styles($query: feature-targeting.all()) {
   $feat-structure: feature-targeting.create-target($query, structure);

@@ -20,7 +20,7 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
  * THE SOFTWARE.
  */
-import { MDCFoundation } from '@material/base/foundation';
+import { MDCFoundation } from 'resources/sass/@material/base/foundation';
 import { MDCChipTrailingActionNavigationEvent } from '../trailingaction/types';
 import { MDCChipAdapter } from './adapter';
 export declare class MDCChipFoundation extends MDCFoundation<MDCChipAdapter> {

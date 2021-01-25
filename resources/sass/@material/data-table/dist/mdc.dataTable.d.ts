@@ -27,11 +27,11 @@ declare module '@material/data-table' {
       * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
       * THE SOFTWARE.
       */
-    export * from '@material/data-table/adapter';
-    export * from '@material/data-table/component';
-    export * from '@material/data-table/foundation';
-    export * from '@material/data-table/constants';
-    export * from '@material/data-table/types';
+    export * from 'resources/sass/@material/data-table/adapter';
+    export * from 'resources/sass/@material/data-table/component';
+    export * from 'resources/sass/@material/data-table/foundation';
+    export * from 'resources/sass/@material/data-table/constants';
+    export * from 'resources/sass/@material/data-table/types';
 }
 
 declare module '@material/data-table/adapter' {
@@ -57,8 +57,8 @@ declare module '@material/data-table/adapter' {
         * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
         * THE SOFTWARE.
         */
-    import { SortValue } from '@material/data-table/constants';
-    import { MDCDataTableRowSelectionChangedEventDetail, ProgressIndicatorStyles, SortActionEventDetail } from '@material/data-table/types';
+    import { SortValue } from 'resources/sass/@material/data-table/constants';
+    import { MDCDataTableRowSelectionChangedEventDetail, ProgressIndicatorStyles, SortActionEventDetail } from 'resources/sass/@material/data-table/types';
     /**
         * Defines the shape of the adapter expected by the foundation.
         * Implement this adapter for your framework of choice to delegate updates to
@@ -262,9 +262,9 @@ declare module '@material/data-table/component' {
         * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
         * THE SOFTWARE.
         */
-    import { MDCComponent } from '@material/base/component';
-    import { MDCCheckboxFactory } from '@material/checkbox/component';
-    import { MDCDataTableFoundation } from '@material/data-table/foundation';
+    import { MDCComponent } from 'resources/sass/@material/base/component';
+    import { MDCCheckboxFactory } from 'resources/sass/@material/checkbox/component';
+    import { MDCDataTableFoundation } from 'resources/sass/@material/data-table/foundation';
     /**
         * Implementation of `MDCDataTableFoundation`
         */
@@ -329,9 +329,9 @@ declare module '@material/data-table/foundation' {
         * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
         * THE SOFTWARE.
         */
-    import { MDCFoundation } from '@material/base/foundation';
-    import { MDCDataTableAdapter } from '@material/data-table/adapter';
-    import { SortActionEventData } from '@material/data-table/types';
+    import { MDCFoundation } from 'resources/sass/@material/base/foundation';
+    import { MDCDataTableAdapter } from 'resources/sass/@material/data-table/adapter';
+    import { SortActionEventData } from 'resources/sass/@material/data-table/types';
     /**
         * The Foundation of data table component containing pure business logic, any
         * logic requiring DOM manipulation are delegated to adapter methods.
@@ -517,7 +517,7 @@ declare module '@material/data-table/types' {
         * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
         * THE SOFTWARE.
         */
-    import { SortValue } from '@material/data-table/constants';
+    import { SortValue } from 'resources/sass/@material/data-table/constants';
     export interface MDCDataTableRowSelectionChangedEventDetail {
             rowIndex: number;
             rowId: string | null;

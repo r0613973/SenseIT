@@ -20,7 +20,7 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
  * THE SOFTWARE.
  */
-import { MDCComponent } from '@material/base/component';
+import { MDCComponent } from 'resources/sass/@material/base/component';
 import { MDCSelectIconFoundation } from './foundation';
 export declare type MDCSelectIconFactory = (el: Element, foundation?: MDCSelectIconFoundation) => MDCSelectIcon;
 export declare class MDCSelectIcon extends MDCComponent<MDCSelectIconFoundation> {

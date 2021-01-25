@@ -29,11 +29,11 @@ declare module '@material/tab' {
       * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
       * THE SOFTWARE.
       */
-    export * from '@material/tab/adapter';
-    export * from '@material/tab/component';
-    export * from '@material/tab/constants';
-    export * from '@material/tab/foundation';
-    export * from '@material/tab/types';
+    export * from 'resources/sass/@material/tab/adapter';
+    export * from 'resources/sass/@material/tab/component';
+    export * from 'resources/sass/@material/tab/constants';
+    export * from 'resources/sass/@material/tab/foundation';
+    export * from 'resources/sass/@material/tab/types';
 }
 
 declare module '@material/tab/adapter' {
@@ -123,12 +123,12 @@ declare module '@material/tab/component' {
         * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
         * THE SOFTWARE.
         */
-    import { MDCComponent } from '@material/base/component';
-    import { MDCRippleFactory } from '@material/ripple/component';
-    import { MDCRippleCapableSurface } from '@material/ripple/types';
-    import { MDCTabIndicatorFactory } from '@material/tab-indicator/component';
-    import { MDCTabFoundation } from '@material/tab/foundation';
-    import { MDCTabDimensions } from '@material/tab/types';
+    import { MDCComponent } from 'resources/sass/@material/base/component';
+    import { MDCRippleFactory } from 'resources/sass/@material/ripple/component';
+    import { MDCRippleCapableSurface } from 'resources/sass/@material/ripple/types';
+    import { MDCTabIndicatorFactory } from 'resources/sass/@material/tab-indicator/component';
+    import { MDCTabFoundation } from 'resources/sass/@material/tab/foundation';
+    import { MDCTabDimensions } from 'resources/sass/@material/tab/types';
     export type MDCTabFactory = (el: Element, foundation?: MDCTabFoundation) => MDCTab;
     export class MDCTab extends MDCComponent<MDCTabFoundation> implements MDCRippleCapableSurface {
             static attachTo(root: Element): MDCTab;
@@ -222,9 +222,9 @@ declare module '@material/tab/foundation' {
         * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
         * THE SOFTWARE.
         */
-    import { MDCFoundation } from '@material/base/foundation';
-    import { MDCTabAdapter } from '@material/tab/adapter';
-    import { MDCTabDimensions } from '@material/tab/types';
+    import { MDCFoundation } from 'resources/sass/@material/base/foundation';
+    import { MDCTabAdapter } from 'resources/sass/@material/tab/adapter';
+    import { MDCTabDimensions } from 'resources/sass/@material/tab/types';
     export class MDCTabFoundation extends MDCFoundation<MDCTabAdapter> {
             static get cssClasses(): {
                     ACTIVE: string;

@@ -28,13 +28,13 @@ declare module '@material/drawer' {
       * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
       * THE SOFTWARE.
       */
-    import * as util from '@material/drawer/util';
+    import * as util from 'resources/sass/@material/drawer/util';
     export { util };
-    export * from '@material/drawer/adapter';
-    export * from '@material/drawer/component';
-    export * from '@material/drawer/constants';
-    export * from '@material/drawer/dismissible/foundation';
-    export * from '@material/drawer/modal/foundation';
+    export * from 'resources/sass/@material/drawer/adapter';
+    export * from 'resources/sass/@material/drawer/component';
+    export * from 'resources/sass/@material/drawer/constants';
+    export * from 'resources/sass/@material/drawer/dismissible/foundation';
+    export * from 'resources/sass/@material/drawer/modal/foundation';
 }
 
 declare module '@material/drawer/util' {
@@ -60,7 +60,7 @@ declare module '@material/drawer/util' {
       * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
       * THE SOFTWARE.
       */
-    import { FocusOptions, FocusTrap } from '@material/dom/focus-trap';
+    import { FocusOptions, FocusTrap } from 'resources/sass/@material/dom/focus-trap';
     export type MDCDrawerFocusTrapFactory = (element: HTMLElement, options: FocusOptions) => FocusTrap;
     export function createFocusTrapInstance(surfaceEl: HTMLElement, focusTrapFactory: MDCDrawerFocusTrapFactory): FocusTrap;
 }
@@ -147,10 +147,10 @@ declare module '@material/drawer/component' {
         * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
         * THE SOFTWARE.
         */
-    import { MDCComponent } from '@material/base/component';
-    import { MDCList, MDCListFactory } from '@material/list/component';
-    import { MDCDismissibleDrawerFoundation } from '@material/drawer/dismissible/foundation';
-    import { MDCDrawerFocusTrapFactory } from '@material/drawer/util';
+    import { MDCComponent } from 'resources/sass/@material/base/component';
+    import { MDCList, MDCListFactory } from 'resources/sass/@material/list/component';
+    import { MDCDismissibleDrawerFoundation } from 'resources/sass/@material/drawer/dismissible/foundation';
+    import { MDCDrawerFocusTrapFactory } from 'resources/sass/@material/drawer/util';
     /**
         * @events `MDCDrawer:closed {}` Emits when the navigation drawer has closed.
         * @events `MDCDrawer:opened {}` Emits when the navigation drawer has opened.
@@ -238,8 +238,8 @@ declare module '@material/drawer/dismissible/foundation' {
         * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
         * THE SOFTWARE.
         */
-    import { MDCFoundation } from '@material/base/foundation';
-    import { MDCDrawerAdapter } from '@material/drawer/adapter';
+    import { MDCFoundation } from 'resources/sass/@material/base/foundation';
+    import { MDCDrawerAdapter } from 'resources/sass/@material/drawer/adapter';
     export class MDCDismissibleDrawerFoundation extends MDCFoundation<MDCDrawerAdapter> {
             static get strings(): {
                     APP_CONTENT_SELECTOR: string;
@@ -325,7 +325,7 @@ declare module '@material/drawer/modal/foundation' {
         * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
         * THE SOFTWARE.
         */
-    import { MDCDismissibleDrawerFoundation } from '@material/drawer/dismissible/foundation';
+    import { MDCDismissibleDrawerFoundation } from 'resources/sass/@material/drawer/dismissible/foundation';
     export class MDCModalDrawerFoundation extends MDCDismissibleDrawerFoundation {
             /**
                 * Handles click event on scrim.

@@ -21,7 +21,7 @@
  * THE SOFTWARE.
  */
 
-import {MDCFoundation} from '@material/base/foundation';
+import {MDCFoundation} from 'resources/sass/@material/base/foundation';
 
 import {MDCBannerAdapter} from './adapter';
 import {CloseReason, cssClasses, numbers} from './constants';

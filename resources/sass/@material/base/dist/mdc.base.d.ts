@@ -23,9 +23,9 @@ declare module '@material/base' {
       * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
       * THE SOFTWARE.
       */
-    export * from '@material/base/component';
-    export * from '@material/base/foundation';
-    export * from '@material/base/types';
+    export * from 'resources/sass/@material/base/component';
+    export * from 'resources/sass/@material/base/foundation';
+    export * from 'resources/sass/@material/base/types';
 }
 
 declare module '@material/base/component' {
@@ -51,8 +51,8 @@ declare module '@material/base/component' {
         * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
         * THE SOFTWARE.
         */
-    import { MDCFoundation } from '@material/base/foundation';
-    import { CustomEventListener, EventType, SpecificEventListener } from '@material/base/types';
+    import { MDCFoundation } from 'resources/sass/@material/base/foundation';
+    import { CustomEventListener, EventType, SpecificEventListener } from 'resources/sass/@material/base/types';
     export class MDCComponent<FoundationType extends MDCFoundation> {
             root: Element;
             static attachTo(root: Element): MDCComponent<MDCFoundation<{}>>;

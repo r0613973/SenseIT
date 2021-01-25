@@ -26,13 +26,13 @@ declare module '@material/snackbar' {
       * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
       * THE SOFTWARE.
       */
-    import * as util from '@material/snackbar/util';
+    import * as util from 'resources/sass/@material/snackbar/util';
     export { util };
-    export * from '@material/snackbar/adapter';
-    export * from '@material/snackbar/component';
-    export * from '@material/snackbar/constants';
-    export * from '@material/snackbar/foundation';
-    export * from '@material/snackbar/types';
+    export * from 'resources/sass/@material/snackbar/adapter';
+    export * from 'resources/sass/@material/snackbar/component';
+    export * from 'resources/sass/@material/snackbar/constants';
+    export * from 'resources/sass/@material/snackbar/foundation';
+    export * from 'resources/sass/@material/snackbar/types';
 }
 
 declare module '@material/snackbar/util' {
@@ -104,9 +104,9 @@ declare module '@material/snackbar/component' {
         * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
         * THE SOFTWARE.
         */
-    import { MDCComponent } from '@material/base/component';
-    import { MDCSnackbarFoundation } from '@material/snackbar/foundation';
-    import { MDCSnackbarAnnouncerFactory } from '@material/snackbar/types';
+    import { MDCComponent } from 'resources/sass/@material/base/component';
+    import { MDCSnackbarFoundation } from 'resources/sass/@material/snackbar/foundation';
+    import { MDCSnackbarAnnouncerFactory } from 'resources/sass/@material/snackbar/types';
     export class MDCSnackbar extends MDCComponent<MDCSnackbarFoundation> {
             static attachTo(root: Element): MDCSnackbar;
             initialize(announcerFactory?: MDCSnackbarAnnouncerFactory): void;
@@ -213,8 +213,8 @@ declare module '@material/snackbar/foundation' {
         * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
         * THE SOFTWARE.
         */
-    import { MDCFoundation } from '@material/base/foundation';
-    import { MDCSnackbarAdapter } from '@material/snackbar/adapter';
+    import { MDCFoundation } from 'resources/sass/@material/base/foundation';
+    import { MDCSnackbarAdapter } from 'resources/sass/@material/snackbar/adapter';
     export class MDCSnackbarFoundation extends MDCFoundation<MDCSnackbarAdapter> {
             static get cssClasses(): {
                     CLOSING: string;
