@@ -36,7 +36,7 @@
 @use '@material/theme/theme';
 @use '@material/theme/theme-color';
 @use '@material/touch-target/variables' as touch-target-variables;
-@use './checkbox-custom-properties';
+@use 'checkbox-custom-properties';
 
 $baseline-theme-color: secondary !default;
 $mark-color: theme-color.prop-value(on-secondary) !default;

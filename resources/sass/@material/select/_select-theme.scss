@@ -41,7 +41,7 @@
 @use '@material/theme/state';
 @use '@material/theme/variables' as theme-variables;
 @use '@material/typography/mixins' as typography-mixins;
-@use './select-icon-theme';
+@use 'select-icon-theme';
 
 $ripple-target: '.mdc-select__ripple';
 

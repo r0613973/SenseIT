@@ -23,7 +23,7 @@
 @use 'sass:list';
 @use 'sass:map';
 @use 'sass:meta';
-@use './gss';
+@use 'gss';
 
 /// When true, add an additional property/value declaration before declarations
 /// that use advanced features such as custom properties or CSS functions. This

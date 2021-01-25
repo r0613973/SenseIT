@@ -33,12 +33,12 @@
 @use '@material/ripple/ripple-theme';
 @use '@material/touch-target/mixins' as touch-target-mixins;
 @use '@material/theme/theme-color';
-@use './checkbox-custom-properties';
+@use 'checkbox-custom-properties';
 @use '@material/theme/theme';
 @use '@material/theme/color-custom-properties';
 @use '@material/theme/custom-properties';
 @use '@material/touch-target/variables' as touch-target-variables;
-@use './checkbox-theme';
+@use 'checkbox-theme';
 
 ///
 /// Checkbox and ripple styles.

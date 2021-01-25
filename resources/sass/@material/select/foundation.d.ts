@@ -20,7 +20,7 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
  * THE SOFTWARE.
  */
-import { MDCFoundation } from '@material/base/foundation';
+import { MDCFoundation } from 'resources/sass/@material/base/foundation';
 import { MDCSelectAdapter } from './adapter';
 import { MDCSelectFoundationMap } from './types';
 export declare class MDCSelectFoundation extends MDCFoundation<MDCSelectAdapter> {

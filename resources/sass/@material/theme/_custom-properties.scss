@@ -21,8 +21,8 @@
 //
 @use 'sass:map';
 @use 'sass:meta';
-@use './css';
-@use './gss';
+@use 'css';
+@use 'gss';
 
 /// Returns true if the parameter is a custom property Map.
 ///

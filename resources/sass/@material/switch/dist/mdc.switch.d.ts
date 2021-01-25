@@ -28,10 +28,10 @@ declare module '@material/switch' {
       * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
       * THE SOFTWARE.
       */
-    export * from '@material/switch/adapter';
-    export * from '@material/switch/component';
-    export * from '@material/switch/constants';
-    export * from '@material/switch/foundation';
+    export * from 'resources/sass/@material/switch/adapter';
+    export * from 'resources/sass/@material/switch/component';
+    export * from 'resources/sass/@material/switch/constants';
+    export * from 'resources/sass/@material/switch/foundation';
 }
 
 declare module '@material/switch/adapter' {
@@ -89,10 +89,10 @@ declare module '@material/switch/component' {
       * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
       * THE SOFTWARE.
       */
-    import { MDCComponent } from '@material/base/component';
-    import { MDCRipple } from '@material/ripple/component';
-    import { MDCRippleCapableSurface } from '@material/ripple/types';
-    import { MDCSwitchFoundation } from '@material/switch/foundation';
+    import { MDCComponent } from 'resources/sass/@material/base/component';
+    import { MDCRipple } from 'resources/sass/@material/ripple/component';
+    import { MDCRippleCapableSurface } from 'resources/sass/@material/ripple/types';
+    import { MDCSwitchFoundation } from 'resources/sass/@material/switch/foundation';
     export class MDCSwitch extends MDCComponent<MDCSwitchFoundation> implements MDCRippleCapableSurface {
         static attachTo(root: HTMLElement): MDCSwitch;
         destroy(): void;
@@ -149,8 +149,8 @@ declare module '@material/switch/foundation' {
       * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
       * THE SOFTWARE.
       */
-    import { MDCFoundation } from '@material/base/foundation';
-    import { MDCSwitchAdapter } from '@material/switch/adapter';
+    import { MDCFoundation } from 'resources/sass/@material/base/foundation';
+    import { MDCSwitchAdapter } from 'resources/sass/@material/switch/adapter';
     export class MDCSwitchFoundation extends MDCFoundation<MDCSwitchAdapter> {
         /** The string constants used by the switch. */
         static get strings(): {

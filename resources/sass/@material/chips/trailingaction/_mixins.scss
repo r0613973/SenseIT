@@ -29,7 +29,7 @@
 @use '@material/rtl/mixins' as rtl;
 @use '@material/theme/theme';
 @use '@material/touch-target/mixins' as touch;
-@use './variables';
+@use 'variables';
 
 $ripple-target: '.mdc-chip-trailing-action__ripple';
 

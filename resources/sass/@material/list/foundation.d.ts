@@ -20,7 +20,7 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
  * THE SOFTWARE.
  */
-import { MDCFoundation } from '@material/base/foundation';
+import { MDCFoundation } from 'resources/sass/@material/base/foundation';
 import { MDCListAdapter } from './adapter';
 import { MDCListIndex } from './types';
 export declare class MDCListFoundation extends MDCFoundation<MDCListAdapter> {

@@ -26,8 +26,8 @@ declare module '@material/auto-init' {
         * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
         * THE SOFTWARE.
         */
-    import { MDCComponent } from '@material/base/component';
-    import { MDCFoundation } from '@material/base/foundation';
+    import { MDCComponent } from 'resources/sass/@material/base/component';
+    import { MDCFoundation } from 'resources/sass/@material/base/foundation';
     export interface MDCAttachable {
             new <F extends MDCFoundation>(root: Element, foundation?: F, ...args: Array<unknown>): MDCComponent<F>;
             attachTo<F extends MDCFoundation>(root: Element): MDCComponent<F>;

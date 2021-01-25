@@ -20,8 +20,8 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
  * THE SOFTWARE.
  */
-import { MDCFoundation } from '@material/base/foundation';
-import { MDCTabInteractionEvent } from '@material/tab/types';
+import { MDCFoundation } from 'resources/sass/@material/base/foundation';
+import { MDCTabInteractionEvent } from 'resources/sass/@material/tab/types';
 import { MDCTabBarAdapter } from './adapter';
 export declare class MDCTabBarFoundation extends MDCFoundation<MDCTabBarAdapter> {
     static get strings(): {

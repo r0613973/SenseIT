@@ -20,7 +20,7 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
  * THE SOFTWARE.
  */
-import { EventType, SpecificEventListener } from '@material/base/types';
+import { EventType, SpecificEventListener } from 'resources/sass/@material/base/types';
 import { CssClasses } from './constants';
 /**
  * Implement this adapter for your framework of choice to delegate updates to

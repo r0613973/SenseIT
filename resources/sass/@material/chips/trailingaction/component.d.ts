@@ -20,9 +20,9 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
  * THE SOFTWARE.
  */
-import { MDCComponent } from '@material/base/component';
-import { MDCRipple, MDCRippleFactory } from '@material/ripple/component';
-import { MDCRippleCapableSurface } from '@material/ripple/types';
+import { MDCComponent } from 'resources/sass/@material/base/component';
+import { MDCRipple, MDCRippleFactory } from 'resources/sass/@material/ripple/component';
+import { MDCRippleCapableSurface } from 'resources/sass/@material/ripple/types';
 import { MDCChipTrailingActionFoundation } from './foundation';
 /**
  * Creates a trailing action component on the given element.

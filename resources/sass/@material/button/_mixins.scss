@@ -36,7 +36,7 @@
 @use '@material/shape/mixins' as shape-mixins;
 @use '@material/shape/functions' as shape-functions;
 @use '@material/density/functions' as density-functions;
-@use './variables';
+@use 'variables';
 @use '@material/elevation/functions' as elevation-functions;
 
 $ripple-target: '.mdc-button__ripple';

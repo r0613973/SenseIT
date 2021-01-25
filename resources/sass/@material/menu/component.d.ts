@@ -20,12 +20,12 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
  * THE SOFTWARE.
  */
-import { MDCComponent } from '@material/base/component';
-import { MDCListFactory } from '@material/list/component';
-import { MDCListIndex } from '@material/list/types';
-import { MDCMenuSurfaceFactory } from '@material/menu-surface/component';
-import { Corner } from '@material/menu-surface/constants';
-import { MDCMenuDistance } from '@material/menu-surface/types';
+import { MDCComponent } from 'resources/sass/@material/base/component';
+import { MDCListFactory } from 'resources/sass/@material/list/component';
+import { MDCListIndex } from 'resources/sass/@material/list/types';
+import { MDCMenuSurfaceFactory } from 'resources/sass/@material/menu-surface/component';
+import { Corner } from 'resources/sass/@material/menu-surface/constants';
+import { MDCMenuDistance } from 'resources/sass/@material/menu-surface/types';
 import { DefaultFocusState } from './constants';
 import { MDCMenuFoundation } from './foundation';
 export declare type MDCMenuFactory = (el: Element, foundation?: MDCMenuFoundation) => MDCMenu;

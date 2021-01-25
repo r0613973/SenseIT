@@ -27,13 +27,13 @@ declare module '@material/dialog' {
       * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
       * THE SOFTWARE.
       */
-    import * as util from '@material/dialog/util';
+    import * as util from 'resources/sass/@material/dialog/util';
     export { util };
-    export * from '@material/dialog/adapter';
-    export * from '@material/dialog/component';
-    export * from '@material/dialog/constants';
-    export * from '@material/dialog/foundation';
-    export * from '@material/dialog/types';
+    export * from 'resources/sass/@material/dialog/adapter';
+    export * from 'resources/sass/@material/dialog/component';
+    export * from 'resources/sass/@material/dialog/constants';
+    export * from 'resources/sass/@material/dialog/foundation';
+    export * from 'resources/sass/@material/dialog/types';
 }
 
 declare module '@material/dialog/util' {
@@ -59,7 +59,7 @@ declare module '@material/dialog/util' {
       * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
       * THE SOFTWARE.
       */
-    import { FocusOptions, FocusTrap } from '@material/dom/focus-trap';
+    import { FocusOptions, FocusTrap } from 'resources/sass/@material/dom/focus-trap';
     export type MDCDialogFocusTrapFactory = (element: HTMLElement, options: FocusOptions) => FocusTrap;
     export function createFocusTrapInstance(surfaceEl: HTMLElement, focusTrapFactory: MDCDialogFocusTrapFactory, initialFocusEl?: HTMLElement): FocusTrap;
     export function isScrollable(el: HTMLElement | null): boolean;
@@ -119,9 +119,9 @@ declare module '@material/dialog/component' {
       * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
       * THE SOFTWARE.
       */
-    import { MDCComponent } from '@material/base/component';
-    import { MDCDialogFoundation } from '@material/dialog/foundation';
-    import { MDCDialogFocusTrapFactory } from '@material/dialog/util';
+    import { MDCComponent } from 'resources/sass/@material/base/component';
+    import { MDCDialogFoundation } from 'resources/sass/@material/dialog/foundation';
+    import { MDCDialogFocusTrapFactory } from 'resources/sass/@material/dialog/util';
     export class MDCDialog extends MDCComponent<MDCDialogFoundation> {
         get isOpen(): boolean;
         get escapeKeyAction(): string;
@@ -218,8 +218,8 @@ declare module '@material/dialog/foundation' {
         * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
         * THE SOFTWARE.
         */
-    import { MDCFoundation } from '@material/base/foundation';
-    import { MDCDialogAdapter } from '@material/dialog/adapter';
+    import { MDCFoundation } from 'resources/sass/@material/base/foundation';
+    import { MDCDialogAdapter } from 'resources/sass/@material/dialog/adapter';
     export class MDCDialogFoundation extends MDCFoundation<MDCDialogAdapter> {
             static get cssClasses(): {
                     CLOSING: string;

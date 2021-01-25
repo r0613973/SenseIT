@@ -20,7 +20,7 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
  * THE SOFTWARE.
  */
-import { MDCFoundation } from '@material/base/foundation';
+import { MDCFoundation } from 'resources/sass/@material/base/foundation';
 import { MDCMenuAdapter } from './adapter';
 import { DefaultFocusState } from './constants';
 export declare class MDCMenuFoundation extends MDCFoundation<MDCMenuAdapter> {

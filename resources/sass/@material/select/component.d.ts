@@ -20,11 +20,11 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
  * THE SOFTWARE.
  */
-import { MDCComponent } from '@material/base/component';
-import { MDCFloatingLabelFactory } from '@material/floating-label/component';
-import { MDCLineRippleFactory } from '@material/line-ripple/component';
-import { MDCMenuFactory } from '@material/menu/component';
-import { MDCNotchedOutlineFactory } from '@material/notched-outline/component';
+import { MDCComponent } from 'resources/sass/@material/base/component';
+import { MDCFloatingLabelFactory } from 'resources/sass/@material/floating-label/component';
+import { MDCLineRippleFactory } from 'resources/sass/@material/line-ripple/component';
+import { MDCMenuFactory } from 'resources/sass/@material/menu/component';
+import { MDCNotchedOutlineFactory } from 'resources/sass/@material/notched-outline/component';
 import { MDCSelectFoundation } from './foundation';
 import { MDCSelectHelperTextFactory } from './helper-text/component';
 import { MDCSelectIconFactory } from './icon/component';

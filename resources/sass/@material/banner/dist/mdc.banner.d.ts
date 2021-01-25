@@ -26,10 +26,10 @@ declare module '@material/banner' {
       * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
       * THE SOFTWARE.
       */
-    export * from '@material/banner/adapter';
-    export * from '@material/banner/component';
-    export * from '@material/banner/constants';
-    export * from '@material/banner/foundation';
+    export * from 'resources/sass/@material/banner/adapter';
+    export * from 'resources/sass/@material/banner/component';
+    export * from 'resources/sass/@material/banner/constants';
+    export * from 'resources/sass/@material/banner/foundation';
 }
 
 declare module '@material/banner/adapter' {
@@ -55,7 +55,7 @@ declare module '@material/banner/adapter' {
         * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
         * THE SOFTWARE.
         */
-    import { CloseReason } from '@material/banner/constants';
+    import { CloseReason } from 'resources/sass/@material/banner/constants';
     /**
         * Defines the shape of the adapter expected by the foundation.
         * Implement this adapter for your framework of choice to delegate updates to
@@ -122,9 +122,9 @@ declare module '@material/banner/component' {
         * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
         * THE SOFTWARE.
         */
-    import { MDCComponent } from '@material/base/component';
-    import { CloseReason } from '@material/banner/constants';
-    import { MDCBannerFoundation } from '@material/banner/foundation';
+    import { MDCComponent } from 'resources/sass/@material/base/component';
+    import { CloseReason } from 'resources/sass/@material/banner/constants';
+    import { MDCBannerFoundation } from 'resources/sass/@material/banner/foundation';
     /** Vanilla JS implementation of banner component. */
     export class MDCBanner extends MDCComponent<MDCBannerFoundation> {
             static attachTo(root: Element): MDCBanner;
@@ -221,9 +221,9 @@ declare module '@material/banner/foundation' {
         * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
         * THE SOFTWARE.
         */
-    import { MDCFoundation } from '@material/base/foundation';
-    import { MDCBannerAdapter } from '@material/banner/adapter';
-    import { CloseReason } from '@material/banner/constants';
+    import { MDCFoundation } from 'resources/sass/@material/base/foundation';
+    import { MDCBannerAdapter } from 'resources/sass/@material/banner/adapter';
+    import { CloseReason } from 'resources/sass/@material/banner/constants';
     /**
         * Foundation class for banner. Responsibilities include opening and closing the
         * banner.

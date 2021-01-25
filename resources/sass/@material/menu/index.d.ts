@@ -20,7 +20,7 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
  * THE SOFTWARE.
  */
-export { Corner } from '@material/menu-surface/constants';
+export { Corner } from 'resources/sass/@material/menu-surface/constants';
 export * from './adapter';
 export * from './component';
 export * from './constants';

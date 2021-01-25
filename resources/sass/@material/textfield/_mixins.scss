@@ -44,8 +44,8 @@
 @use 'character-counter/mixins' as character-counter-mixins;
 @use 'icon/mixins' as icon-mixins;
 @use 'icon/variables' as icon-variables;
-@use './variables';
-@use './functions';
+@use 'variables';
+@use 'functions';
 @use '@material/rtl/mixins' as rtl-mixins;
 
 @mixin core-styles($query: feature-targeting.all()) {

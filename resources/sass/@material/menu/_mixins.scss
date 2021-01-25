@@ -30,7 +30,7 @@
 @use '@material/list/mixins' as list-mixins;
 @use '@material/list/variables' as list-variables;
 @use '@material/ripple/ripple';
-@use './variables';
+@use 'variables';
 
 @mixin core-styles($query: feature-targeting.all()) {
   $feat-color: feature-targeting.create-target($query, color);

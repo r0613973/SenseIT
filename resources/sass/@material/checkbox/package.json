@@ -51,7 +51,7 @@
   ],
   "license": "MIT",
   "main": "dist/mdc.checkbox.js",
-  "module": "./index.js",
+  "module": "index.js",
   "name": "@material/checkbox",
   "repository": {
     "type": "git",

@@ -20,7 +20,7 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
  * THE SOFTWARE.
  */
-import { FocusOptions, FocusTrap } from '@material/dom/focus-trap';
+import { FocusOptions, FocusTrap } from 'resources/sass/@material/dom/focus-trap';
 export declare type MDCDialogFocusTrapFactory = (element: HTMLElement, options: FocusOptions) => FocusTrap;
 export declare function createFocusTrapInstance(surfaceEl: HTMLElement, focusTrapFactory: MDCDialogFocusTrapFactory, initialFocusEl?: HTMLElement): FocusTrap;
 export declare function isScrollable(el: HTMLElement | null): boolean;

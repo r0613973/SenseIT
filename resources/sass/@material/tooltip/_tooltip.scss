@@ -27,7 +27,7 @@
 @use '@material/elevation/mixins' as elevation-mixins;
 @use '@material/feature-targeting/feature-targeting';
 @use '@material/rtl/rtl' as rtl;
-@use './tooltip-theme';
+@use 'tooltip-theme';
 @use '@material/typography/typography';
 
 $_padding-x: 4px;

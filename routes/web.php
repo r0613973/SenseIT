@@ -16,7 +16,11 @@ Auth::routes();
 Route::view('/', 'home');
 Route::redirect('home', '/');
 Route::get('logout', 'Auth\LoginController@logout');
-
+Route::view('/temperatuur', 'data-schermen/temperatuur');
+Route::view('/luchtkwaliteit', 'data-schermen/luchtkwaliteit');
+Route::view('/luchtvochtigheid', 'data-schermen/luchtvochtigheid');
+Route::view('/locatie', 'data-schermen/locatie');
+Route::view('/zonlicht', 'data-schermen/zonlicht');
 
 Route::middleware(['auth'])->prefix('admin')->group(function () {
 

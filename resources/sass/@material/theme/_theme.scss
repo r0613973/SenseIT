@@ -27,11 +27,11 @@
 @use 'sass:map';
 @use 'sass:meta';
 @use '@material/feature-targeting/feature-targeting';
-@use './css';
-@use './custom-properties';
-@use './gss';
-@use './replace';
-@use './theme-color';
+@use 'css';
+@use 'custom-properties';
+@use 'gss';
+@use 'replace';
+@use 'theme-color';
 
 @mixin core-styles($query: feature-targeting.all()) {
   $feat-color: feature-targeting.create-target($query, color);

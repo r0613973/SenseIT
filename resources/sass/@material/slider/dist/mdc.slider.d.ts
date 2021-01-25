@@ -27,11 +27,11 @@ declare module '@material/slider' {
       * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
       * THE SOFTWARE.
       */
-    export * from '@material/slider/adapter';
-    export * from '@material/slider/component';
-    export * from '@material/slider/constants';
-    export * from '@material/slider/foundation';
-    export * from '@material/slider/types';
+    export * from 'resources/sass/@material/slider/adapter';
+    export * from 'resources/sass/@material/slider/component';
+    export * from 'resources/sass/@material/slider/constants';
+    export * from 'resources/sass/@material/slider/foundation';
+    export * from 'resources/sass/@material/slider/types';
 }
 
 declare module '@material/slider/adapter' {
@@ -57,8 +57,8 @@ declare module '@material/slider/adapter' {
         * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
         * THE SOFTWARE.
         */
-    import { EventType, SpecificEventListener } from '@material/base/types';
-    import { Thumb, TickMark } from '@material/slider/types';
+    import { EventType, SpecificEventListener } from 'resources/sass/@material/base/types';
+    import { Thumb, TickMark } from 'resources/sass/@material/slider/types';
     /**
         * Defines the shape of the adapter expected by the foundation.
         * Implement this adapter for your framework of choice to delegate updates to
@@ -292,8 +292,8 @@ declare module '@material/slider/component' {
         * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
         * THE SOFTWARE.
         */
-    import { MDCComponent } from '@material/base/component';
-    import { MDCSliderFoundation } from '@material/slider/foundation';
+    import { MDCComponent } from 'resources/sass/@material/base/component';
+    import { MDCSliderFoundation } from 'resources/sass/@material/slider/foundation';
     /** Vanilla JS implementation of slider component. */
     export class MDCSlider extends MDCComponent<MDCSliderFoundation> {
             static attachTo(root: Element, options?: {
@@ -396,9 +396,9 @@ declare module '@material/slider/foundation' {
         * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
         * THE SOFTWARE.
         */
-    import { MDCFoundation } from '@material/base/foundation';
-    import { MDCSliderAdapter } from '@material/slider/adapter';
-    import { Thumb } from '@material/slider/types';
+    import { MDCFoundation } from 'resources/sass/@material/base/foundation';
+    import { MDCSliderAdapter } from 'resources/sass/@material/slider/adapter';
+    import { Thumb } from 'resources/sass/@material/slider/types';
     /**
         * Foundation class for slider. Responsibilities include:
         * - Updating slider values (internal state and DOM updates) based on client

@@ -13,4 +13,4 @@
 @forward "@material/list" as mdc-list-*;
 @forward "@material/elevation" as mdc-elevation-* hide mdc-elevation-elevation;
 @forward "@material/elevation" as mdc-* hide mdc-core-styles, mdc-overlay-common, mdc-overlay-dimensions, mdc-overlay-fill-color, mdc-overlay-opacity, mdc-overlay-selector-, mdc-overlay-surface-position, mdc-shadow, mdc-transition-value, mdc-overlay-transition-value;
-@forward "./index" as mdc-drawer-*;
+@forward "index" as mdc-drawer-*;

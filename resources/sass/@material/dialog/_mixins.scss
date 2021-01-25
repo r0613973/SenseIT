@@ -34,7 +34,7 @@
 @use '@material/theme/theme-color';
 @use '@material/touch-target/variables' as touch-target-variables;
 @use '@material/typography/typography';
-@use './variables';
+@use 'variables';
 
 @mixin core-styles($query: feature-targeting.all()) {
   $feat-animation: feature-targeting.create-target($query, animation);

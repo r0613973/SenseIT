@@ -20,8 +20,8 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
  * THE SOFTWARE.
  */
-import { MDCComponent } from '@material/base/component';
-import { MDCList, MDCListFactory } from '@material/list/component';
+import { MDCComponent } from 'resources/sass/@material/base/component';
+import { MDCList, MDCListFactory } from 'resources/sass/@material/list/component';
 import { MDCDismissibleDrawerFoundation } from './dismissible/foundation';
 import { MDCDrawerFocusTrapFactory } from './util';
 /**
