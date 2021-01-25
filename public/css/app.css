@@ -6422,18 +6422,8 @@ body {
 .username,
 .password {
   display: flex;
-  margin: 20px auto;
   width: 300px;
-}
-
-.username:not(.mdc-text-field--invalid):not(.mdc-text-field--disabled) .mdc-floating-label,
-.password:not(.mdc-text-field--invalid):not(.mdc-text-field--disabled) .mdc-floating-label {
-  color: #023436;
-}
-
-.username.mdc-text-field--focused:not(.mdc-text-field--invalid):not(.mdc-text-field--disabled) .mdc-floating-label,
-.password.mdc-text-field--focused:not(.mdc-text-field--invalid):not(.mdc-text-field--disabled) .mdc-floating-label {
-  color: #023436;
+  margin: 20px auto;
 }
 
 .button-container {
@@ -6445,15 +6435,6 @@ body {
 
 .button-container button {
   margin: 3px;
-}
-
-.shrine-login {
-  background-color: #fff;
-  color: #023436;
-}
-
-.cancel:not(:disabled) {
-  color: #023436;
 }
 
 .mdc-drawer {
