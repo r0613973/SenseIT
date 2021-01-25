@@ -1,11 +1,11 @@
 @extends('layouts.template')
-
+@include('data-schermen.bottom-nav')
 @section('main')
 
 <h1>Locatie</h1>
 
 
-@include('data-schermen.bottom-nav')
+
 @endsection
 @section('script')
     <script>
