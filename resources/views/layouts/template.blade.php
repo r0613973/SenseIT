@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <!--<link href="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.css" rel="stylesheet">-->
-
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+          rel="stylesheet">
     <link rel="stylesheet"
           href="https://cdnjs.cloudflare.com/ajax/libs/normalize/6.0.0/normalize.min.css">
 
@@ -26,35 +27,31 @@
 
 
 </head>
-<body class="home">
+
 @if($nav ?? '' !=  '' )
 
 @else
+    <body class="home">
     @include('shared.navigation')
-
+    <main class="mdc-top-app-bar--fixed-adjust">
 @endif
 
-<div class="shrine-body">
-    <p>
-        <a class="btn btn-primary" data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
-            Link with href
-        </a>
-        <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
-            Button with data-target
-        </button>
-    </p>
-    <div class="collapse" id="collapseExample">
-        <div class="card card-body">
-            Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.
-        </div>
-    </div>
+
+
+
+
+
+
+
 
 
     @yield('main', 'Page under construction ...')
 
+        @if($nav ?? '' !=  '' )
 
-
-</div>
+        @else
+</main>
+@endif
 {{--  Footer  --}}
 
 <script src="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js"></script>
@@ -65,16 +62,13 @@
     @yield('script')
 <script>
 
-    const listEl = document.querySelector('.mdc-drawer .mdc-list');
-    const mainContentEl = document.querySelector('.main-content');
-
-    listEl.addEventListener('click', (event) => {
-        drawer.open = false;
+    const drawer = mdc.drawer.MDCDrawer.attachTo(document.querySelector('.mdc-drawer'));
+    const topAppBar = mdc.topAppBar.MDCTopAppBar.attachTo(document.querySelector('.mdc-top-app-bar'));
+    topAppBar.listen('MDCTopAppBar:nav', () => {
+        drawer.open = !drawer.open;
     });
 
-    document.body.addEventListener('MDCDrawer:closed', () => {
-        mainContentEl.querySelector('input, button').focus();
-    });
+
 </script>
 
 </body>
