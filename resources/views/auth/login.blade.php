@@ -1,25 +1,22 @@
 @extends('layouts.template' , ['nav' => '1'])
 
 @section('main')
-
+    <body class="shrine-login">
     <section class="header">
-        <svg class="shrine-logo" ...>
-            ...
-        </svg>
+        <img  class="shrine-logo" src="./images/sense-it.svg" alt="sense it logo">
         <h1>SENSE IT</h1>
     </section>
-    <!-- todo link  cheken-->
-    <form action="home.html">
 
+    <form action="home.html">
         <label class="mdc-text-field mdc-text-field--filled username">
             <span class="mdc-text-field__ripple"></span>
-            <input type="text" class="mdc-text-field__input" aria-labelledby="username-label" name="username" required>
+            <input type="text" class="mdc-text-field__input" aria-labelledby="username-label" name="username">
             <span class="mdc-floating-label" id="username-label">Username</span>
             <span class="mdc-line-ripple"></span>
         </label>
         <label class="mdc-text-field mdc-text-field--filled password">
             <span class="mdc-text-field__ripple"></span>
-            <input type="password" class="mdc-text-field__input" aria-labelledby="password-label" name="password" required minlength="8">
+            <input type="password" class="mdc-text-field__input" aria-labelledby="password-label" name="password">
             <span class="mdc-floating-label" id="password-label">Password</span>
             <span class="mdc-line-ripple"></span>
         </label>
@@ -37,7 +34,6 @@
     </span>
             </button>
         </div>
-
 
 
     </form>

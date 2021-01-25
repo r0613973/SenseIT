@@ -3,7 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!--<link href="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.css" rel="stylesheet">-->
+
+
+   <!--<link href="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.css" rel="stylesheet">-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+          rel="stylesheet">
 
     <link rel="stylesheet"
           href="https://cdnjs.cloudflare.com/ajax/libs/normalize/6.0.0/normalize.min.css">
@@ -26,23 +30,39 @@
 
 
 </head>
+
 <body class="home">
+
 
 @if($nav ?? '' !=  '' )
 
 @else
+
     @include('shared.navigation')
 
+<div class="shrine-body">
 
+    <main class="mdc-top-app-bar--fixed-adjust">
 @endif
 
-<div class="shrine-body">
+
+
+
+
+
+
+
+
 
 
     @yield('main', 'Page under construction ...')
 
+        @if($nav ?? '' !=  '' )
 
-</div>
+        @else
+</main>
+@endif
+
 {{--  Footer  --}}
 
 <script src="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js"></script>
@@ -59,16 +79,13 @@
 @yield('script')
 <script>
 
-    const listEl = document.querySelector('.mdc-drawer .mdc-list');
-    const mainContentEl = document.querySelector('.main-content');
-
-    listEl.addEventListener('click', (event) => {
-        drawer.open = false;
+    const drawer = mdc.drawer.MDCDrawer.attachTo(document.querySelector('.mdc-drawer'));
+    const topAppBar = mdc.topAppBar.MDCTopAppBar.attachTo(document.querySelector('.mdc-top-app-bar'));
+    topAppBar.listen('MDCTopAppBar:nav', () => {
+        drawer.open = !drawer.open;
     });
 
-    document.body.addEventListener('MDCDrawer:closed', () => {
-        mainContentEl.querySelector('input, button').focus();
-    });
+
 </script>
 
 </body>

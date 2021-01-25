@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="387df3c6-cab3-4ce6-af6d-abafd05e3875" name="Default Changelist" comment="">
+
       <change afterPath="$PROJECT_DIR$/resources/sass/_bottomnav.scss" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/resources/views/data-schermen/bottom-nav.blade.php" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/resources/views/data-schermen/locatie.blade.php" afterDir="false" />
@@ -1693,7 +1694,16 @@
       <change beforePath="$PROJECT_DIR$/resources/sass/app.scss" beforeDir="false" afterPath="$PROJECT_DIR$/resources/sass/app.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/layouts/template.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/template.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
+
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+
+      <change beforePath="$PROJECT_DIR$/.idea/test.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/test.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/css/app.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/app.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/app.js" afterDir="false" />
+
     </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -1701,7 +1711,9 @@
   </component>
   <component name="ComposerSettings" doNotAsk="true" synchronizationState="SYNCHRONIZE">
     <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
-    <execution />
+    <execution>
+      <executable />
+    </execution>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -1859,9 +1871,31 @@
       <recent name="C:\sites_laravel\SenseIT\test\resources\sass" />
     </key>
   </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
   <component name="RunManager" selected="PHPUnit.phpunit.xml">
     <configuration name="phpunit.xml" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
       <TestRunner scope="XML" />
+      <method v="2" />
+    </configuration>
+    <configuration name="dev" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="dev" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
       <method v="2" />
     </configuration>
     <configuration name="watch" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
@@ -1877,10 +1911,14 @@
     <recent_temporary>
       <list>
         <item itemvalue="npm.watch" />
+        <item itemvalue="npm.dev" />
       </list>
     </recent_temporary>
   </component>
-  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="SpellCheckerSettings" BundledDictionaries="0" Folders="0" CustomDictionaries="0" Dictionaries="0" CorrectionsLimit="5" DefaultDictionary="application-level" UseSingleDictionary="true" />
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="387df3c6-cab3-4ce6-af6d-abafd05e3875" name="Default Changelist" comment="" />
@@ -1891,12 +1929,22 @@
       <workItem from="1611219891255" duration="1574000" />
       <workItem from="1611221542933" duration="309000" />
       <workItem from="1611222014651" duration="842000" />
+
       <workItem from="1611301650784" duration="11000000" />
       <workItem from="1611321346839" duration="18000" />
       <workItem from="1611321398448" duration="139000" />
       <workItem from="1611321550707" duration="992000" />
       <workItem from="1611561434917" duration="30000" />
       <workItem from="1611561509947" duration="12841000" />
+
+      <workItem from="1611301650784" duration="15437000" />
+      <workItem from="1611560693537" duration="1296000" />
+
+      <workItem from="1611562598301" duration="9605000" />
+
+      <workItem from="1611562598301" duration="8703000" />
+      <workItem from="1611574917741" duration="363000" />
+
     </task>
     <task id="LOCAL-00001" summary="implement basic template">
       <created>1611309593022</created>
@@ -1912,17 +1960,129 @@
       <option name="project" value="LOCAL" />
       <updated>1611318372477</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="fix fix material">
+      <created>1611318489920</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1611318489920</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Finish styling nav">
+      <created>1611570065549</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1611570065549</updated>
+    </task>
+    <task id="LOCAL-00005" summary="fix login">
+      <created>1611574313961</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1611574313961</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="3" />
+    <option name="version" value="1" />
+    <option name="exactExcludedFiles">
+      <list>
+        <option value="$PROJECT_DIR$/resources/sass/@material/progress-indicator/component.js.map" />
+        <option value="$PROJECT_DIR$/resources/sass/@material/progress-indicator/component.js" />
+        <option value="$PROJECT_DIR$/resources/sass/@material/progress-indicator/component.d.ts" />
+        <option value="$PROJECT_DIR$/resources/sass/@material/progress-indicator/foundation.js.map" />
+        <option value="$PROJECT_DIR$/resources/sass/@material/progress-indicator/foundation.js" />
+        <option value="$PROJECT_DIR$/resources/sass/@material/progress-indicator/foundation.d.ts" />
+        <option value="$PROJECT_DIR$/resources/sass/@material/banner/constants.js.map" />
+        <option value="$PROJECT_DIR$/resources/sass/@material/banner/constants.js" />
+        <option value="$PROJECT_DIR$/resources/sass/@material/banner/constants.d.ts" />
+        <option value="$PROJECT_DIR$/resources/sass/@material/banner/foundation.js.map" />
+        <option value="$PROJECT_DIR$/resources/sass/@material/banner/foundation.js" />
+        <option value="$PROJECT_DIR$/resources/sass/@material/banner/foundation.d.ts" />
+        <option value="$PROJECT_DIR$/resources/sass/@material/banner/component.js.map" />
+        <option value="$PROJECT_DIR$/resources/sass/@material/banner/component.js" />
+        <option value="$PROJECT_DIR$/resources/sass/@material/banner/component.d.ts" />
+        <option value="$PROJECT_DIR$/resources/sass/@material/banner/adapter.js.map" />
+        <option value="$PROJECT_DIR$/resources/sass/@material/banner/adapter.js" />
+        <option value="$PROJECT_DIR$/resources/sass/@material/banner/adapter.d.ts" />
+        <option value="$PROJECT_DIR$/resources/sass/@material/banner/index.js.map" />
+        <option value="$PROJECT_DIR$/resources/sass/@material/banner/index.js" />
+        <option value="$PROJECT_DIR$/resources/sass/@material/banner/index.d.ts" />
+      </list>
+    </option>
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="implement basic template" />
     <MESSAGE value="fix material" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix material" />
+    <MESSAGE value="fix fix material" />
+    <MESSAGE value="Finish styling nav" />
+    <MESSAGE value="fix login" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix login" />
   </component>
+
+  <component name="WindowStateProjectService">
+    <state x="905" y="123" key="CommitChangelistDialog2" timestamp="1611574313584">
+      <screen x="0" y="30" width="2560" height="1050" />
+    </state>
+    <state x="905" y="123" key="CommitChangelistDialog2/0.30.2560.1050/2560.-125.1080.1890@0.30.2560.1050" timestamp="1611574313584" />
+    <state x="248" y="117" key="DiffContextDialog" timestamp="1611317970064">
+      <screen x="0" y="30" width="2560" height="1050" />
+    </state>
+    <state x="248" y="117" key="DiffContextDialog/0.30.2560.1050/2560.-125.1080.1890@0.30.2560.1050" timestamp="1611317970064" />
+    <state x="949" y="333" key="EditFileWatcherDialog" timestamp="1611316072629">
+      <screen x="0" y="30" width="2560" height="1050" />
+    </state>
+    <state x="949" y="333" key="EditFileWatcherDialog/0.30.2560.1050/2560.-125.1080.1890@0.30.2560.1050" timestamp="1611316072629" />
+    <state width="1233" height="297" key="GridCell.Tab.0.bottom" timestamp="1611569126939">
+      <screen x="0" y="30" width="2560" height="1050" />
+    </state>
+    <state width="1233" height="297" key="GridCell.Tab.0.bottom/0.30.2560.1050/2560.-125.1080.1890@0.30.2560.1050" timestamp="1611569126939" />
+    <state width="1233" height="297" key="GridCell.Tab.0.center" timestamp="1611569126939">
+      <screen x="0" y="30" width="2560" height="1050" />
+    </state>
+    <state width="1233" height="297" key="GridCell.Tab.0.center/0.30.2560.1050/2560.-125.1080.1890@0.30.2560.1050" timestamp="1611569126939" />
+    <state width="1233" height="297" key="GridCell.Tab.0.left" timestamp="1611569126939">
+      <screen x="0" y="30" width="2560" height="1050" />
+    </state>
+    <state width="1233" height="297" key="GridCell.Tab.0.left/0.30.2560.1050/2560.-125.1080.1890@0.30.2560.1050" timestamp="1611569126939" />
+    <state width="1233" height="297" key="GridCell.Tab.0.right" timestamp="1611569126939">
+      <screen x="0" y="30" width="2560" height="1050" />
+    </state>
+    <state width="1233" height="297" key="GridCell.Tab.0.right/0.30.2560.1050/2560.-125.1080.1890@0.30.2560.1050" timestamp="1611569126939" />
+    <state x="872" y="288" key="Vcs.Push.Dialog.v2" timestamp="1611574315422">
+      <screen x="0" y="30" width="2560" height="1050" />
+    </state>
+    <state x="872" y="288" key="Vcs.Push.Dialog.v2/0.30.2560.1050/2560.-125.1080.1890@0.30.2560.1050" timestamp="1611574315422" />
+    <state x="1146" y="288" key="com.intellij.openapi.vcs.changes.SpecificFilesViewDialog" timestamp="1611318107789">
+      <screen x="0" y="30" width="2560" height="1050" />
+    </state>
+    <state x="1146" y="288" key="com.intellij.openapi.vcs.changes.SpecificFilesViewDialog/0.30.2560.1050/2560.-125.1080.1890@0.30.2560.1050" timestamp="1611318107789" />
+    <state x="1097" y="469" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1611240269399">
+      <screen x="0" y="30" width="2560" height="1050" />
+    </state>
+    <state x="1097" y="469" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.30.2560.1050/2560.-125.1080.1890@0.30.2560.1050" timestamp="1611240269399" />
+    <state x="703" y="30" width="1069" height="712" key="dock-window-1" timestamp="1611570725015">
+      <screen x="0" y="30" width="2560" height="1050" />
+    </state>
+    <state x="703" y="30" width="1069" height="712" key="dock-window-1/0.30.2560.1050/2560.-125.1080.1890@0.30.2560.1050" timestamp="1611570725015" />
+    <state x="485" y="263" width="672" height="678" key="search.everywhere.popup" timestamp="1611326226555">
+      <screen x="0" y="30" width="2560" height="1050" />
+    </state>
+    <state x="485" y="263" width="672" height="678" key="search.everywhere.popup/0.30.2560.1050/2560.-125.1080.1890@0.30.2560.1050" timestamp="1611326226555" />
+  </component>
+
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
     <select />
