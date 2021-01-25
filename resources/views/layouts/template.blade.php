@@ -52,9 +52,6 @@
 
 
 
-
-
-
     @yield('main', 'Page under construction ...')
 
         @if($nav ?? '' !=  '' )
@@ -85,7 +82,8 @@
         drawer.open = !drawer.open;
     });
 
-
+    const MDCTooltip = mdc.tooltip.MDCTooltip;
+    const tooltip = new MDCTooltip(document.querySelector('.mdc-tooltip'));
 </script>
 
 </body>
