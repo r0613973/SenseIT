@@ -6,6 +6,7 @@
 
 // material design
 @import 'variables';
+@import "@material/layout-grid/mdc-layout-grid";
 @import "@material/drawer/mdc-drawer";
 @import "@material/list/mdc-list";
 
@@ -15,6 +16,7 @@
 @import "@material/button";
 @import "@material/button/mdc-button";
 @import "@material/icon-button/mdc-icon-button";
+@import "@material/tooltip/styles";
 
 
 

@@ -3,7 +3,7 @@
         <img src="../images/sense-it.svg" alt=""  class="shrine-logo-drawer"  width="88px" height="88px">
         <h1 class="shrine-title">SENSE IT</h1>
    </div>
-    <div class="mdc-drawer__content">
+    <div class="mdc-drawer__content mdc-layout-grid">
         <nav class="mdc-list">
             <a class="mdc-list-item mdc-list-item--activated" href="#" tabindex="0" aria-current="page">
                 <span class="mdc-list-item__text">Home</span>
@@ -17,7 +17,19 @@
                 <span class="mdc-list-item__text">Analyse</span>
             </a>
         </nav>
+        <div>
+                <div style="position: fixed;
+        bottom: 0;
+        textAlign: 'center';
+        paddingBottom: 10;" >
+                    <div class="mdc-layout-grid__inner">
+                        <div class="mdc-layout-grid__cell">test 1</div>
+                        <div class="mdc-layout-grid__cell">test 2</div>
+                        <div class="mdc-layout-grid__cell"> test 3</div>
+                    </div>
+                </div>
 
+            </div>
     </div>
 </aside>
 <div class="mdc-drawer-scrim"></div>
@@ -34,6 +46,7 @@
             <button class="material-icons mdc-top-app-bar__action-item mdc-icon-button" aria-label="Search">search</button>
             <button class="material-icons mdc-top-app-bar__action-item mdc-icon-button" aria-label="Options">more_vert</button>
         </section>
+
     </div>
 </header>
 
