@@ -1,4 +1,4 @@
-<div class="demo-nav demo-card-7 demo-nav-theme">
+<div class="demo-nav demo-card-7 demo-nav-theme" style="z-index: 2">
     <div class="mdc-bottom-navigation mdc-bottom-navigation--shifting">
         <nav class="mdc-bottom-navigation__list">
             <a href="/temperatuur">
