@@ -11,7 +11,7 @@
 
     <link rel="stylesheet"
           href="https://cdnjs.cloudflare.com/ajax/libs/normalize/6.0.0/normalize.min.css">
-    <link rel="stylesheet" href="css/bootstrap.min.css">
+
     <link rel="stylesheet" href="{{ mix('css/app.css') }}">
 
 
@@ -32,7 +32,7 @@
 
 </head>
 
-<body class="home">
+
 
 
 @if($nav ?? '' !=  '' )
@@ -41,7 +41,7 @@
 
     @include('shared.navigation')
 
-
+    <body class="home">
     <div class="shrine-body">
         <main class="mdc-top-app-bar--fixed-adjust container">
             @endif
@@ -52,8 +52,9 @@
 
             @else
         </main>
-        @endif
     </div>
+        @endif
+
     {{--  Footer  --}}
 
     <script src="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js"></script>

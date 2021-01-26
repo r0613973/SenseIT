@@ -1,5 +1,4 @@
-
-@import url(https://fonts.googleapis.com/css2?family=DM+Sans&display=swap);:root {
+@import url(https://fonts.googleapis.com/css2?family=DM+Sans&display=swap);@import url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css);:root {
   --mdc-layout-grid-margin-desktop: 24px;
   --mdc-layout-grid-gutter-desktop: 24px;
   --mdc-layout-grid-column-width-desktop: 72px;
@@ -775,9 +774,6 @@
 }
 
 .mdc-drawer {
-
-@import url(https://fonts.googleapis.com/css2?family=DM+Sans&display=swap);@import url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css);.mdc-drawer {
-
   border-color: rgba(0, 0, 0, 0.12);
   background-color: #fff;
   /* @alternate */
@@ -8406,7 +8402,8 @@ svg.mdc-button__icon {
 .mdc-layout-grid--align-right {
   margin-right: 0;
   margin-left: auto;
-=======
+}
+
 .mdc-tooltip__surface {
   border-radius: 4px;
   /* @alternate */
@@ -8633,7 +8630,6 @@ svg.mdc-button__icon {
 
 .mdc-tooltip__surface .mdc-tooltip__content-link {
   text-decoration: none;
-
 }
 
 html,

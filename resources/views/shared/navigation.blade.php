@@ -17,20 +17,11 @@
                 <span class="mdc-list-item__text">Analyse</span>
             </a>
         </nav>
-        <div>
-                <div style="position: fixed;
-        bottom: 0;
-        textAlign: 'center';
-        paddingBottom: 10;" >
-                    <div class="mdc-layout-grid__inner">
-                        <div class="mdc-layout-grid__cell">test 1</div>
-                        <div class="mdc-layout-grid__cell">test 2</div>
-                        <div class="mdc-layout-grid__cell"> test 3</div>
-                    </div>
-                </div>
 
-            </div>
     </div>
+
+
+
 </aside>
 <div class="mdc-drawer-scrim"></div>
 
@@ -42,9 +33,8 @@
             <span class="mdc-top-app-bar__title">Page title</span>
         </section>
         <section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-end" role="toolbar">
-            <button class="material-icons mdc-top-app-bar__action-item mdc-icon-button" aria-label="Favorite">favorite</button>
-            <button class="material-icons mdc-top-app-bar__action-item mdc-icon-button" aria-label="Search">search</button>
-            <button class="material-icons mdc-top-app-bar__action-item mdc-icon-button" aria-label="Options">more_vert</button>
+
+            <button class="material-icons mdc-top-app-bar__action-item mdc-icon-button" aria-label="Options">account_circle</button>
         </section>
 
     </div>
