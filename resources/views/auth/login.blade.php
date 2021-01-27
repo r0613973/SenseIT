@@ -50,6 +50,5 @@
     const password = new MDCTextField(document.querySelector('.password'));
     new MDCRipple(document.querySelector('.cancel'));
     new MDCRipple(document.querySelector('.next'));
-
     </script>
 @endsection
