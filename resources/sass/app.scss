@@ -28,9 +28,8 @@
 @import "@material/layout-grid/mdc-layout-grid";
 
 @import "@material/tooltip/styles";
-
-
-
+@import "@material/checkbox/mdc-checkbox";
+@import "@material/data-table/mdc-data-table";
 
 
 @import "main";
@@ -38,6 +37,7 @@
 @import "home";
 @import "shrine-Drawer";
 @import "bottomnav";
+@import "dataview";
 
 
 //

@@ -1,50 +1,20 @@
 @extends('layouts.template')
 @include('data-schermen.bottom-nav')
-@section('main')
 
-    <div class="row">
-        <div class="col-6">
-            <h1>Temperatuur</h1>
-        </div>
-    </div>
-    <div class="row">
-        <div class="col-6">
-            <table class="table">
-                <thead>
-                <tr>
-                    <th scope="col"></th>
-                    <th scope="col">First</th>
-                    <th scope="col">Last</th>
-                    <th scope="col">Handle</th>
-                </tr>
-                </thead>
-                <tbody>
-                <tr>
-                    <th scope="row">1</th>
-                    <td>Mark</td>
-                    <td>Otto</td>
-                    <td>@mdo</td>
-                </tr>
-                <tr>
-                    <th scope="row">2</th>
-                    <td>Jacob</td>
-                    <td>Thornton</td>
-                    <td>@fat</td>
-                </tr>
-                <tr>
-                    <th scope="row">3</th>
-                    <td>Larry</td>
-                    <td>the Bird</td>
-                    <td>@twitter</td>
-                </tr>
-                </tbody>
-            </table>
-        </div>
-    </div>
+@section('title', 'Temperatuur')
+@section('main')
+    @include('data-schermen.datatemplate')
 
 @endsection
+
 @section('script')
     <script>
         $('#temperatuurIcon').addClass('mdc-bottom-navigation__list-item--activated');
     </script>
+
+
+    <script>
+        const dataTable = new MDCDataTable(document.querySelector('.mdc-data-table'));
+    </script
+
 @endsection

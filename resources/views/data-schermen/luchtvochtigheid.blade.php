@@ -1,10 +1,8 @@
 @extends('layouts.template')
 @include('data-schermen.bottom-nav')
+@section('title', 'Luchtvochtigheid')
 @section('main')
-
-    <h1>Luchtvochtigheid</h1>
-
-
+    @include('data-schermen.datatemplate')
 
 @endsection
 @section('script')

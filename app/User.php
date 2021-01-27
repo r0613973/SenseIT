@@ -8,6 +8,16 @@ use Illuminate\Notifications\Notifiable;
 
 class User extends Authenticatable
 {
+
+    public function boxusers()
+    {
+        return $this->hasMany('App\BoxUser');
+    }
+
+    public function usertype()
+    {
+        return $this->belongsTo('App\UserType');
+    }
     use Notifiable;
 
     /**

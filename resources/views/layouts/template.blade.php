@@ -11,7 +11,7 @@
 
     <link rel="stylesheet"
           href="https://cdnjs.cloudflare.com/ajax/libs/normalize/6.0.0/normalize.min.css">
-    <link rel="stylesheet" href="css/bootstrap.min.css">
+    {{--<link rel="stylesheet" href="css/bootstrap.min.css">--}}
     <link rel="stylesheet" href="{{ mix('css/app.css') }}">
 
 
@@ -67,18 +67,16 @@
             integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
             crossorigin="anonymous"></script>
     <script src="{{mix('js/app.js')}}"></script>
-    @yield('script')
-    <script>
 
+    <script>
         const drawer = mdc.drawer.MDCDrawer.attachTo(document.querySelector('.mdc-drawer'));
         const topAppBar = mdc.topAppBar.MDCTopAppBar.attachTo(document.querySelector('.mdc-top-app-bar'));
         topAppBar.listen('MDCTopAppBar:nav', () => {
             drawer.open = !drawer.open;
         });
-
-
+        const MDCdataTable = mdc.dataTable.MDCDataTable;
     </script>
 
-
+    @yield('script')
 </body>
 </html>
