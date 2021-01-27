@@ -8,30 +8,32 @@
     </section>
 
     <form action="home.html">
-        <label class="mdc-text-field mdc-text-field--filled username">
+        <label class="mdc-text-field mdc-text-field--with-leading-icon mdc-text-field--filled username">
+            <i class="material-icons mdc-text-field__icon mdc-text-field__icon--leading">person</i>
             <span class="mdc-text-field__ripple"></span>
-            <input type="text" class="mdc-text-field__input" aria-labelledby="username-label" name="username">
+            <input type="text" class="mdc-text-field__input" aria-labelledby="username-label" name="username" required>
             <span class="mdc-floating-label" id="username-label">Username</span>
             <span class="mdc-line-ripple"></span>
         </label>
-        <label class="mdc-text-field mdc-text-field--filled password">
+        <label class="mdc-text-field mdc-text-field--with-leading-icon mdc-text-field--filled password">
+            <i class="material-icons mdc-text-field__icon mdc-text-field__icon--leading">vpn_key</i>
             <span class="mdc-text-field__ripple"></span>
-            <input type="password" class="mdc-text-field__input" aria-labelledby="password-label" name="password">
-            <span class="mdc-floating-label" id="password-label">Password</span>
+            <input type="password" class="mdc-text-field__input" aria-labelledby="password-label" name="password" required>
+            <span class="mdc-floating-label" id="password-label">Wachtwoord</span>
             <span class="mdc-line-ripple"></span>
         </label>
         <div class="button-container">
-            <button type="button" class="mdc-button cancel">
+            <button type="button" class="mdc-button cancel" onclick="location.href='../home'">
                 <div class="mdc-button__ripple"></div>
                 <span class="mdc-button__label">
-      Cancel
-    </span>
+                    Cancel
+                </span>
             </button>
             <button class="mdc-button mdc-button--raised next">
                 <div class="mdc-button__ripple"></div>
                 <span class="mdc-button__label">
-      Next
-    </span>
+                    Login
+                </span>
             </button>
         </div>
 
