@@ -77,7 +77,17 @@
             drawer.open = !drawer.open;
         });
 
+        const MDCMenu = mdc.menu.MDCMenu;
+        const menu = new MDCMenu(document.querySelector('.mdc-menu'));
+        menu.open = false;
+        function openMenu() {
+            menu.open = !menu.open;
 
+        }
+
+        document.querySelector('#menu-button').addEventListener("click", openMenu);
+        const MDCtooltip = mdc.Tooltip.MDCTooltip;
+        const tooltip = new MDCTooltip(document.querySelector('.mdc-tooltip'));
     </script>
 
 
