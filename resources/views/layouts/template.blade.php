@@ -11,7 +11,9 @@
 
     <link rel="stylesheet"
           href="https://cdnjs.cloudflare.com/ajax/libs/normalize/6.0.0/normalize.min.css">
+
     {{--<link rel="stylesheet" href="css/bootstrap.min.css">--}}
+
     <link rel="stylesheet" href="{{ mix('css/app.css') }}">
 
 
@@ -32,7 +34,7 @@
 
 </head>
 
-<body class="home">
+
 
 
 @if($nav ?? '' !=  '' )
@@ -41,7 +43,7 @@
 
     @include('shared.navigation')
 
-
+    <body class="home">
     <div class="shrine-body">
         <main class="mdc-top-app-bar--fixed-adjust container">
             @endif
@@ -52,8 +54,9 @@
 
             @else
         </main>
-        @endif
     </div>
+        @endif
+
     {{--  Footer  --}}
 
     <script src="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js"></script>
@@ -74,7 +77,22 @@
         topAppBar.listen('MDCTopAppBar:nav', () => {
             drawer.open = !drawer.open;
         });
+
         const MDCdataTable = mdc.dataTable.MDCDataTable;
+
+
+        const MDCMenu = mdc.menu.MDCMenu;
+        const menu = new MDCMenu(document.querySelector('.mdc-menu'));
+        menu.open = false;
+        function openMenu() {
+            menu.open = !menu.open;
+
+        }
+
+        document.querySelector('#menu-button').addEventListener("click", openMenu);
+        const MDCtooltip = mdc.Tooltip.MDCTooltip;
+        const tooltip = new MDCTooltip(document.querySelector('.mdc-tooltip'));
+
     </script>
 
     @yield('script')
