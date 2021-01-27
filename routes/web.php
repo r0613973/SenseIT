@@ -16,9 +16,9 @@ Auth::routes();
 Route::view('/', 'home');
 Route::redirect('home', '/');
 Route::get('logout', 'Auth\LoginController@logout');
-Route::view('/temperatuur', 'data-schermen/temperatuur');
+Route::get('/temperatuur', 'TemperatuurController@index');
 Route::view('/luchtkwaliteit', 'data-schermen/luchtkwaliteit');
-Route::view('/luchtvochtigheid', 'data-schermen/luchtvochtigheid');
+Route::get('/luchtvochtigheid', 'LuchtvochtigheidController@index');
 Route::view('/locatie', 'data-schermen/locatie');
 Route::view('/zonlicht', 'data-schermen/zonlicht');
 
