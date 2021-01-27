@@ -1,12 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="66142c7c-f75f-43cc-918b-d31415caa0bc" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/test.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/test.iml" afterDir="false" />
+
+    <list default="true" id="387df3c6-cab3-4ce6-af6d-abafd05e3875" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/css/app.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/app.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/auth/register.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/auth/register.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/mix-manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/public/mix-manifest.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/sass/app.scss" beforeDir="false" afterPath="$PROJECT_DIR$/resources/sass/app.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/auth/login.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/auth/login.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/layouts/template.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/template.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/shared/navigation.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/shared/navigation.blade.php" afterDir="false" />
+
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -258,7 +263,9 @@
       <workItem from="1611562598301" duration="8703000" />
       <workItem from="1611574917741" duration="363000" />
       <workItem from="1611663202152" duration="3861000" />
-      <workItem from="1611733724297" duration="6562000" />
+
+      <workItem from="1611735344304" duration="2663000" />
+
     </task>
     <task id="LOCAL-00001" summary="implement basic template">
       <created>1611309593022</created>
@@ -362,30 +369,56 @@
     <option name="LAST_COMMIT_MESSAGE" value="fix login" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="905" y="123" key="CommitChangelistDialog2" />
-    <state x="905" y="123" key="CommitChangelistDialog2/0.30.2560.1050/2560.-125.1080.1890@0.30.2560.1050" />
-    <state x="248" y="117" key="DiffContextDialog" />
-    <state x="248" y="117" key="DiffContextDialog/0.30.2560.1050/2560.-125.1080.1890@0.30.2560.1050" />
-    <state x="949" y="333" key="EditFileWatcherDialog" />
-    <state x="949" y="333" key="EditFileWatcherDialog/0.30.2560.1050/2560.-125.1080.1890@0.30.2560.1050" />
-    <state width="2517" height="297" key="GridCell.Tab.0.bottom" />
-    <state width="2517" height="297" key="GridCell.Tab.0.bottom/0.30.2560.1050/2560.-125.1080.1890@0.30.2560.1050" />
-    <state width="2517" height="297" key="GridCell.Tab.0.center" />
-    <state width="2517" height="297" key="GridCell.Tab.0.center/0.30.2560.1050/2560.-125.1080.1890@0.30.2560.1050" />
-    <state width="2517" height="297" key="GridCell.Tab.0.left" />
-    <state width="2517" height="297" key="GridCell.Tab.0.left/0.30.2560.1050/2560.-125.1080.1890@0.30.2560.1050" />
-    <state width="2517" height="297" key="GridCell.Tab.0.right" />
-    <state width="2517" height="297" key="GridCell.Tab.0.right/0.30.2560.1050/2560.-125.1080.1890@0.30.2560.1050" />
-    <state x="872" y="288" key="Vcs.Push.Dialog.v2" />
-    <state x="872" y="288" key="Vcs.Push.Dialog.v2/0.30.2560.1050/2560.-125.1080.1890@0.30.2560.1050" />
-    <state x="1146" y="288" key="com.intellij.openapi.vcs.changes.SpecificFilesViewDialog" />
-    <state x="1146" y="288" key="com.intellij.openapi.vcs.changes.SpecificFilesViewDialog/0.30.2560.1050/2560.-125.1080.1890@0.30.2560.1050" />
-    <state x="1097" y="469" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" />
-    <state x="1097" y="469" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.30.2560.1050/2560.-125.1080.1890@0.30.2560.1050" />
-    <state x="703" y="30" width="1069" height="712" key="dock-window-1" />
-    <state x="703" y="30" width="1069" height="712" key="dock-window-1/0.30.2560.1050/2560.-125.1080.1890@0.30.2560.1050" />
-    <state x="485" y="263" width="672" height="678" key="search.everywhere.popup" />
-    <state x="485" y="263" width="672" height="678" key="search.everywhere.popup/0.30.2560.1050/2560.-125.1080.1890@0.30.2560.1050" />
+
+    <state x="905" y="123" key="CommitChangelistDialog2" timestamp="1611575238462">
+      <screen x="0" y="30" width="2560" height="1050" />
+    </state>
+    <state x="905" y="123" key="CommitChangelistDialog2/0.30.2560.1050/2560.-125.1080.1890@0.30.2560.1050" timestamp="1611575238462" />
+    <state x="248" y="117" key="DiffContextDialog" timestamp="1611317970064">
+      <screen x="0" y="30" width="2560" height="1050" />
+    </state>
+    <state x="248" y="117" key="DiffContextDialog/0.30.2560.1050/2560.-125.1080.1890@0.30.2560.1050" timestamp="1611317970064" />
+    <state x="949" y="333" key="EditFileWatcherDialog" timestamp="1611316072629">
+      <screen x="0" y="30" width="2560" height="1050" />
+    </state>
+    <state x="949" y="333" key="EditFileWatcherDialog/0.30.2560.1050/2560.-125.1080.1890@0.30.2560.1050" timestamp="1611316072629" />
+    <state width="2517" height="297" key="GridCell.Tab.0.bottom" timestamp="1611676704386">
+      <screen x="0" y="30" width="2560" height="1050" />
+    </state>
+    <state width="2517" height="297" key="GridCell.Tab.0.bottom/0.30.2560.1050/2560.-125.1080.1890@0.30.2560.1050" timestamp="1611676704386" />
+    <state width="2517" height="297" key="GridCell.Tab.0.center" timestamp="1611676704386">
+      <screen x="0" y="30" width="2560" height="1050" />
+    </state>
+    <state width="2517" height="297" key="GridCell.Tab.0.center/0.30.2560.1050/2560.-125.1080.1890@0.30.2560.1050" timestamp="1611676704386" />
+    <state width="2517" height="297" key="GridCell.Tab.0.left" timestamp="1611676704386">
+      <screen x="0" y="30" width="2560" height="1050" />
+    </state>
+    <state width="2517" height="297" key="GridCell.Tab.0.left/0.30.2560.1050/2560.-125.1080.1890@0.30.2560.1050" timestamp="1611676704386" />
+    <state width="2517" height="297" key="GridCell.Tab.0.right" timestamp="1611676704386">
+      <screen x="0" y="30" width="2560" height="1050" />
+    </state>
+    <state width="2517" height="297" key="GridCell.Tab.0.right/0.30.2560.1050/2560.-125.1080.1890@0.30.2560.1050" timestamp="1611676704386" />
+    <state x="872" y="288" key="Vcs.Push.Dialog.v2" timestamp="1611575246390">
+      <screen x="0" y="30" width="2560" height="1050" />
+    </state>
+    <state x="872" y="288" key="Vcs.Push.Dialog.v2/0.30.2560.1050/2560.-125.1080.1890@0.30.2560.1050" timestamp="1611575246390" />
+    <state x="1146" y="288" key="com.intellij.openapi.vcs.changes.SpecificFilesViewDialog" timestamp="1611318107789">
+      <screen x="0" y="30" width="2560" height="1050" />
+    </state>
+    <state x="1146" y="288" key="com.intellij.openapi.vcs.changes.SpecificFilesViewDialog/0.30.2560.1050/2560.-125.1080.1890@0.30.2560.1050" timestamp="1611318107789" />
+    <state x="1097" y="469" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1611240269399">
+      <screen x="0" y="30" width="2560" height="1050" />
+    </state>
+    <state x="1097" y="469" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.30.2560.1050/2560.-125.1080.1890@0.30.2560.1050" timestamp="1611240269399" />
+    <state x="703" y="30" width="1069" height="712" key="dock-window-1" timestamp="1611570725015">
+      <screen x="0" y="30" width="2560" height="1050" />
+    </state>
+    <state x="703" y="30" width="1069" height="712" key="dock-window-1/0.30.2560.1050/2560.-125.1080.1890@0.30.2560.1050" timestamp="1611570725015" />
+    <state x="485" y="263" width="672" height="678" key="search.everywhere.popup" timestamp="1611326226555">
+      <screen x="0" y="30" width="2560" height="1050" />
+    </state>
+    <state x="485" y="263" width="672" height="678" key="search.everywhere.popup/0.30.2560.1050/2560.-125.1080.1890@0.30.2560.1050" timestamp="1611326226555" />
+
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

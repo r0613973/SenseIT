@@ -30,11 +30,39 @@
     <div class="mdc-top-app-bar__row">
         <section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-start">
             <button class="material-icons mdc-top-app-bar__navigation-icon mdc-icon-button" aria-label="Open navigation menu">menu</button>
-            <span class="mdc-top-app-bar__title">Page title</span>
+            <span class="mdc-top-app-bar__title">Sense IT</span>
         </section>
-        <section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-end" role="toolbar">
+        <section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-end " role="toolbar">
+<div class="mdc-menu-surface--anchor">
 
-            <button class="material-icons mdc-top-app-bar__action-item mdc-icon-button" aria-label="Options">account_circle</button>
+    <button data-tooltip-id="tooltip-id" class="material-icons mdc-top-app-bar__action-item mdc-icon-button" id="menu-button" aria-label="Account">account_circle</button>
+    <div id="tooltip" class="mdc-tooltip" role="tooltip" aria-hidden="true">
+        <div class="mdc-tooltip__surface">
+            Account
+        </div>
+    </div>
+    <div style="margin-top: 64px" class="mdc-menu mdc-menu-surface">
+        <ul class="mdc-list" role="menu" aria-hidden="true" aria-orientation="vertical" tabindex="-1">
+            <li class="mdc-list-item" role="menuitem">
+                <span class="mdc-list-item__ripple"></span>
+                <span class="mdc-list-item__text">Account</span>
+            </li>
+            <li class="mdc-list-item" role="menuitem">
+                <span class="mdc-list-item__ripple"></span>
+                <span class="mdc-list-item__text">Settings</span>
+            </li>
+            <li class="mdc-list-item" role="menuitem">
+                <span class="mdc-list-item__ripple"></span>
+                <span class="mdc-list-item__text">Report</span>
+            </li>
+            <li class="mdc-list-item" role="menuitem">
+                <span class="mdc-list-item__ripple"></span>
+                <span class="mdc-list-item__text">log out</span>
+
+            </li>
+        </ul>
+    </div>
+</div>
         </section>
 
     </div>
