@@ -1,8 +1,9 @@
 @extends('layouts.template')
 @include('data-schermen.bottom-nav')
+@section('title', 'Zonlicht')
 @section('main')
 
-    <h1>Zonlicht</h1>
+    @include('data-schermen.datatemplate')
 
 
 

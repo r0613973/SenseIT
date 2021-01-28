@@ -1,3 +1,4 @@
+
 <div class="mdc-data-table">
     <table class="mdc-data-table__table" aria-label="Dessert calories">
         <thead>
@@ -14,27 +15,20 @@
         </tr>
         </thead>
         <tbody class="mdc-data-table__content">
-        @section('someSection')
-            {{ $value = 0 }}
-        @endsection
+
         @foreach($measurements as $measurement)
             <tr class="mdc-data-table__row">
-                @if($measurement['value']>=$value)
-                    <td class="mdc-data-table__cell "><i class="fas fa-arrow-circle-up"></i></td>
-
-                @else
-                    <td class="mdc-data-table__cell "><i class="fas fa-arrow-circle-down"></i></td>
-                @endif
-                @section('someSection')
-                    {{ $value = $measurement['value'] }}
-                @endsection
-                <td class="mdc-data-table__cell mdc-data-table__cell--numeric">{{$measurement['value']}} </td>
-                <td class="mdc-data-table__cell ">{{$measurement['timeStamp']}}</td>
+                <td class="mdc-data-table__cell ">{!! $measurement->Arrow !!}</td>
+                <td class="mdc-data-table__cell mdc-data-table__cell--numeric">{{$measurement->Value}} </td>
+                <td class="mdc-data-table__cell ">{{$measurement->TimeStamp}}</td>
 
             </tr>
         @endforeach
+
         </tbody>
+
     </table>
+    {{ $measurements->links() }}
 </div>
 
 

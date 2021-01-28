@@ -16,11 +16,11 @@ Auth::routes();
 Route::view('/', 'home');
 Route::redirect('home', '/');
 Route::get('logout', 'Auth\LoginController@logout');
-Route::get('/temperatuur', 'TemperatuurController@index');
-Route::view('/luchtkwaliteit', 'data-schermen/luchtkwaliteit');
-Route::get('/luchtvochtigheid', 'LuchtvochtigheidController@index');
+Route::get('/temperatuur', 'MeasurementController@temperatuur');
+Route::get('/luchtkwaliteit', 'MeasurementController@luchtkwaliteit');
+Route::get('/luchtvochtigheid', 'MeasurementController@luchtvochtigheid');
 Route::view('/locatie', 'data-schermen/locatie');
-Route::view('/zonlicht', 'data-schermen/zonlicht');
+Route::get('/zonlicht', 'MeasurementController@zonlicht');
 
 Route::middleware(['auth'])->prefix('admin')->group(function () {
 

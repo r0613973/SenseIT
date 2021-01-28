@@ -3,7 +3,7 @@
 
 @section('title', 'Temperatuur')
 @section('main')
-    @include('data-schermen.datatemplate')
+ @include('data-schermen.datatemplate')
 
 @endsection
 
