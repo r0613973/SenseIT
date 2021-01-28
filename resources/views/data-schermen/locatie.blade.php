@@ -1,5 +1,5 @@
 @extends('layouts.template')
-@include('data-schermen.bottom-nav')
+
 @section('main')
 
 <h1>Locatie</h1>
@@ -12,3 +12,4 @@
         $('#locatieIcon').addClass('mdc-bottom-navigation__list-item--activated');
     </script>
 @endsection
+@include('data-schermen.bottom-nav')

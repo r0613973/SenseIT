@@ -1,5 +1,5 @@
 @extends('layouts.template')
-@include('data-schermen.bottom-nav')
+
 @section('title', 'Zonlicht')
 @section('main')
 
@@ -15,3 +15,4 @@
 
     </script>
 @endsection
+@include('data-schermen.bottom-nav')

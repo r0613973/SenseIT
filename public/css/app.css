@@ -8794,7 +8794,6 @@ svg.mdc-button__icon {
 .mdc-layout-grid--align-right {
   margin-right: 0;
   margin-left: auto;
-
 }
 
 .mdc-tooltip__surface {
@@ -9032,7 +9031,6 @@ svg.mdc-button__icon {
   margin: calc((40px - 40px) / 2);
   /* @alternate */
   margin: calc((var(--mdc-checkbox-ripple-size, 40px) - var(--mdc-checkbox-ripple-size, 40px)) / 2);
-
 }
 
 .mdc-checkbox .mdc-checkbox__ripple::before,
@@ -10724,7 +10722,9 @@ body {
 }
 
 .container {
+  width: 50%;
   margin: auto;
+  margin-bottom: 50px;
 }
 
 .fa-arrow-circle-up {
@@ -10733,6 +10733,19 @@ body {
 
 .fa-arrow-circle-down {
   color: #f00;
+}
+
+.bottomnav {
+  padding-top: 20px;
+}
+
+.mdc-data-table {
+  margin-bottom: 60px;
+  margin-top: 20px;
+}
+
+.paginationButton {
+  color: #037971;
 }
 
 .header {

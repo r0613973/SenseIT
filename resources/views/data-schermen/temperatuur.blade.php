@@ -1,5 +1,5 @@
 @extends('layouts.template')
-@include('data-schermen.bottom-nav')
+
 
 @section('title', 'Temperatuur')
 @section('main')
@@ -18,3 +18,4 @@
     </script
 
 @endsection
+@include('data-schermen.bottom-nav')

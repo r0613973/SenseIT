@@ -5,12 +5,12 @@
    </div>
     <div class="mdc-drawer__content mdc-layout-grid">
         <nav class="mdc-list">
-            <a class="mdc-list-item mdc-list-item--activated" href="#" tabindex="0" aria-current="page">
+            <a class="mdc-list-item mdc-list-item" href="#" tabindex="0" aria-current="page">
                 <span class="mdc-list-item__text">Home</span>
             </a>
-            <a class="mdc-list-item" href="#" tabindex="0">
+            <a class="mdc-list-item" href="/temperatuur" tabindex="0">
 
-                <span class="mdc-list-item__text">Box</span>
+                <span class="mdc-list-item__text">Metingen</span>
             </a>
             <a class="mdc-list-item" href="#" tabindex="0">
 
@@ -31,7 +31,7 @@
         <section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-start">
             <button class="material-icons mdc-top-app-bar__navigation-icon mdc-icon-button" aria-label="Open navigation menu">menu</button>
 
-            <span class="mdc-top-app-bar__title">@yield('title', 'The Vinyl Shop')</span>
+            <span class="mdc-top-app-bar__title">@yield('title', 'Sense IT')</span>
 
         </section>
         <section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-end " role="toolbar">
