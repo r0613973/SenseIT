@@ -1,5 +1,5 @@
 @extends('layouts.template')
-@include('data-schermen.bottom-nav')
+
 @section('title', 'Luchtvochtigheid')
 @section('main')
     @include('data-schermen.datatemplate')
@@ -11,3 +11,4 @@
         $('#luchtvochtigheidIcon').addClass('mdc-bottom-navigation__list-item--activated');
     </script>
 @endsection
+@include('data-schermen.bottom-nav')

@@ -1,5 +1,7 @@
 
 <div class="mdc-data-table">
+
+    {{ $measurements->links() }}
     <table class="mdc-data-table__table" aria-label="Dessert calories">
         <thead>
         <tr class="mdc-data-table__header-row">
@@ -28,7 +30,7 @@
         </tbody>
 
     </table>
-    {{ $measurements->links() }}
-</div>
 
+
+</div>
 

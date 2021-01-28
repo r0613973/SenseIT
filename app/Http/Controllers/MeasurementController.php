@@ -10,21 +10,31 @@ class MeasurementController extends Controller
 {
     public function temperatuur()
     {
-        $result =  $this->ophalendata(5, 16);
+        $measurements =  $this->ophalendata(4, 16);
+        $measurements->eenheid  = '°C';
+        $result = compact('measurements');
+        Json::dump($result);
+
 
         return view('data-schermen.temperatuur', $result);
     }
 
     public function luchtvochtigheid()
     {
-        $result =  $this->ophalendata(5, 15);
+        $measurements =  $this->ophalendata(4, 15);
+        $measurements->eenheid  = '%';
+        $result = compact('measurements');
+        Json::dump($result);
 
         return view('data-schermen.luchtvochtigheid', $result);
     }
     public function zonlicht()
     {
         //TODO Juiste sensor toevoegen
-        $result =  $this->ophalendata(5, -1);
+        $measurements =  $this->ophalendata(5, -1);
+        $measurements->eenheid  = '%';
+        $result = compact('measurements');
+        Json::dump($result);
 
         return view('data-schermen.zonlicht', $result);
     }
@@ -32,7 +42,10 @@ class MeasurementController extends Controller
     public function luchtkwaliteit()
     {
         //TODO Juiste sensor toevoegen
-        $result =  $this->ophalendata(5, -1);
+        $measurements =  $this->ophalendata(5, -1);
+        $measurements->eenheid  = 'pm2.5';
+        $result = compact('measurements');
+        Json::dump($result);
 
         return view('data-schermen.luchtkwaliteit', $result);
     }
@@ -54,9 +67,8 @@ class MeasurementController extends Controller
             }
             $vorigewaarde = $measurement->Value;
         }
-        $result = compact('measurements');
-        Json::dump($result);
-        return $result;
+
+        return $measurements;
     }
 
 

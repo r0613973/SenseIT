@@ -12,6 +12,8 @@
     <link rel="stylesheet"
           href="https://cdnjs.cloudflare.com/ajax/libs/normalize/6.0.0/normalize.min.css">
 
+
+   {{--     bootstrap is nodig voor de pagination links--}}
     <link rel="stylesheet" href="css/bootstrap.min.css">
 
     <link rel="stylesheet" href="{{ mix('css/app.css') }}">
@@ -35,8 +37,6 @@
 </head>
 
 
-
-
 @if($nav ?? '' !=  '' )
 
 @else
@@ -55,7 +55,7 @@
             @else
         </main>
     </div>
-        @endif
+    @endif
 
     {{--  Footer  --}}
 
@@ -84,6 +84,7 @@
         const MDCMenu = mdc.menu.MDCMenu;
         const menu = new MDCMenu(document.querySelector('.mdc-menu'));
         menu.open = false;
+
         function openMenu() {
             menu.open = !menu.open;
 
@@ -92,9 +93,9 @@
         document.querySelector('#menu-button').addEventListener("click", openMenu);
         const MDCtooltip = mdc.Tooltip.MDCTooltip;
         const tooltip = new MDCTooltip(document.querySelector('.mdc-tooltip'));
-
+        const list = mdc.list.MDCList.attachTo(document.querySelector('.mdc-list'));
     </script>
 
     @yield('script')
-</body>
+    </body>
 </html>
