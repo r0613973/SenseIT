@@ -64,6 +64,7 @@
             </div>
         </div>
     </div>
+
     <p class="text-sm text-gray-700 leading-5 text-center">
         <span class="font-medium">{{ $paginator->firstItem() }}</span>
         {!! __('-') !!}

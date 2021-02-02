@@ -7,12 +7,13 @@
         <h1>SENSE IT</h1>
     </section>
 
-    <form action="home.html">
+    <form  method="POST" action="{{ route('login') }}">
+        @csrf
         <label class="mdc-text-field mdc-text-field--with-leading-icon mdc-text-field--filled username">
             <i class="material-icons mdc-text-field__icon mdc-text-field__icon--leading">person</i>
             <span class="mdc-text-field__ripple"></span>
-            <input type="text" class="mdc-text-field__input" aria-labelledby="username-label" name="username" required>
-            <span class="mdc-floating-label" id="username-label">Username</span>
+            <input type="text" class="mdc-text-field__input" aria-labelledby="email-label" name="Email" required>
+            <span class="mdc-floating-label" id="email-label">Email</span>
             <span class="mdc-line-ripple"></span>
         </label>
         <label class="mdc-text-field mdc-text-field--with-leading-icon mdc-text-field--filled password">
@@ -23,17 +24,14 @@
             <span class="mdc-line-ripple"></span>
         </label>
         <div class="button-container">
-            <button type="button" class="mdc-button cancel" onclick="location.href='../home'">
+            <button type="button" class="mdc-button cancel" onclick="location.href='../register'">
                 <div class="mdc-button__ripple"></div>
                 <span class="mdc-button__label">
-                    Cancel
+                    Account aanmaken
                 </span>
             </button>
-            <button class="mdc-button mdc-button--raised next">
-                <div class="mdc-button__ripple"></div>
-                <span class="mdc-button__label">
-                    Login
-                </span>
+            <button type="submit" class="mdc-button mdc-button--raised next">
+                {{ __('Login') }}
             </button>
         </div>
 
