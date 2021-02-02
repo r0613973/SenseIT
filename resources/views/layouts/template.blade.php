@@ -45,7 +45,7 @@
 
     <body class="home">
     <div class="shrine-body">
-        <main class="mdc-top-app-bar--fixed-adjust ">
+        <main class="{{--mdc-top-app-bar--fixed-adjust--}} ">
 
             @endif
 

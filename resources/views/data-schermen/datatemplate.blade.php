@@ -1,4 +1,4 @@
-<div class="container">
+<div class="hscroll">
     <div class="mdc-data-table">
 
         {{ $measurements->links() }}
