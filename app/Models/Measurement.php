@@ -10,13 +10,13 @@ use Illuminate\Database\Eloquent\Model;
 
 /**
  * Class Measurement
- * 
+ *
  * @property int $MeasurementID
  * @property int $BoxID
  * @property int $SensorID
  * @property character varying|null $Value
  * @property timestamp without time zone $TimeStamp
- * 
+ *
  * @property SensorBox $sensor_box
  *
  * @package App\Models
@@ -45,10 +45,10 @@ class Measurement extends Model
 
 	public function sensor_box()
 	{
-		return $this->belongsTo(SensorBox::class, 'BoxID')
-					->where('SensorBox.BoxID', '=', 'Measurement.BoxID')
+		return $this->belongsTo(SensorBox::class, 'BoxID');
+					/*->where('SensorBox.BoxID', '=', 'Measurement.BoxID')
 					->where('SensorBox.SensorID', '=', 'Measurement.BoxID')
 					->where('SensorBox.BoxID', '=', 'Measurement.SensorID')
-					->where('SensorBox.SensorID', '=', 'Measurement.SensorID');
+					->where('SensorBox.SensorID', '=', 'Measurement.SensorID');*/
 	}
 }

@@ -10721,12 +10721,6 @@ body {
   padding-top: 0.1px;
 }
 
-.container {
-  width: 50%;
-  margin: auto;
-  margin-bottom: 50px;
-}
-
 .fa-arrow-circle-up {
   color: #0f0;
 }
@@ -10739,13 +10733,16 @@ body {
   padding-top: 20px;
 }
 
-.mdc-data-table {
-  margin-bottom: 60px;
-  margin-top: 20px;
+.container .mdc-icon-button {
+  transform: scale(0.6);
 }
 
 .paginationButton {
   color: #037971;
+}
+
+.grafana {
+  margin-bottom: 60px;
 }
 
 .header {
@@ -10759,8 +10756,12 @@ body {
   fill: currentColor;
 }
 
-.username,
-.password {
+.lastName,
+.firstName,
+.password,
+.email,
+.password1,
+.username {
   display: flex;
   width: 300px;
   margin: 20px auto;

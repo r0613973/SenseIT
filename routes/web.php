@@ -13,14 +13,21 @@ use Illuminate\Support\Facades\Route;
 |
 */
 Auth::routes();
-Route::view('/', 'home');
+Route::get('/logout', 'LoginController@logout');
+
 Route::redirect('home', '/');
-Route::get('logout', 'Auth\LoginController@logout');
-Route::get('/temperatuur', 'MeasurementController@temperatuur');
-Route::get('/luchtkwaliteit', 'MeasurementController@luchtkwaliteit');
-Route::get('/luchtvochtigheid', 'MeasurementController@luchtvochtigheid');
-Route::view('/locatie', 'data-schermen/locatie');
-Route::get('/zonlicht', 'MeasurementController@zonlicht');
+Route::post('/registreer', 'RegistreerController@Post')->name('registreer.post');
+Route::post('/login', 'LoginController@Login')->name('login');
+Route::view('/login','auth.login');
+
+Route::middleware(['auth'])->group(function () {
+    Route::get('/temperatuur', 'MeasurementController@temperatuur');
+    Route::get('/luchtkwaliteit', 'MeasurementController@luchtkwaliteit');
+    Route::get('/luchtvochtigheid', 'MeasurementController@luchtvochtigheid');
+    Route::view('/locatie', 'data-schermen/locatie');
+    Route::get('/zonlicht', 'MeasurementController@zonlicht');
+    Route::view('/', 'home');
+});
 
 Route::middleware(['auth'])->prefix('admin')->group(function () {
 

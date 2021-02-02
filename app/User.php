@@ -1,49 +1,74 @@
-<?php
+<?php /** @noinspection Annotator */
+/** @noinspection Annotator */
+/** @noinspection Annotator */
+
+/**
+ * Created by Reliese Model.
+ */
 
 namespace App;
 
-use Illuminate\Contracts\Auth\MustVerifyEmail;
+use Illuminate\Database\Eloquent\Collection;
+use Illuminate\Database\Eloquent\Model;
 use Illuminate\Foundation\Auth\User as Authenticatable;
-use Illuminate\Notifications\Notifiable;
 
-class User extends Authenticatable
+/**
+ * Class User
+ *
+ * @property int $UserID
+ * @property character varying $LastName
+ * @property character varying $FirstName
+ * @property character varying $Email
+ * @property character varying $Password
+ * @property character varying|null $Address
+ * @property character varying|null $PostalCode
+ * @property character varying|null $City
+ * @property int $UserTypeID
+ *
+ * @property UserType $user_type
+ * @property Collection|Box[] $boxes
+ *
+ * @package App\Models
+ * @noinspection Annotator
+ */
+class User extends  Authenticatable
 {
+    protected $table = 'User';
+    protected $primaryKey = 'UserID';
+    public $incrementing = false;
+    public $timestamps = false;
 
-    public function boxusers()
-    {
-        return $this->hasMany('App\BoxUser');
-    }
-
-    public function usertype()
-    {
-        return $this->belongsTo('App\UserType');
-    }
-    use Notifiable;
-
-    /**
-     * The attributes that are mass assignable.
-     *
-     * @var array
-     */
-    protected $fillable = [
-        'name', 'email', 'password',
-    ];
-
-    /**
-     * The attributes that should be hidden for arrays.
-     *
-     * @var array
-     */
-    protected $hidden = [
-        'password', 'remember_token',
-    ];
-
-    /**
-     * The attributes that should be cast to native types.
-     *
-     * @var array
-     */
     protected $casts = [
-        'email_verified_at' => 'datetime',
+        'UserID' => 'int',
+        'LastName' => 'character varying',
+        'FirstName' => 'character varying',
+        'Email' => 'character varying',
+        'Password' => 'character varying',
+        'Address' => 'character varying',
+        'PostalCode' => 'character varying',
+        'City' => 'character varying',
+        'UserTypeID' => 'int'
     ];
+
+    protected $fillable = [
+        'LastName',
+        'FirstName',
+        'Email',
+        'Password',
+        'Address',
+        'PostalCode',
+        'City',
+        'UserTypeID'
+    ];
+
+    public function user_type()
+    {
+        return $this->belongsTo(\App\Models\UserType::class, 'UserTypeID');
+    }
+
+    public function boxes()
+    {
+        return $this->belongsToMany(\App\Models\Box::class, 'BoxUser', 'UserID', 'BoxID')
+            ->withPivot('BoxUserID', 'StartDate', 'EndDate');
+    }
 }

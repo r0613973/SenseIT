@@ -10,8 +10,8 @@ class MeasurementController extends Controller
 {
     public function temperatuur()
     {
-        $measurements =  $this->ophalendata(4, 16);
-        $measurements->eenheid  = '°C';
+        $measurements = $this->ophalendata(5, 18);
+
         $result = compact('measurements');
         Json::dump($result);
 
@@ -21,18 +21,17 @@ class MeasurementController extends Controller
 
     public function luchtvochtigheid()
     {
-        $measurements =  $this->ophalendata(4, 15);
-        $measurements->eenheid  = '%';
+        $measurements = $this->ophalendata(5, 15);
         $result = compact('measurements');
         Json::dump($result);
 
         return view('data-schermen.luchtvochtigheid', $result);
     }
+
     public function zonlicht()
     {
         //TODO Juiste sensor toevoegen
-        $measurements =  $this->ophalendata(5, -1);
-        $measurements->eenheid  = '%';
+        $measurements = $this->ophalendata(5, -1);
         $result = compact('measurements');
         Json::dump($result);
 
@@ -42,8 +41,7 @@ class MeasurementController extends Controller
     public function luchtkwaliteit()
     {
         //TODO Juiste sensor toevoegen
-        $measurements =  $this->ophalendata(5, -1);
-        $measurements->eenheid  = 'pm2.5';
+        $measurements = $this->ophalendata(5, 14);
         $result = compact('measurements');
         Json::dump($result);
 
@@ -54,12 +52,13 @@ class MeasurementController extends Controller
     public function ophalendata($boxID, $SensorID)
     {
         $measurements = Measurement::orderBy('TimeStamp', 'desc')
-            ->where('BoxID', 'like', $boxID)
-            ->where('SensorID', 'like', $SensorID)->paginate(10);
+            ->join('Sensor', 'Measurement.SensorID', '=', "Sensor.SensorID")
+            ->join('SensorType', 'Sensor.SensorTypeID', '=', 'SensorType.SensorTypeID')
+            ->where('Measurement.BoxID', 'like', $boxID)
+            ->where('Measurement.SensorID', 'like', $SensorID)
+            ->paginate(10);
         $vorigewaarde = 0;
         foreach ($measurements as $measurement) {
-            $measurement->timeStamp = "0";
-
             if ($measurement->Value >= $vorigewaarde) {
                 $measurement->Arrow = '<i class="fas fa-arrow-circle-down"></i>';
             } else {

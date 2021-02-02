@@ -9,8 +9,8 @@
     fill: currentColor;
 }
 
-.username,
-.password {
+.lastName, .firstName,
+.password, .email, .password1, .username , {
     display: flex;
     width: 300px;
     margin: 20px auto;
