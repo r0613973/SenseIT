@@ -9,10 +9,16 @@
 
     <form  method="POST" action="{{ route('login') }}">
         @csrf
+        @if (session()->has('error'))
+            <div class="loginAlert alert alert-danger">
+                <p>{!! session()->get('error') !!}</p>
+            </div>
+
+        @endif
         <label class="mdc-text-field mdc-text-field--with-leading-icon mdc-text-field--filled username">
             <i class="material-icons mdc-text-field__icon mdc-text-field__icon--leading">person</i>
             <span class="mdc-text-field__ripple"></span>
-            <input type="text" class="mdc-text-field__input" aria-labelledby="email-label" name="Email" required>
+            <input type="text" class="mdc-text-field__input" aria-labelledby="email-label" name="Email" value="{{ old('Email') }}" required>
             <span class="mdc-floating-label" id="email-label">Email</span>
             <span class="mdc-line-ripple"></span>
         </label>
@@ -50,5 +56,9 @@
     const password = new MDCTextField(document.querySelector('.password'));
     new MDCRipple(document.querySelector('.cancel'));
     new MDCRipple(document.querySelector('.next'));
+
+
+    const banner = new MDCBanner(document.querySelector('.mdc-banner'));
+    const snackbar = new  mdc.snackbar.MDCSnackbar.attachTo(document.querySelector('.mdc-snackbar'));
     </script>
 @endsection

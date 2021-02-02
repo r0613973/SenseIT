@@ -15,6 +15,8 @@ class RegistreerController extends Controller
 {
     public function Post(Request $request)
     {
+
+        $request->flash();
         $validator = Validator::make($request->all(), [
             'FirstName' => ['required', 'string', 'max:255'],
             'LastName' => ['required', 'string', 'max:255'],
@@ -34,11 +36,11 @@ class RegistreerController extends Controller
             ->post('https://vitoapi.azure-api.net/api/User', [
                 'LastName' => Request('lastName'),
                 'FirstName' =>Request('firstName'),
-                'Email' => Request('email'),
+                'Email' => Request('Email'),
                 'Password' =>Request('password'),
                 'UserTypeID' => 3,
             ]);
-        $emailAddress = Request('email');
+        $emailAddress = Request('Email');
         $name = Request('firstName');
         $email = new RegisterMail($emailAddress, $name);
         Mail::to($emailAddress)->send($email);

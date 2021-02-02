@@ -12,7 +12,7 @@
         <label class="mdc-text-field mdc-text-field--with-leading-icon mdc-text-field--filled email">
             <i class="material-icons mdc-text-field__icon mdc-text-field__icon--leading">email</i>
             <span class="mdc-text-field__ripple"></span>
-            <input type="email" class="mdc-text-field__input" aria-labelledby="email-label" name="email" id="email"
+            <input type="email" class="mdc-text-field__input" aria-labelledby="email-label" name="Email" id="Email"
                    required>
             <span class="mdc-floating-label" id="email-label">Email</span>
             <span class="mdc-line-ripple"></span>
