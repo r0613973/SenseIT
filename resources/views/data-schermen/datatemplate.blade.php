@@ -1,6 +1,7 @@
+
 <div class="hscroll">
     <div class="mdc-data-table">
-
+        <div class="mdc-data-table__table-container">
         {{ $measurements->links() }}
         <table class="mdc-data-table__table">
             <thead>
@@ -31,6 +32,6 @@
 
         </table>
 
-
+        </div>
     </div>
 </div>

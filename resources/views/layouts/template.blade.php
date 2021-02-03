@@ -43,10 +43,13 @@
 
     @include('shared.navigation')
 
-    <body class="home">
-    <div class="shrine-body">
-        <main class="{{--mdc-top-app-bar--fixed-adjust--}} ">
+    <body class="">
 
+    <!--<div class="shrine-body">-->
+        <main class="{{--mdc-top-app-bar--fixed-adjust--}}">
+            <div class="container">
+                <div class="mdc-layout-grid">
+                    <div class="mdc-layout-gird__inner">
             @endif
 
             @yield('main', 'Page under construction ...')
@@ -54,8 +57,11 @@
             @if($nav ?? '' !=  '' )
 
             @else
+                    </div>
+                </div></div>
+            @yield('bottom-nav')
         </main>
-    </div>
+
     @endif
 
     {{--  Footer  --}}
