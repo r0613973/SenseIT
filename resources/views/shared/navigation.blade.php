@@ -36,7 +36,9 @@
 
         </section>
         <section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-end " role="toolbar">
+            <span>{{auth()->user()['FirstName']." ". auth()->user()['LastName']}}</span>
             <div class="mdc-menu-surface--anchor">
+
 
                 <button data-tooltip-id="tooltip-id" class="material-icons mdc-top-app-bar__action-item mdc-icon-button"
                         id="menu-button" aria-label="Account">account_circle

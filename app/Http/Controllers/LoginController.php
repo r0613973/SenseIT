@@ -37,7 +37,7 @@ class LoginController extends Controller
             Auth::login($user);
 
             if (auth()->user()) {
-                return view('home');
+                return redirect('home');
             }
         }
 
