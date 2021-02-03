@@ -27,6 +27,7 @@ Route::middleware(['auth'])->group(function () {
     Route::view('/locatie', 'data-schermen/locatie');
     Route::get('/zonlicht', 'MeasurementController@zonlicht');
     Route::view('/', 'home');
+    Route::view('/sateliet', 'data-schermen/sateliet');
 });
 
 Route::middleware(['auth'])->prefix('admin')->group(function () {
