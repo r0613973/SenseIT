@@ -37,8 +37,20 @@ body{
     overflow-x: auto; /* Horizontal */
 }
 
-.mdc-data-table{
+.mdc-data-table, .home{
     margin-top: 50px;
     width: 100%;
+
 }
 
+.mdc-card{
+    padding: 15px;
+}
+
+.content {
+    display: none;
+}
+
+.content--active {
+    display: block;
+}
