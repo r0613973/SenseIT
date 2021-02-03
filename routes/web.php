@@ -26,7 +26,12 @@ Route::middleware(['auth'])->group(function () {
     Route::get('/luchtvochtigheid', 'MeasurementController@luchtvochtigheid');
     Route::view('/locatie', 'data-schermen/locatie');
     Route::get('/zonlicht', 'MeasurementController@zonlicht');
+
+   
+    Route::view('/sateliet', 'data-schermen/sateliet');
+
     Route::get('/', 'HomeController@index');
+
 });
 
 Route::middleware(['auth'])->prefix('admin')->group(function () {
