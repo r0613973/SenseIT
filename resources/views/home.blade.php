@@ -4,7 +4,7 @@
 
     <div class="home">
 
-        <div class="mdc-layout-grid__cell">
+        <div class="container">
             <h2>Overzicht van uw gekoppelde boxen</h2>
             <div class="mdc-tab-bar" role="tablist">
                 <div class="mdc-tab-scroller">

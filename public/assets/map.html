@@ -23,15 +23,20 @@
 
 
     var variable = parent.document.getElementById(window.name);
-    console.log( variable.attributes.lat.value);
+    console.log( variable);
     mapboxgl.accessToken = 'pk.eyJ1IjoicnViZW5saWUiLCJhIjoiY2syMjhubmkxMDY1ZzNpcGRpM21mcGVudCJ9.5Sd8sCupul110RJ2qRMcpg';
+
+
+
     var map = new mapboxgl.Map({
         container: 'map', // container id
         style: 'mapbox://styles/mapbox/streets-v11', // style URL
         center: [ variable.attributes.lat.value, variable.attributes.long.value],  // starting position [lng, lat]
         zoom: 16 // starting zoom
     });
+
     map.on('load', function () {
+
         map.addSource('fapar', {
             'type': 'raster',
 // use the tiles option to specify a WMS tile source URL
@@ -105,6 +110,9 @@
         var layers = document.getElementById('menu');
         layers.appendChild(link);
     }
+    var marker = new mapboxgl.Marker()
+        .setLngLat([ variable.attributes.lat.value, variable.attributes.long.value])  // starting position [lng, lat])
+        .addTo(map);
     map.on('load', function () {
         map.resize();});
 
