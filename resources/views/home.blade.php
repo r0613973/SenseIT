@@ -61,17 +61,18 @@
                                         </div>
                                     @endforeach
                                 </ul>
-                                <iframe
-                                    src="http://20.73.164.205:3000/d-solo/xIkhwMLGk/sensoren-metingen-dashboard?var-Box_Admin=All&var-Box_Boer={{$box->BoxID}}&var-X_Coordinaten=51.0152&var-Y_Coordinaten=4.71502&refresh=5m&from=1611446516245&to=1612656116245&orgId=1&panelId=9"
-                                    height="200" frameborder="0">
 
-                                </iframe>
 
                                 <iframe src="http://20.73.164.205:3000/d-solo/xIkhwMLGk/sensoren-metingen-dashboard?orgId=1&var-Box_Admin=All&var-Box_Boer={{$box->BoxID}}&from=1611734741265&to=1612339541265&panelId=7"
                                         height="200" frameborder="0">
 
                                 </iframe>
                                 @if($box->BoxID == 5 )
+                                    <iframe
+                                        src="http://20.73.164.205:3000/d-solo/xIkhwMLGk/sensoren-metingen-dashboard?var-Box_Admin=All&var-Box_Boer={{$box->BoxID}}&var-X_Coordinaten=51.0152&var-Y_Coordinaten=4.71502&refresh=5m&from=1611446516245&to=1612656116245&orgId=1&panelId=9"
+                                        height="200" frameborder="0">
+
+                                    </iframe>
                                     <iframe
                                         src="http://20.73.164.205:3000/d-solo/xIkhwMLGk/sensoren-metingen-dashboard?var-Box_Admin=All&var-Box_Boer=5&var-X_Coordinaten=51.0152&var-Y_Coordinaten=4.71502&refresh=5m&from=1611446516245&to=1612656116245&orgId=1&panelId=11"
                                         height="200" frameborder="0">
@@ -96,6 +97,7 @@
 @endsection
 @section('script')
     <script>
+
         $('.mdc-tab-scroller__scroll-content button').first().addClass('mdc-tab--active');
         $('.mdc-tab-indicator').first().addClass('mdc-tab-indicator--active');
         $('.content').first().addClass('content--active');
@@ -120,6 +122,7 @@
             // Show content for newly-activated tab
             contentEls[event.detail.index].classList.add('content--active');
         });
+        console.log("Test");
 
 
     </script>

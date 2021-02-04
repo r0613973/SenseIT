@@ -5,16 +5,15 @@
     </div>
     <div class="mdc-drawer__content mdc-layout-grid">
         <nav class="mdc-list">
-            <a class="mdc-list-item mdc-list-item" href="#" tabindex="0" aria-current="page">
+            <a class="mdc-list-item mdc-list-item" href="/" tabindex="0" aria-current="page">
                 <span class="mdc-list-item__text">Home</span>
             </a>
             <a class="mdc-list-item" href="/temperatuur" tabindex="0">
 
                 <span class="mdc-list-item__text">Metingen</span>
             </a>
-            <a class="mdc-list-item" href="#" tabindex="0">
-
-                <span class="mdc-list-item__text">Analyse</span>
+            <a class="mdc-list-item" href="/account" tabindex="0">
+                <span class="mdc-list-item__text">Account</span>
             </a>
         </nav>
 
@@ -51,7 +50,7 @@
                 <div style="margin-top: 64px" class="mdc-menu mdc-menu-surface">
                     <ul class="mdc-list" role="menu" aria-hidden="true" aria-orientation="vertical" tabindex="-1">
                         <li class="mdc-list-item" role="menuitem">
-                            <button type="button" class="mdc-button cancel" onclick="location.href='../'">
+                            <button type="button" class="mdc-button cancel" onclick="location.href='../account'">
                                 <div class="mdc-button__ripple"></div>
                                 <span class="mdc-button__label">
                                   account

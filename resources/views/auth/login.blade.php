@@ -49,7 +49,7 @@
 
 @endsection
 @section('script')
-    <script>
+    <script>localStorage.clear();
     const MDCTextField = mdc.textField.MDCTextField;
     const MDCRipple =  mdc.ripple.MDCRipple;
     const username = new MDCTextField(document.querySelector('.username'));
