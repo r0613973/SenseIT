@@ -42,9 +42,9 @@
 
             </a>
             <a href="/sateliet">
-            <span class="mdc-bottom-navigation__list-item" id="locatieIcon">
+            <span class="mdc-bottom-navigation__list-item" id="satelieticoon">
           <span class="material-icons mdc-bottom-navigation__list-item__icon"><i
-                  class="fas fa-map-marker-alt"></i></span>
+                  class="fas fa-satellite"></i></span>
           <span class="mdc-bottom-navigation__list-item__text">sateliet</span>
         </span>
             </a>
