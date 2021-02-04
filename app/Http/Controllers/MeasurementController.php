@@ -69,7 +69,7 @@ class MeasurementController extends Controller
         }
 
         foreach ($boxen as $box) {
-            $sensoriD =
+            $box->SensorTypeID = $SensorTypeID;
 
 
             $box['measurements'] = Measurement::orderBy('TimeStamp', 'desc')
