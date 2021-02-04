@@ -7,6 +7,7 @@ use App\Models\Measurement;
 use Facades\App\Helpers\Json;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Http;
+use Illuminate\Support\Str;
 
 class MeasurementController extends Controller
 {
@@ -21,6 +22,13 @@ class MeasurementController extends Controller
 
         return view('data-schermen.temperatuur', $result);
     }
+    public function bodemTemperatuur()
+    {
+        $boxen = $this->ophalendata(5, 7);
+        $result = compact('boxen');
+        Json::dump($result);
+        return view('data-schermen.bodemTemperatuur', $result);
+    }
 
     public function luchtvochtigheid()
     {
@@ -29,6 +37,15 @@ class MeasurementController extends Controller
         Json::dump($result);
 
         return view('data-schermen.luchtvochtigheid', $result);
+    }
+
+    public function bodemvochtigheid()
+    {
+        $boxen = $this->ophalendata(5, 8);
+        $result = compact('boxen');
+        Json::dump($result);
+
+        return view('data-schermen.bodemvochtigheid', $result);
     }
 
     public function zonlicht()
@@ -79,7 +96,7 @@ class MeasurementController extends Controller
                 ->where('SensorType.SensorTypeID', 'like', $SensorTypeID)
                 ->paginate(10)->onEachSide(2);
 
-
+            $unit= '%';
             $vorigewaarde = 0;
             foreach ($box['measurements'] as $measurement) {
                 if ($measurement->Value >= $vorigewaarde) {
@@ -87,8 +104,11 @@ class MeasurementController extends Controller
                 } else {
                     $measurement->Arrow = '<i class="fas fa-arrow-circle-up"></i>';
                 }
+                $measurement->TimeStamp =Str::substr($measurement->TimeStamp, 0, 19);
+                $unit =$measurement->Unit;
                 $vorigewaarde = $measurement->Value;
             }
+            $box->Unit = $unit;
 
         }
 
