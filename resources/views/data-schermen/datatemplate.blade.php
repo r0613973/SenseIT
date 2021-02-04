@@ -1,5 +1,7 @@
 <div class="home">
-    <div class="mdc-layout-grid__cell">
+<div class="container">
+    <div class="row">
+
         <div class="mdc-tab-bar" role="tablist">
             <div class="mdc-tab-scroller">
                 <div class="mdc-tab-scroller__scroll-area">
@@ -22,8 +24,9 @@
             </div>
         </div>
 
+    </div>
 
-        <div class="mdc-layout-grid__cell">
+<div class="row">
             @foreach($boxen as $box)
                 <div class="content" id="{{$box->BoxID}}">
                     @if(count($box->measurements)==0)
@@ -32,6 +35,7 @@
                         </div>
 
                     @else
+                        <div class="row">
                         <div class="mdc-data-table">
                             <div class="mdc-data-table__table-container">
                                 {{ $box->measurements->onEachSide(1)->links() }}
@@ -73,15 +77,19 @@
 
                             </div>
                         </div>
+                        </div>
                     @endif
-                        <iframe src="http://20.73.164.205:3000/d-solo/xIkhwMLGk/sensoren-metingen-dashboard?orgId=1&refresh=5s&var-User_Name=1&var-Box_Admin=All&var-Box_Boer={{$box->BoxID}}&var-Sensor_type={{$SensorTypeID}}&var-X_Coordinaten=51.0152&var-Y_Coordinaten=4.71502&from=1611843390409&to=1612448190409&panelId=39" width="450" height="200" frameborder="0">
+                    <div class="row">
+                        <iframe src="http://20.73.164.205:3000/d-solo/xIkhwMLGk/sensoren-metingen-dashboard?orgId=1&refresh=5s&var-User_Name=1&var-Box_Admin=All&var-Box_Boer={{$box->BoxID}}&var-Sensor_type={{$SensorTypeID}}&var-X_Coordinaten=51.0152&var-Y_Coordinaten=4.71502&from=1611843390409&to=1612448190409&panelId=39" width="450" height="500" frameborder="0">
 
                         </iframe>
+                    </div>
                 </div>
             @endforeach
-        </div>
-    </div>
 </div>
+
+
+</div></div>
 
 @section('script2')
     <script>
