@@ -23,8 +23,10 @@ Route::view('/login','auth.login');
 Route::middleware(['auth'])->group(function () {
     Route::get('/account', 'AccountController@index');
     Route::get('/temperatuur', 'MeasurementController@temperatuur');
+    Route::get('/bodemTemperatuur', 'MeasurementController@bodemTemperatuur');
     Route::get('/luchtkwaliteit', 'MeasurementController@luchtkwaliteit');
     Route::get('/luchtvochtigheid', 'MeasurementController@luchtvochtigheid');
+    Route::get('/bodemvochtigheid', 'MeasurementController@bodemvochtigheid');
     Route::view('/locatie', 'data-schermen/locatie');
     Route::get('/zonlicht', 'MeasurementController@zonlicht');
     Route::get('/tokenQry','MeasurementController@tokenQry');

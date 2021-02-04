@@ -12628,6 +12628,15 @@ body {
   display: block;
 }
 
+.measurementTable {
+  margin-top: 20px;
+}
+
+.iframeMeasurement {
+  padding-right: 0px;
+  padding-left: 0px;
+}
+
 .header {
   text-align: center;
 }

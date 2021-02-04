@@ -1,42 +1,35 @@
 <div class="home">
-<div class="container">
-    <div class="row">
+    <div class="container">
+        <div class="row">
 
-        <div class="mdc-tab-bar" role="tablist">
-            <div class="mdc-tab-scroller">
-                <div class="mdc-tab-scroller__scroll-area">
-                    <div class="mdc-tab-scroller__scroll-content">
-                        @foreach($boxen as $box)
-                            <button class="mdc-tab mdc-tab" role="tab" aria-selected="true" tabindex="0">
+            <div class="mdc-tab-bar" role="tablist">
+                <div class="mdc-tab-scroller">
+                    <div class="mdc-tab-scroller__scroll-area">
+                        <div class="mdc-tab-scroller__scroll-content">
+                            @foreach($boxen as $box)
+                                <button class="mdc-tab mdc-tab" role="tab" aria-selected="true" tabindex="0">
           <span class="mdc-tab__content">
             <span class="mdc-tab__text-label">Box iD: {{$box->BoxID}}</span>
           </span>
-                                <span class="mdc-tab-indicator">
+                                    <span class="mdc-tab-indicator">
             <span class="mdc-tab-indicator__content mdc-tab-indicator__content--underline"></span>
           </span>
-                                <span class="mdc-tab__ripple"></span>
-                            </button>
-                        @endforeach
+                                    <span class="mdc-tab__ripple"></span>
+                                </button>
+                            @endforeach
 
 
+                        </div>
                     </div>
                 </div>
             </div>
+
         </div>
 
-    </div>
-
-<div class="row">
+        <div class="row">
 
             @foreach($boxen as $box)
                 <div class="content" id="{{$box->BoxID}}">
-                    <div class="row">
-                     {{--   <iframe src="http://20.73.164.205:3000/d-solo/xIkhwMLGk/sensoren-metingen-dashboard?orgId=1&refresh=5s&var-User_Name=1&var-Box_Admin=All&var-Box_Boer={{$box->BoxID}}&var-Sensor_type={{$box->SensorTypeID}}&var-X_Coordinaten=51.0152&var-Y_Coordinaten=4.71502&from=1611843390409&to=1612448190409&panelId=39" width="450" height="500" frameborder="0">
-
-                        </iframe>
---}}
-                        <iframe src="http://20.73.164.205:3000/d-solo/xIkhwMLGk/sensoren-metingen-dashboard?orgId=1&refresh=5s&from=1612416655138&to=1612459855138&var-User_Name=1&var-Box_Boer={{$box->BoxID}}&var-Sensor_type={{$box->SensorTypeID}}&var-Unit=%25&var-X_Coordinaten=51.0152&var-Y_Coordinaten=4.71502&var-Box_Admin=All&panelId=39" width="450" height="200" frameborder="0"></iframe>
-                    </div>
                     @if(count($box->measurements)==0)
                         <div class="card">
                             <div class="card-body">Deze box heeft geen meetwaarden</div>
@@ -44,58 +37,69 @@
 
                     @else
                         <div class="row">
-                        <div class="mdc-data-table">
-                            <div class="mdc-data-table__table-container">
-                                <table class="mdc-data-table__table">
-                                    <thead>
-                                    <tr class="mdc-data-table__header-row">
-                                        <th class="mdc-data-table__header-cell" role="columnheader" scope="col"><i
-                                                class="fas fa-arrow-circle-right"></i></th>
-                                        <th class="mdc-data-table__header-cell mdc-data-table__header-cell--numeric"
-                                            role="columnheader"
-                                            scope="col">Waarde
-                                        </th>
-                                        <th class="mdc-data-table__header-cell mdc-data-table__header-cell--numeric"
-                                            role="columnheader"
-                                            scope="col">Tijdstip
-                                        </th>
+                            {{--   <iframe src="http://20.73.164.205:3000/d-solo/xIkhwMLGk/sensoren-metingen-dashboard?orgId=1&refresh=5s&var-User_Name=1&var-Box_Admin=All&var-Box_Boer={{$box->BoxID}}&var-Sensor_type={{$box->SensorTypeID}}&var-X_Coordinaten=51.0152&var-Y_Coordinaten=4.71502&from=1611843390409&to=1612448190409&panelId=39" width="450" height="500" frameborder="0">
 
-                                    </tr>
-                                    </thead>
-                                    <tbody class="mdc-data-table__content">
+                               </iframe>
+       --}}
+                            <iframe class="iframeMeasurement"
+                                    src="http://20.73.164.205:3000/d-solo/xIkhwMLGk/sensoren-metingen-dashboard?orgId=1&refresh=5s&from=1612416655138&to=1612459855138&var-User_Name=1&var-Box_Boer={{$box->BoxID}}&var-Sensor_type={{$box->SensorTypeID}}&var-Unit={{$box->Unit}}&var-X_Coordinaten=51.0152&var-Y_Coordinaten=4.71502&var-Box_Admin=All&panelId=39"
+                                    width="450" height="200" frameborder="0"></iframe>
+                        </div>
 
-
-                                    @foreach($box->measurements as $measurement)
-
-                                        <tr class="mdc-data-table__row">
-                                            <td class="mdc-data-table__cell ">{!! $measurement->Arrow !!}</td>
-                                            <td class="mdc-data-table__cell mdc-data-table__cell--numeric">{{$measurement->Value . $measurement->Unit}}  </td>
-                                            <td class="mdc-data-table__cell mdc-data-table__cell--numeric">{{$measurement->TimeStamp}}</td>
-
+                        <div class="row">
+                            <div class="mdc-data-table measurementTable">
+                                <div class="mdc-data-table__table-container">
+                                    <table class="mdc-data-table__table">
+                                        <thead>
+                                        <tr class="mdc-data-table__header-row">
+                                            <th class="mdc-data-table__header-cell" role="columnheader" scope="col"><i
+                                                    class="fas fa-arrow-circle-right"></i></th>
+                                            <th class="mdc-data-table__header-cell mdc-data-table__header-cell--numeric"
+                                                role="columnheader"
+                                                scope="col">Waarde
+                                            </th>
+                                            <th class="mdc-data-table__header-cell mdc-data-table__header-cell--numeric"
+                                                role="columnheader"
+                                                scope="col">Tijdstip
+                                            </th>
 
                                         </tr>
-                                    @endforeach
+                                        </thead>
+                                        <tbody class="mdc-data-table__content">
 
-                                    </tbody>
 
-                                </table>
-                                {{ $box->measurements->onEachSide(1)->links() }}
+                                        @foreach($box->measurements as $measurement)
 
+                                            <tr class="mdc-data-table__row">
+                                                <td class="mdc-data-table__cell ">{!! $measurement->Arrow !!}</td>
+                                                <td class="mdc-data-table__cell mdc-data-table__cell--numeric">{{$measurement->Value . $measurement->Unit}}  </td>
+                                                <td class="mdc-data-table__cell mdc-data-table__cell--numeric">{{$measurement->TimeStamp}}</td>
+
+
+                                            </tr>
+                                        @endforeach
+
+                                        </tbody>
+
+                                    </table>
+                                    {{ $box->measurements->onEachSide(1)->links() }}
+
+                                </div>
                             </div>
                         </div>
-                        </div>
                     @endif
-                  {{--  <div class="row">
-                        <iframe src="http://20.73.164.205:3000/d-solo/xIkhwMLGk/sensoren-metingen-dashboard?orgId=1&refresh=5s&var-User_Name=1&var-Box_Admin=All&var-Box_Boer={{$box->BoxID}}&var-Sensor_type={{$SensorTypeID}}&var-X_Coordinaten=51.0152&var-Y_Coordinaten=4.71502&from=1611843390409&to=1612448190409&panelId=39" width="450" height="500" frameborder="0">
+                    {{--  <div class="row">
+                          <iframe src="http://20.73.164.205:3000/d-solo/xIkhwMLGk/sensoren-metingen-dashboard?orgId=1&refresh=5s&var-User_Name=1&var-Box_Admin=All&var-Box_Boer={{$box->BoxID}}&var-Sensor_type={{$SensorTypeID}}&var-X_Coordinaten=51.0152&var-Y_Coordinaten=4.71502&from=1611843390409&to=1612448190409&panelId=39" width="450" height="500" frameborder="0">
 
-                        </iframe>
-                    </div>--}}
+                          </iframe>
+                      </div>--}}
                 </div>
             @endforeach
+        </div>
+
+
+    </div>
 </div>
-
-
-</div></div>
 
 @section('script2')
     <script>

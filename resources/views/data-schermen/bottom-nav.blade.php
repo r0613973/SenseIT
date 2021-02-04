@@ -5,7 +5,14 @@
        <span class="mdc-bottom-navigation__list-item  " id="temperatuurIcon">
           <span class="material-icons mdc-bottom-navigation__list-item__icon"><i
                   class="fas fa-thermometer-half"></i></span>
-          <span class="mdc-bottom-navigation__list-item__text">Temperatuur</span>
+          <span class="mdc-bottom-navigation__list-item__text">Lucht °C</span>
+        </span>
+            </a>
+            <a href="/bodemTemperatuur">
+       <span class="mdc-bottom-navigation__list-item  " id="bodemTemperatuurIcon">
+          <span class="material-icons mdc-bottom-navigation__list-item__icon"><i
+                  class="fas fa-thermometer-half"></i></span>
+          <span class="mdc-bottom-navigation__list-item__text">Bodem °C</span>
         </span>
             </a>
             <a href="/luchtvochtigheid">
@@ -13,6 +20,13 @@
           <span class="material-icons mdc-bottom-navigation__list-item__icon"><i class="fas fa-tint"></i></span>
           <span class="mdc-bottom-navigation__list-item__text">Luchtvochtigheid</span>
         </span>
+            </a>
+            <a href="/bodemvochtigheid">
+            <span class="mdc-bottom-navigation__list-item" id="bodemvochtigheidIcon">
+          <span class="material-icons mdc-bottom-navigation__list-item__icon"><i class="fas fa-tint"></i></span>
+          <span class="mdc-bottom-navigation__list-item__text">bodemvochtigheid</span>
+        </span>
+
             </a>
             <a href="/zonlicht">
             <span class="mdc-bottom-navigation__list-item" id="zonlichtIcon">
@@ -33,14 +47,7 @@
           <span class="mdc-bottom-navigation__list-item__text">Locatie</span>
         </span>
             </a>
-            <a href="/bodemvochtigheid">
-            <span class="mdc-bottom-navigation__list-item" id="locatieIcon">
-          <span class="material-icons mdc-bottom-navigation__list-item__icon"><i
-                  class="fas fa-map-marker-alt"></i></span>
-          <span class="mdc-bottom-navigation__list-item__text">bodemvochtigheid</span>
-        </span>
 
-            </a>
             <a href="/sateliet">
             <span class="mdc-bottom-navigation__list-item" id="satelieticoon">
           <span class="material-icons mdc-bottom-navigation__list-item__icon"><i
