@@ -27,8 +27,16 @@
     </div>
 
 <div class="row">
+
             @foreach($boxen as $box)
                 <div class="content" id="{{$box->BoxID}}">
+                    <div class="row">
+                     {{--   <iframe src="http://20.73.164.205:3000/d-solo/xIkhwMLGk/sensoren-metingen-dashboard?orgId=1&refresh=5s&var-User_Name=1&var-Box_Admin=All&var-Box_Boer={{$box->BoxID}}&var-Sensor_type={{$box->SensorTypeID}}&var-X_Coordinaten=51.0152&var-Y_Coordinaten=4.71502&from=1611843390409&to=1612448190409&panelId=39" width="450" height="500" frameborder="0">
+
+                        </iframe>
+--}}
+                        <iframe src="http://20.73.164.205:3000/d-solo/xIkhwMLGk/sensoren-metingen-dashboard?orgId=1&refresh=5s&from=1612416655138&to=1612459855138&var-User_Name=1&var-Box_Boer={{$box->BoxID}}&var-Sensor_type={{$box->SensorTypeID}}&var-Unit=%25&var-X_Coordinaten=51.0152&var-Y_Coordinaten=4.71502&var-Box_Admin=All&panelId=39" width="450" height="200" frameborder="0"></iframe>
+                    </div>
                     @if(count($box->measurements)==0)
                         <div class="card">
                             <div class="card-body">Deze box heeft geen meetwaarden</div>
@@ -38,7 +46,6 @@
                         <div class="row">
                         <div class="mdc-data-table">
                             <div class="mdc-data-table__table-container">
-                                {{ $box->measurements->onEachSide(1)->links() }}
                                 <table class="mdc-data-table__table">
                                     <thead>
                                     <tr class="mdc-data-table__header-row">
@@ -59,9 +66,7 @@
 
 
                                     @foreach($box->measurements as $measurement)
-                                        @section('test')
-                                            {{$SensorTypeID= $measurement->SensorTypeID}}
-                                        @endsection
+
                                         <tr class="mdc-data-table__row">
                                             <td class="mdc-data-table__cell ">{!! $measurement->Arrow !!}</td>
                                             <td class="mdc-data-table__cell mdc-data-table__cell--numeric">{{$measurement->Value . $measurement->Unit}}  </td>
@@ -74,16 +79,17 @@
                                     </tbody>
 
                                 </table>
+                                {{ $box->measurements->onEachSide(1)->links() }}
 
                             </div>
                         </div>
                         </div>
                     @endif
-                    <div class="row">
+                  {{--  <div class="row">
                         <iframe src="http://20.73.164.205:3000/d-solo/xIkhwMLGk/sensoren-metingen-dashboard?orgId=1&refresh=5s&var-User_Name=1&var-Box_Admin=All&var-Box_Boer={{$box->BoxID}}&var-Sensor_type={{$SensorTypeID}}&var-X_Coordinaten=51.0152&var-Y_Coordinaten=4.71502&from=1611843390409&to=1612448190409&panelId=39" width="450" height="500" frameborder="0">
 
                         </iframe>
-                    </div>
+                    </div>--}}
                 </div>
             @endforeach
 </div>
