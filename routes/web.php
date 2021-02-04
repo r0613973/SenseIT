@@ -30,7 +30,7 @@ Route::middleware(['auth'])->group(function () {
     Route::get('/tokenQry','MeasurementController@tokenQry');
     Route::get('/maprequeset/{boxid}','MeasurementController@maprequeset')->name('maprequeset.post');
 
-    Route::view('/sateliet', 'data-schermen/sateliet');
+    Route::get('/sateliet', 'MeasurementController@sateliet');
 
     Route::get('/', 'HomeController@index');
 

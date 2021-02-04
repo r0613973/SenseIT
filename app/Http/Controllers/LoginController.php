@@ -31,7 +31,7 @@ class LoginController extends Controller
             ->post('https://vitoapi.azure-api.net/api/User/authenticate');
        // dd($response -> json()['token']);
 
-        session(['token'=> $response->json()['token']]);
+
 
 
         if (count(($response->json())) > 2) {
@@ -41,7 +41,9 @@ class LoginController extends Controller
             Auth::login($user);
 
             if (auth()->user()) {
+                session(['token'=> $response->json()['token']]);
                 return redirect('home');
+
             }
         }
 
