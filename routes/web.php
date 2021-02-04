@@ -21,6 +21,7 @@ Route::post('/login', 'LoginController@Login')->name('login');
 Route::view('/login','auth.login');
 
 Route::middleware(['auth'])->group(function () {
+    Route::get('/account', 'AccountController@index');
     Route::get('/temperatuur', 'MeasurementController@temperatuur');
     Route::get('/luchtkwaliteit', 'MeasurementController@luchtkwaliteit');
     Route::get('/luchtvochtigheid', 'MeasurementController@luchtvochtigheid');
