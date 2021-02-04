@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Measurement;
 use Facades\App\Helpers\Json;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Http;
 
 class MeasurementController extends Controller
 {
@@ -12,7 +13,8 @@ class MeasurementController extends Controller
     {
         $measurements = $this->ophalendata(5, 18);
 
-        $result = compact('measurements');
+
+        $result = compact('measurements' );
         Json::dump($result);
 
 
@@ -68,6 +70,25 @@ class MeasurementController extends Controller
         }
 
         return $measurements;
+    }
+    public function tokenQry()
+    {
+        $token = session('token');
+
+        return response() ->json(
+            [
+                'token' => $token
+            ]
+        ) ;
+    }
+    public function maprequeset($boxid)
+    {
+            $url = "https://vitotestapi20210125111558.azurewebsites.net/api/SigFox/DB/".$boxid;
+        $response = Http::withHeaders([
+            'Ocp-Apim-Subscription-Key' => 'a9c9a5b87e2447dba2330ed7ce88efe3'
+        ])
+            ->post($url);
+        return $response;
     }
 
 

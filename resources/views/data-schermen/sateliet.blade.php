@@ -30,8 +30,20 @@
     </script>
 
 
-        <script src='https://api.mapbox.com/mapbox-gl-js/v2.0.0/mapbox-gl.js'></script>
+
     <script>
+        document.onload()
+        {
+            console.log("test")
+            httpGet()
+        }
+        function httpGet(theUrl)
+        {
+            var xmlHttp = new XMLHttpRequest();
+            xmlHttp.open( "POST", theUrl, false ); // false for synchronous request
+            xmlHttp.send( null );
+            return xmlHttp.responseText;
+        }
         const MDCList= mdc.list.MDCList;
         new MDCList(document.querySelector('.mdc-list'));
 

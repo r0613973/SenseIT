@@ -7,6 +7,7 @@ use App\Models\User;
 use Facades\App\Helpers\Json;
 
 
+use http\Message\Body;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Http;
@@ -28,7 +29,9 @@ class LoginController extends Controller
             /* 'dataType' => 'json'*/
         ])->withBody($string, 'application/json')
             ->post('https://vitoapi.azure-api.net/api/User/authenticate');
+       // dd($response -> json()['token']);
 
+        session(['token'=> $response->json()['token']]);
 
         if (count(($response->json())) > 2) {
             $id = $response->json()['userID'];
