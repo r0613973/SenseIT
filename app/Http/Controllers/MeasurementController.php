@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\BoxUser;
 use App\Models\Measurement;
 use Facades\App\Helpers\Json;
 use Illuminate\Http\Request;
@@ -10,9 +11,8 @@ class MeasurementController extends Controller
 {
     public function temperatuur()
     {
-        $measurements = $this->ophalendata(5, 18);
-
-        $result = compact('measurements');
+        $boxen = $this->ophalendata(5, 4);
+        $result = compact('boxen');
         Json::dump($result);
 
 
@@ -21,8 +21,8 @@ class MeasurementController extends Controller
 
     public function luchtvochtigheid()
     {
-        $measurements = $this->ophalendata(5, 15);
-        $result = compact('measurements');
+        $boxen = $this->ophalendata(5, 3);
+        $result = compact('boxen');
         Json::dump($result);
 
         return view('data-schermen.luchtvochtigheid', $result);
@@ -31,8 +31,8 @@ class MeasurementController extends Controller
     public function zonlicht()
     {
         //TODO Juiste sensor toevoegen
-        $measurements = $this->ophalendata(5, -1);
-        $result = compact('measurements');
+        $boxen = $this->ophalendata(5, 1);
+        $result = compact('boxen');
         Json::dump($result);
 
         return view('data-schermen.zonlicht', $result);
@@ -41,33 +41,56 @@ class MeasurementController extends Controller
     public function luchtkwaliteit()
     {
         //TODO Juiste sensor toevoegen
-        $measurements = $this->ophalendata(5, 14);
-        $result = compact('measurements');
+        $boxen = $this->ophalendata(5, 5);
+
+        $result = compact('boxen' );
         Json::dump($result);
 
-        return view('data-schermen.luchtkwaliteit', $result);
+        return view('data-schermen.luchtkwaliteit', $result );
+    }
+
+    public function ophalenBoxen()
+    {
+
     }
 
 
-    public function ophalendata($boxID, $SensorID)
+    public function ophalendata($boxID, $SensorTypeID)
     {
-        $measurements = Measurement::orderBy('TimeStamp', 'desc')
-            ->join('Sensor', 'Measurement.SensorID', '=', "Sensor.SensorID")
-            ->join('SensorType', 'Sensor.SensorTypeID', '=', 'SensorType.SensorTypeID')
-            ->where('Measurement.BoxID', 'like', $boxID)
-            ->where('Measurement.SensorID', 'like', $SensorID)
-            ->paginate(10);
-        $vorigewaarde = 0;
-        foreach ($measurements as $measurement) {
-            if ($measurement->Value >= $vorigewaarde) {
-                $measurement->Arrow = '<i class="fas fa-arrow-circle-down"></i>';
-            } else {
-                $measurement->Arrow = '<i class="fas fa-arrow-circle-up"></i>';
-            }
-            $vorigewaarde = $measurement->Value;
+        $user = auth()->user();
+        $userID = $user['UserID'];
+        if ($user->UserTypeID == 1 || $user->UserTypeID == 2) {
+            $boxen = BoxUser::orderby('BoxID')->distinct('BoxID')->with('Box')->get();
+        } else {
+            $boxen = BoxUser::where('BoxUser.UserID', '=', $userID)->orderby('BoxID')->with('Box')->get();
         }
 
-        return $measurements;
+        foreach ($boxen as $box) {
+            $sensoriD =
+
+
+            $box['measurements'] = Measurement::orderBy('TimeStamp', 'desc')
+                ->join('Sensor', 'Measurement.SensorID', '=', "Sensor.SensorID")
+                ->join('SensorType', 'Sensor.SensorTypeID', '=', 'SensorType.SensorTypeID')
+                ->where('Measurement.BoxID', 'like', $box->BoxID)
+                ->where('SensorType.SensorTypeID', 'like', $SensorTypeID)
+                ->paginate(10)->onEachSide(2);
+
+
+            $vorigewaarde = 0;
+            foreach ($box['measurements'] as $measurement) {
+                if ($measurement->Value >= $vorigewaarde) {
+                    $measurement->Arrow = '<i class="fas fa-arrow-circle-down"></i>';
+                } else {
+                    $measurement->Arrow = '<i class="fas fa-arrow-circle-up"></i>';
+                }
+                $vorigewaarde = $measurement->Value;
+            }
+
+        }
+
+
+        return $boxen;
     }
 
 

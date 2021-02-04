@@ -30,6 +30,7 @@ class LoginController extends Controller
             ->post('https://vitoapi.azure-api.net/api/User/authenticate');
 
 
+
         if (count(($response->json())) > 2) {
             $id = $response->json()['userID'];
             $user = User::findOrFail($id);
@@ -49,6 +50,7 @@ class LoginController extends Controller
     public function logout()
     {
         Auth::logout();
+
         return redirect('login');
     }
 }

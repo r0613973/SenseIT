@@ -10,5 +10,6 @@
 
         $('#luchtkwaliteitIcon').addClass('mdc-bottom-navigation__list-item--activated');
     </script>
+    @yield('script2')
 @endsection
 @include('data-schermen.bottom-nav')

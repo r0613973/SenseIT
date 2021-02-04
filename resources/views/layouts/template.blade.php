@@ -99,8 +99,9 @@
         }
 
         document.querySelector('#menu-button').addEventListener("click", openMenu);
-        const MDCtooltip = mdc.Tooltip.MDCTooltip;
-        const tooltip = new MDCTooltip(document.querySelector('.mdc-tooltip'));
+        //TODO Ik heb deze uigeschakeld, geeft error en wordt volgens mij nergens gebruikt
+    /*    const MDCtooltip = mdc.tooltip.MDCTooltip;
+        const tooltip = new MDCtooltip(document.querySelector('.mdc-tooltip'));*/
         const list = mdc.list.MDCList.attachTo(document.querySelector('.mdc-list'));
     </script>
 

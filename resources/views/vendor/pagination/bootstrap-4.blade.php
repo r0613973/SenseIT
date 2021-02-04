@@ -25,8 +25,9 @@
                 @foreach ($elements as $element)
                     {{-- "Three Dots" Separator --}}
                     @if (is_string($element))
-                        <li class="page-item disabled" aria-disabled="true"><span
-                                class="page-link">{{ $element }}</span></li>
+                       {{-- <li class="page-item disabled" aria-disabled="true"><span
+                                class="page-link">{{ $element }}</span></li>--}}
+                        <button class="mdc-icon-button  mdc-data-table__pagination-button">{{$element}}</button>
                     @endif
 
                     {{-- Array Of Links --}}

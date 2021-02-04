@@ -2,12 +2,14 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Box;
 use App\Models\BoxUser;
 use App\Models\Measurement;
 use App\Models\Monitoring;
 use App\Models\SensorBox;
 use Illuminate\Http\Request;
 use Facades\App\Helpers\Json;
+use Illuminate\Support\Facades\DB;
 
 class HomeController extends Controller
 {
@@ -31,7 +33,12 @@ class HomeController extends Controller
 
         $user = auth()->user();
         $userID= $user['UserID'];
-        $boxen = BoxUser::where('BoxUser.UserID', '=', $userID)->orderby('BoxID')->with('Box')->get();
+        if($user->UserTypeID == 1 || $user->UserTypeID == 2) {
+            $boxen = BoxUser::orderby('BoxID')->distinct('BoxID')->with('Box')->get();
+        }
+        else{
+            $boxen = BoxUser::where('BoxUser.UserID', '=', $userID)->orderby('BoxID')->with('Box')->get();
+        }
 
         foreach ($boxen as $box) {
 
@@ -49,7 +56,7 @@ class HomeController extends Controller
 
         $snapshot = compact('boxen');
         $user = compact('user');
-        Json::dump($user);
+        Json::dump($snapshot);
         return view('home', $snapshot, $user);
     }
 
