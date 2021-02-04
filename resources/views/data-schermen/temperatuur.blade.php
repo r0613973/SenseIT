@@ -5,10 +5,13 @@
 @section('main')
 
 
-               @include('data-schermen.datatemplate')
 
 
 
+            <div class="mdc-layout-grid__cell" style="padding-bottom: 15vh">
+
+                @include('data-schermen.datatemplate')
+            </div>
 
 
 

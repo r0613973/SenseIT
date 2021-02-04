@@ -16,6 +16,7 @@
                             </button>
                         @endforeach
 
+
                     </div>
                 </div>
             </div>
@@ -61,6 +62,7 @@
                                             <td class="mdc-data-table__cell ">{!! $measurement->Arrow !!}</td>
                                             <td class="mdc-data-table__cell mdc-data-table__cell--numeric">{{$measurement->Value . $measurement->Unit}}  </td>
                                             <td class="mdc-data-table__cell mdc-data-table__cell--numeric">{{$measurement->TimeStamp}}</td>
+
 
                                         </tr>
                                     @endforeach

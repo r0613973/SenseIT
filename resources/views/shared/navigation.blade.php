@@ -58,22 +58,6 @@
                             </button>
                         </li>
                         <li class="mdc-list-item" role="menuitem">
-                            <button type="button" class="mdc-button cancel" onclick="location.href='../'">
-                                <div class="mdc-button__ripple"></div>
-                                <span class="mdc-button__label">
-                                  settings
-                                </span>
-                            </button>
-                        </li>
-                        <li class="mdc-list-item" role="menuitem">
-                            <button type="button" class="mdc-button cancel" onclick="location.href='../'">
-                                <div class="mdc-button__ripple"></div>
-                                <span class="mdc-button__label">
-                                  report
-                                </span>
-                            </button>
-                        </li>
-                        <li class="mdc-list-item" role="menuitem">
                                 <button type="button" class="mdc-button cancel" type="submit" onclick="location.href='/logout'">
                                     <div class="mdc-button__ripple"></div>
                                     <span class="mdc-button__label">

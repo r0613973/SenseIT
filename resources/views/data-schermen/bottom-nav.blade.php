@@ -26,11 +26,18 @@
           <span class="mdc-bottom-navigation__list-item__text">Luchtkwaliteit</span>
         </span> </a>
 
-            <a href="/locatie">
+           <a href="/locatie">
             <span class="mdc-bottom-navigation__list-item" id="locatieIcon">
           <span class="material-icons mdc-bottom-navigation__list-item__icon"><i
                   class="fas fa-map-marker-alt"></i></span>
           <span class="mdc-bottom-navigation__list-item__text">Locatie</span>
+        </span>
+            </a>
+            <a href="/bodemvochtigheid">
+            <span class="mdc-bottom-navigation__list-item" id="locatieIcon">
+          <span class="material-icons mdc-bottom-navigation__list-item__icon"><i
+                  class="fas fa-map-marker-alt"></i></span>
+          <span class="mdc-bottom-navigation__list-item__text">bodemvochtigheid</span>
         </span>
             </a>
         </nav>
