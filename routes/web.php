@@ -34,9 +34,14 @@ Route::middleware(['auth'])->group(function () {
 
     Route::get('/', 'HomeController@index');
 
+    Route::get('/create_new_box', 'CrudBoxController@index');
+    Route::get('/submit_new_box', 'CrudBoxController@store');
+
 });
 
 Route::middleware(['auth'])->prefix('admin')->group(function () {
+
+
 
     //voorbeeld code uit de cursus
 

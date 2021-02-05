@@ -20,7 +20,7 @@
     <link rel="stylesheet" href="{{ mix('css/app.css') }}">
 
 
-    <title>@yield('title', 'The Vinyl Shop')</title>
+    <title>@yield('title', 'SenseIT')</title>
 
 
     <link rel="apple-touch-icon" sizes="144x144" href="/images/favicon/apple-touch-icon.png">
