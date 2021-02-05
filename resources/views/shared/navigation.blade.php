@@ -8,6 +8,12 @@
             <a class="mdc-list-item mdc-list-item" href="/" tabindex="0" aria-current="page">
                 <span class="mdc-list-item__text">Home</span>
             </a>
+            @if (auth()->user()->UserTypeID == 1)
+                <a class="mdc-list-item" href="/create_new_box" tabindex="0">
+                    <span class="mdc-list-item__text">Nieuwe box</span>
+                </a>
+            @endif
+
             <a class="mdc-list-item" href="/temperatuur" tabindex="0">
 
                 <span class="mdc-list-item__text">Metingen</span>

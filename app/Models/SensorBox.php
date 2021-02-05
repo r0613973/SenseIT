@@ -9,7 +9,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Collection;
 use Illuminate\Database\Eloquent\Model;
 
-/**
+/*
  * Class SensorBox
  * 
  * @property int $BoxID
