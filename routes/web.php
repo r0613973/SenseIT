@@ -31,9 +31,9 @@ Route::middleware(['auth'])->group(function () {
     Route::get('/zonlicht', 'MeasurementController@zonlicht');
     Route::get('/tokenQry','MeasurementController@tokenQry');
     Route::get('/maprequeset/{boxid}','MeasurementController@maprequeset')->name('maprequeset.post');
-
+    Route::view('/datatablestest', 'data-schermen/datatablestest');
     Route::get('/sateliet', 'MeasurementController@sateliet');
-
+    Route::get('/datatable', 'MeasurementController@Datatablestest');
     Route::get('/', 'HomeController@index');
 
     Route::get('/create_new_box', 'CrudBoxController@index');
