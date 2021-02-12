@@ -91,9 +91,7 @@
         </div>
     </div>
 @endsection
-@section('bottom-nav')
-    @include('data-schermen.bottom-nav')
-@endsection
+
 @section('script')
 
 @endsection
