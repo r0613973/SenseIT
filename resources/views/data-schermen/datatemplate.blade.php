@@ -1,4 +1,7 @@
-<div class="home" style="padding-bottom: 14vh">
+<div class="home" style="padding-bottom: 14vh" id="{{$metingvalue}}">
+    <?php
+    $counter = 0;
+    ?>
     <div class="container">
         <div class="row">
 
@@ -29,6 +32,7 @@
         <div class="row">
 
             @foreach($boxen as $box)
+
                 <div class="content" id="{{$box->BoxID}}">
                     @if(count($box->measurements)==0)
                         <div class="card">
@@ -46,47 +50,58 @@
                                     width="450" height="200" frameborder="0"></iframe>
                         </div>
 
-                        <div class="row">
-                            <div class="mdc-data-table measurementTable">
-                                <div class="mdc-data-table__table-container">
-                                    <table class="mdc-data-table__table">
-                                        <thead>
-                                        <tr class="mdc-data-table__header-row">
-                                            <th class="mdc-data-table__header-cell" role="columnheader" scope="col"><i
-                                                    class="fas fa-arrow-circle-right"></i></th>
-                                            <th class="mdc-data-table__header-cell mdc-data-table__header-cell--numeric"
-                                                role="columnheader"
-                                                scope="col">Waarde
-                                            </th>
-                                            <th class="mdc-data-table__header-cell mdc-data-table__header-cell--numeric"
-                                                role="columnheader"
-                                                scope="col">Tijdstip
-                                            </th>
+                        <div class="row {{$counter ?? ''}} tablecounter" id=""  >
+{{--                            <div class="mdc-data-table measurementTable">--}}
+{{--                                <div class="mdc-data-table__table-container">--}}
+{{--                                    <table class="mdc-data-table__table">--}}
+{{--                                        <thead>--}}
+{{--                                        <tr class="mdc-data-table__header-row">--}}
+{{--                                            <th class="mdc-data-table__header-cell" role="columnheader" scope="col"><i--}}
+{{--                                                    class="fas fa-arrow-circle-right"></i></th>--}}
+{{--                                            <th class="mdc-data-table__header-cell mdc-data-table__header-cell--numeric"--}}
+{{--                                                role="columnheader"--}}
+{{--                                                scope="col">Waarde--}}
+{{--                                            </th>--}}
+{{--                                            <th class="mdc-data-table__header-cell mdc-data-table__header-cell--numeric"--}}
+{{--                                                role="columnheader"--}}
+{{--                                                scope="col">Tijdstip--}}
+{{--                                            </th>--}}
 
-                                        </tr>
-                                        </thead>
-                                        <tbody class="mdc-data-table__content">
-
-
-                                        @foreach($box->measurements as $measurement)
-
-                                            <tr class="mdc-data-table__row">
-                                                <td class="mdc-data-table__cell ">{!! $measurement->Arrow !!}</td>
-                                                <td class="mdc-data-table__cell mdc-data-table__cell--numeric">{{$measurement->Value . $measurement->Unit}}  </td>
-                                                <td class="mdc-data-table__cell mdc-data-table__cell--numeric">{{$measurement->TimeStamp}}</td>
+{{--                                        </tr>--}}
+{{--                                        </thead>--}}
+{{--                                        <tbody class="mdc-data-table__content">--}}
 
 
-                                            </tr>
-                                        @endforeach
+{{--                                        @foreach($box->measurements as $measurement)--}}
 
-                                        </tbody>
+{{--                                            <tr class="mdc-data-table__row">--}}
+{{--                                                <td class="mdc-data-table__cell ">{!! $measurement->Arrow !!}</td>--}}
+{{--                                                <td class="mdc-data-table__cell mdc-data-table__cell--numeric">{{$measurement->Value . $measurement->Unit}}  </td>--}}
+{{--                                                <td class="mdc-data-table__cell mdc-data-table__cell--numeric">{{$measurement->TimeStamp}}</td>--}}
 
-                                    </table>
-                                    {{ $box->measurements->onEachSide(1)->links() }}
 
-                                </div>
-                            </div>
+{{--                                            </tr>--}}
+{{--                                        @endforeach--}}
+
+{{--                                        </tbody>--}}
+
+{{--                                    </table>--}}
+{{--                                    {{ $box->measurements->onEachSide(1)->links() }}--}}
+
+{{--                                </div>--}}
+{{--                            </div>--}}
+
+
+
+                            <table id="myTable{{$box -> BoxID}}" class="display"></table>
+
+
+
+
                         </div>
+                        <?php
+                        $counter++;
+                        ?>
                     @endif
                     {{--  <div class="row">
                           <iframe src="http://20.73.164.205:3000/d-solo/xIkhwMLGk/sensoren-metingen-dashboard?orgId=1&refresh=5s&var-User_Name=1&var-Box_Admin=All&var-Box_Boer={{$box->BoxID}}&var-Sensor_type={{$SensorTypeID}}&var-X_Coordinaten=51.0152&var-Y_Coordinaten=4.71502&from=1611843390409&to=1612448190409&panelId=39" width="450" height="500" frameborder="0">
@@ -94,6 +109,7 @@
                           </iframe>
                       </div>--}}
                 </div>
+
             @endforeach
         </div>
 
@@ -102,6 +118,71 @@
 </div>
 
 @section('script2')
+    <script src="https://cdn.datatables.net/1.10.23/js/jquery.dataTables.min.js"></script>
+
+    <script>
+
+        var counter = 0;
+        var datatablecoutner = 0;
+        $(document).ready( function () {
+            var meetingvariable =  $(".home").attr('id');
+                        console.log(meetingvariable);
+
+
+                        $.getJSON('/'+meetingvariable).done(data=>{
+                        console.log(data);
+
+
+                            $.each( data.boxen, function( key, value ) {
+                               console.log(value);
+                                var waarden= value.measurements.data;
+
+
+                                var table = $('#myTable' + value.BoxID).DataTable({
+                                    responsive: true,
+                                    scrollX: false,
+                                    language: {
+                                        "url": "//cdn.datatables.net/plug-ins/1.10.20/i18n/Dutch.json"
+                                    },
+                                    "data": waarden,
+
+                                    columns: [
+                                        {
+                                            "title": "Datum",
+                                            "data": null,
+                                            "render": function (waarden) {
+                                                return '<div class="recruiterName" data-id="' + waarden + '">' + waarden.TimeStamp + '</div>'
+                                            }
+                                        },
+                                        {
+                                            "title": "Waarden",
+                                            "data": null,
+                                            "render": function (waarden) {
+                                                return '<div class="recruiterName" data-id="' + waarden + '">' + waarden.Value + '</div>'
+                                            }
+                                        }
+                                    ]
+
+
+                                });
+
+
+
+                            });
+
+
+
+                    }
+                )
+
+
+        });
+
+
+    </script>
+
+
+
     <script>
         const MDCTabBar = mdc.tabBar.MDCTabBar;
         var tabBar = new MDCTabBar(document.querySelector('.mdc-tab-bar'));

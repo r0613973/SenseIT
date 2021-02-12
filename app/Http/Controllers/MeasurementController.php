@@ -31,6 +31,17 @@ class MeasurementController extends Controller
         return view('data-schermen.bodemTemperatuur', $result);
     }
 
+
+
+
+    public function temperatuurmetingen()
+    {
+        $boxen = $this->ophalendata(5, 4);
+        $result = compact('boxen');
+        Json::dump($result);
+        return $result;
+    }
+
     public function luchtvochtigheid()
     {
         $boxen = $this->ophalendata(5, 3);
@@ -95,7 +106,7 @@ class MeasurementController extends Controller
                 ->join('SensorType', 'Sensor.SensorTypeID', '=', 'SensorType.SensorTypeID')
                 ->where('Measurement.BoxID', 'like', $box->BoxID)
                 ->where('SensorType.SensorTypeID', 'like', $SensorTypeID)
-                ->paginate(10)->onEachSide(2);
+                ->paginate(1000)->onEachSide(2);
 
             $unit= '%';
             $vorigewaarde = 0;
@@ -146,10 +157,11 @@ class MeasurementController extends Controller
 
     }
     public function Datatablestest()
-    {  $boxen = $this->ophalendata(5, 5);
-        $result = compact('boxen');
+    {    $boxen = $this->ophalendata(5, 5);
 
-        return datatables($result);
+        $result = compact('boxen' );
+
+        return $result;
     }
 
 

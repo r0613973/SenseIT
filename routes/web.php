@@ -34,6 +34,8 @@ Route::middleware(['auth'])->group(function () {
     Route::view('/datatablestest', 'data-schermen/datatablestest');
     Route::get('/sateliet', 'MeasurementController@sateliet');
     Route::get('/datatable', 'MeasurementController@Datatablestest');
+
+    Route::get('/tempratuurmetingen','MeasurementController@temperatuurmetingen');
     Route::get('/', 'HomeController@index');
 
     Route::get('/create_new_box', 'CrudBoxController@index');
