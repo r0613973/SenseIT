@@ -14,7 +14,7 @@
                 </a>
             @endif
 
-            <a class="mdc-list-item" href="/temperatuur" tabindex="0">
+            <a class="mdc-list-item" href="/overzicht" tabindex="0">
 
                 <span class="mdc-list-item__text">Metingen</span>
             </a>

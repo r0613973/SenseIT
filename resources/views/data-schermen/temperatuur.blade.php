@@ -8,19 +8,19 @@
 
 
 
-            <div class="mdc-layout-grid__cell" style="padding-bottom: 15vh">
+    <div class="mdc-layout-grid__cell" style="padding-bottom: 15vh">
 
-                @include('data-schermen.datatemplate')
-            </div>
+        @include('data-schermen.datatemplate')
+    </div>
     <div class="container">
-        <div class="row" >
+        <div class="row">
 
 
-            </div>
-            <div class="col" >
-
-            </div>
         </div>
+        <div class="col">
+
+        </div>
+    </div>
     </div>
 
 
@@ -31,9 +31,9 @@
 @endsection
 @section('script')
     <script>
-    $('#temperatuurIcon').addClass('mdc-bottom-navigation__list-item--activated');
+        $('#temperatuurIcon').addClass('mdc-bottom-navigation__list-item--activated');
     </script>
- @yield('script2')
+    @yield('script2')
 
 
 

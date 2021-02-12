@@ -57,9 +57,6 @@
     @include('data-schermen.bottom-nav')
 @endsection
 @section('script')
-    <script>
-        $('#temperatuurIcon').addClass('mdc-bottom-navigation__list-item--activated');
-    </script>
 
 
     <script>
