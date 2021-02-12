@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\MeasurementController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -21,6 +22,7 @@ Route::post('/login', 'LoginController@Login')->name('login');
 Route::view('/login','auth.login');
 
 Route::middleware(['auth'])->group(function () {
+    Route::get('/overzicht', 'MeasurementController@overzicht');
     Route::get('/account', 'AccountController@index');
     Route::get('/temperatuur', 'MeasurementController@temperatuur');
     Route::get('/bodemTemperatuur', 'MeasurementController@bodemTemperatuur');
