@@ -9,7 +9,7 @@
 @endsection
 @section('main')
 <div class="container">
-    <div class="row">
+    <div class="row" >
         <div class="col">
             <table id="myTable" class="display">
 
@@ -25,33 +25,35 @@
         var sensordata;
         $(document).ready( function () {
 
-            $('#myTable').DataTable({
-                data: "{{url('/datatable')}}",
-                    "columns": [
 
-
-                    ]
-
-                }
-            );
-
-
-
-            $.getJSON('/datatable').done(dataset=>{
-                console.log("test morty we need to test")
-                console.log(dataset.boxen[0]);
-                console.log(dataset);
-
-
-
+            var table = $('#myTable').DataTable({
+                responsive: true,
+                scrollX: false,
+                language: {
+                    "url": "//cdn.datatables.net/plug-ins/1.10.20/i18n/Dutch.json"
+                },
+                "ajax": {
+                    "url": "/datatable",
+                    "type": "GET",
+                    "dataSrc": function (json) {
+                        data_response = json;
+                        console.log(json);
+                        console.log(json.boxen[4].measurements.data);
+                        return json.boxen[4].measurements.data;
+                    }
+                },
+                columns: [
+                    {
+                        "data": null,
+                        "render": function (data) {
+                            return '<div class="recruiterName" data-id="' + data + '">' + data.Value + '</div>'
+                        }
+                    }
+                ]
 
 
             });
-
-
-
-
-        } );
+        });
 
 
         $('#luchtkwaliteitIcon').addClass('mdc-bottom-navigation__list-item--activated');

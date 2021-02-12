@@ -32,6 +32,17 @@ class MeasurementController extends Controller
         return view('data-schermen.bodemTemperatuur', $result);
     }
 
+
+
+
+    public function temperatuurmetingen()
+    {
+        $boxen = $this->ophalendata(5, 4);
+        $result = compact('boxen');
+        Json::dump($result);
+        return $result;
+    }
+
     public function luchtvochtigheid()
     {
         $boxen = $this->ophalendata(3);
@@ -176,6 +187,7 @@ class MeasurementController extends Controller
                     $measurement->TimeStamp = Str::substr($measurement->TimeStamp, 0, 19);
                     $unit = $measurement->Unit;
                     $vorigewaarde = $measurement->Value;
+
                 }
             }
             $box->Unit = $unit;
@@ -218,10 +230,11 @@ class MeasurementController extends Controller
 
     }
     public function Datatablestest()
-    {  $boxen = $this->ophalendata(5, 5);
-        $result = compact('boxen');
+    {    $boxen = $this->ophalendata(5, 5);
 
-        return datatables($result);
+        $result = compact('boxen' );
+
+        return $result;
     }
 
 
