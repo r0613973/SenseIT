@@ -149,13 +149,15 @@ class MeasurementController extends Controller
                    ->paginate(3)->onEachSide(2) ;;
             }*/
 
-            $box['sensoren'] = Measurement::orderBy('TimeStamp', 'desc')
+            $box['sensoren2'] = Measurement::orderBy('TimeStamp', 'desc')
                 ->join('Sensor', 'Measurement.SensorID', '=', "Sensor.SensorID")
                 ->join('SensorType', 'Sensor.SensorTypeID', '=', 'SensorType.SensorTypeID')
                 ->where('Measurement.BoxID', 'like', $box->BoxID)
                 ->where('SensorType.SensorTypeID', 'like', $SensorTypeID)
-                ->paginate(10)->onEachSide(2)
-                ->groupBy('SensorID');
+                ->paginate(10);
+
+
+            $box['sensoren'] = $box['sensoren2']->groupBy('SensorID');
 
 
             $unit = '%';

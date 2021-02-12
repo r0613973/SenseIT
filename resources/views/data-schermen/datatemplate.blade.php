@@ -85,12 +85,13 @@
                                         @if(!$loop->last)
                                             <hr>
                                         @endif
+                                        {{ $box['sensoren2']->onEachSide(1)->links() }}
                                     @endforeach
 
 
 
 
-                                    {{--{{ $box->measurements->onEachSide(1)->links() }}--}}
+
 
                                 </div>
                             </div>
