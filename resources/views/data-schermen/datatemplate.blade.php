@@ -1,4 +1,4 @@
-<div class="home">
+<div class="home" style="padding-bottom: 14vh">
     <div class="container">
         <div class="row">
 

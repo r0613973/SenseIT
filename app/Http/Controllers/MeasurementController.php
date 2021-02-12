@@ -7,6 +7,7 @@ use App\Models\Measurement;
 use App\Models\Sensor;
 use App\Models\SensorBox;
 use Facades\App\Helpers\Json;
+use http\Message\Body;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Http;
 use Illuminate\Support\Str;
@@ -205,6 +206,24 @@ class MeasurementController extends Controller
             ->post($url);
         return $response;
     }
+
+    public function sateliet()
+    {
+        $boxen = $this->ophalendata(5, 5);
+
+        $result = compact('boxen' );
+        Json::dump($result);
+
+        return view('data-schermen.sateliet', $result );
+
+    }
+    public function Datatablestest()
+    {  $boxen = $this->ophalendata(5, 5);
+        $result = compact('boxen');
+
+        return datatables($result);
+    }
+
 
 
 }
