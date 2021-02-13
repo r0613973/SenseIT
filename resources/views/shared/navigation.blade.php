@@ -1,6 +1,6 @@
 <aside class="mdc-drawer  mdc-drawer--modal shrine-drawer">
     <div class="mdc-drawer__header">
-        <img src="../images/sense-it.svg" alt="" class="shrine-logo-drawer" width="88px" height="88px">
+        <img src="../images/sense-it.svg" alt="" class="shrine-logo-drawer" width="88px" height="88px"  tabindex="0">
         <h1 class="shrine-title">SENSE IT</h1>
     </div>
     <div class="mdc-drawer__content mdc-layout-grid">

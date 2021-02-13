@@ -3,7 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.23/css/jquery.dataTables.min.css">
+    <style>
 
+        .dataTable
+        {
+            width: 100% !important;
+        }
+    </style>
     <meta name="csrf-token" content="{{ csrf_token() }}" />
     <!--<link href="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.css" rel="stylesheet">-->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
