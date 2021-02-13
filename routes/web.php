@@ -40,8 +40,8 @@ Route::middleware(['auth'])->group(function () {
     Route::get('/tempratuurmetingen','MeasurementController@temperatuurmetingen');
     Route::get('/', 'HomeController@index');
 
-    Route::get('/create_new_box', 'CrudBoxController@index');
-    Route::get('/submit_new_box', 'CrudBoxController@store');
+    Route::resource('box', 'CrudBoxController');
+    Route::get('qryBoxen', 'CrudBoxController@qryBoxen');
 
 });
 

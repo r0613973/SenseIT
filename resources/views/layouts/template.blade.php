@@ -15,7 +15,7 @@
 
 
    {{--     bootstrap is nodig voor de pagination links--}}
-    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
     <link href='https://api.mapbox.com/mapbox-gl-js/v2.0.0/mapbox-gl.css' rel='stylesheet' />
     @yield("imports")
     <link rel="stylesheet" href="{{ mix('css/app.css') }}">
