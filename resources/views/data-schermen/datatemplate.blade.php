@@ -1,3 +1,8 @@
+@section('imports')
+
+
+
+@endsection
 <div class="home" style="padding-bottom: 14vh" id="{{$metingvalue}}">
     <?php
     $counter = 0;
@@ -29,7 +34,7 @@
 
         </div>
 
-        <div class="row">
+        <div class="row" style="padding-top: 10px">
 
             @foreach($boxen as $box)
 
@@ -47,7 +52,7 @@
                         </div>
 
 
-                        <div class="row {{$counter ?? ''}} tablecounter" id=""  >
+                        <div class="row {{$counter ?? ''}} tablecounter tabelcol{{$box->BoxID}}" id="" style="padding-top: 6vh" >
 {{--                            <div class="mdc-data-table measurementTable">--}}
 {{--                                <div class="mdc-data-table__table-container">--}}
 {{--                                    <table class="mdc-data-table__table">--}}
@@ -91,7 +96,7 @@
 
 
 
-                            <table id="myTable{{$box -> BoxID}}" class="display"></table>
+
 
 
 
@@ -119,7 +124,7 @@
         var datatablecoutner = 0;
         $(document).ready( function () {
             var meetingvariable =  $(".home").attr('id');
-                        console.log(meetingvariable);
+
 
 
                         $.getJSON('/'+meetingvariable).done(data=>{
@@ -127,37 +132,71 @@
 
 
                             $.each( data.boxen, function( key, value ) {
-                               console.log(value);
-                                var waarden= value.measurements.data;
+                                var boxid = value.BoxID;
+                                var waarden= value.sensoren;
+
+                                    var sensor =  waarden[0];
 
 
-                                var table = $('#myTable' + value.BoxID).DataTable({
-                                    responsive: true,
-                                    scrollX: false,
-                                    language: {
-                                        "url": "//cdn.datatables.net/plug-ins/1.10.20/i18n/Dutch.json"
-                                    },
-                                    "data": waarden,
+                                console.log("sensoren");
+                                $.each(waarden, function (key, sensoren)
+                                {
+                                    $('.tabelcol'+boxid).append(" <div class='col col-lg-6'>" +
+                                        "<h4>"+ sensoren[0]["sensor"]["Name"]+"</h4>" +
+                                        "<table id=\"myTable"+boxid+counter+"\" class=\"display\"></table> </div> ")
 
-                                    columns: [
-                                        {
-                                            "title": "Datum",
-                                            "data": null,
-                                            "render": function (waarden) {
-                                                return '<div class="recruiterName" data-id="' + waarden + '">' + waarden.TimeStamp + '</div>'
-                                            }
+                                    console.log(sensoren[0]);
+
+
+
+
+
+                                    var table = $('#myTable'+boxid+counter).DataTable({
+                                        responsive: true,
+                                        scrollX: false,
+                                        language: {
+                                            "url": "//cdn.datatables.net/plug-ins/1.10.20/i18n/Dutch.json"
                                         },
-                                        {
-                                            "title": "Waarden",
-                                            "data": null,
-                                            "render": function (waarden) {
-                                                return '<div class="recruiterName" data-id="' + waarden + '">' + waarden.Value + '</div>'
+                                        "data": sensoren,
+
+                                        columns: [
+                                            {
+
+                                                "data": null,
+                                                "render": function (sensoren) {
+                                                    return '<div>' +sensoren["Arrow"] +'</div> '
+                                                }
+                                            },
+
+                                            {
+                                                "title": "Datum",
+                                                "data": null,
+                                                "render": function (sensoren) {
+                                                    return '<div class="recruiterName" data-id="' + sensoren.MeasurementID + '">' + sensoren.TimeStamp + '</div>'
+                                                }
+                                            },
+                                            {
+                                                "title": "Waarden",
+                                                "data": null,
+                                                "render": function (sensoren) {
+                                                    return '<div class="recruiterName" data-id="' + sensoren.MeasurementID + '">' + sensoren['Value'] + '</div>'
+                                                }
+                                            },
+                                            {
+                                                "title": "unit",
+                                                "data": null,
+                                                "render": function (sensoren) {
+                                                    return '<div class="recruiterName" data-id="' + sensoren + '">' + sensoren.Unit + '</div>'
+                                                }
                                             }
-                                        }
-                                    ]
+                                        ]
 
 
-                                });
+                                    });
+                                    counter++;
+                                })
+
+
 
 
 

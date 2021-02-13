@@ -25,6 +25,16 @@ class MeasurementController extends Controller
         return view('data-schermen.temperatuur', $result);
     }
 
+
+    public function temperatuurmetingen()
+    {
+        $boxen = $this->ophalendata(4);
+        $result = compact('boxen');
+        Json::dump($result);
+        return $result;
+    }
+
+
     public function bodemTemperatuur()
     {
         $boxen = $this->ophalendata(7);
@@ -33,16 +43,18 @@ class MeasurementController extends Controller
         return view('data-schermen.bodemTemperatuur', $result);
     }
 
-
-
-
-    public function temperatuurmetingen()
+    public function bodemTemperatuurmetingen()
     {
-        $boxen = $this->ophalendata(5, 4);
+        $boxen = $this->ophalendata(7);
         $result = compact('boxen');
         Json::dump($result);
         return $result;
     }
+
+
+
+
+
 
     public function luchtvochtigheid()
     {
@@ -53,6 +65,15 @@ class MeasurementController extends Controller
         return view('data-schermen.luchtvochtigheid', $result);
     }
 
+    public function luchtvochtigheidmetingen()
+    {
+        $boxen = $this->ophalendata(3);
+        $result = compact('boxen');
+        Json::dump($result);
+
+        return $result;
+    }
+
     public function bodemvochtigheid()
     {
         $boxen = $this->ophalendata(8);
@@ -60,6 +81,14 @@ class MeasurementController extends Controller
         Json::dump($result);
 
         return view('data-schermen.bodemvochtigheid', $result);
+    }
+    public function bodemvochtigheidmetingen()
+    {
+        $boxen = $this->ophalendata(8);
+        $result = compact('boxen');
+        Json::dump($result);
+
+        return $result;
     }
 
     public function zonlicht()
@@ -70,6 +99,15 @@ class MeasurementController extends Controller
         Json::dump($result);
 
         return view('data-schermen.zonlicht', $result);
+    }
+    public function zonlichtmetingen()
+    {
+        //TODO Juiste sensor toevoegen
+        $boxen = $this->ophalendata(1);
+        $result = compact('boxen');
+        Json::dump($result);
+
+        return $result;
     }
 
     public function luchtkwaliteit()
@@ -82,6 +120,17 @@ class MeasurementController extends Controller
 
         return view('data-schermen.luchtkwaliteit', $result);
     }
+    public function luchtkwaliteitMeting()
+    {
+        //TODO Juiste sensor toevoegen
+        $boxen = $this->ophalendata(5);
+
+        $result = compact('boxen');
+        Json::dump($result);
+
+        return $result;
+    }
+
 
     public function sateliet()
     {
@@ -200,7 +249,7 @@ where "Measurement.BoxID" = '.$BoxID.' AND "SensorType.SensorTypeID" = '.$Sensor
                 ->join('SensorType', 'Sensor.SensorTypeID', '=', 'SensorType.SensorTypeID')
                 ->where('Measurement.BoxID', 'like', $box->BoxID)
                 ->where('SensorType.SensorTypeID', 'like', $SensorTypeID)
-                ->paginate(10);
+                ->paginate(1000);
 
 
             $box['sensoren'] = $box['sensoren2']->groupBy('SensorID');
@@ -253,16 +302,7 @@ where "Measurement.BoxID" = '.$BoxID.' AND "SensorType.SensorTypeID" = '.$Sensor
         return $response;
     }
 
-    public function sateliet()
-    {
-        $boxen = $this->ophalendata(5, 5);
 
-        $result = compact('boxen' );
-        Json::dump($result);
-
-        return view('data-schermen.sateliet', $result );
-
-    }
     public function Datatablestest()
     {    $boxen = $this->ophalendata(5, 5);
 
