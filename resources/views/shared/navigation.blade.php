@@ -1,6 +1,8 @@
 <aside class="mdc-drawer  mdc-drawer--modal shrine-drawer">
     <div class="mdc-drawer__header">
+
         <img src="../images/sense-it.svg" alt="" class="shrine-logo-drawer" width="88px" height="88px"  tabindex="0">
+
         <h1 class="shrine-title">SENSE IT</h1>
     </div>
     <div class="mdc-drawer__content mdc-layout-grid">
@@ -9,14 +11,18 @@
                 <span class="mdc-list-item__text">Home</span>
             </a>
             @if (auth()->user()->UserTypeID == 1)
-                <a class="mdc-list-item" href="/create_new_box" tabindex="0">
-                    <span class="mdc-list-item__text">Nieuwe box</span>
+                <a class="mdc-list-item" href="/box">
+                    <span class="mdc-list-item__text">Overzicht van boxen</span>
                 </a>
             @endif
 
-            <a class="mdc-list-item" href="/overzicht" tabindex="0">
+            <a class="mdc-list-item" href="/temperatuur">
 
                 <span class="mdc-list-item__text">Metingen</span>
+            </a>
+            <a class="mdc-list-item" href="/overzicht" tabindex="0">
+
+                <span class="mdc-list-item__text">Overzicht</span>
             </a>
             <a class="mdc-list-item" href="/account" tabindex="0">
                 <span class="mdc-list-item__text">Account</span>

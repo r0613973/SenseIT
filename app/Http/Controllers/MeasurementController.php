@@ -9,6 +9,7 @@ use App\Models\SensorBox;
 use Facades\App\Helpers\Json;
 use http\Message\Body;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Http;
 use Illuminate\Support\Str;
 
@@ -151,14 +152,23 @@ class MeasurementController extends Controller
         } else {
             $boxen = BoxUser::where('BoxUser.UserID', '=', $userID)->orderby('BoxID')->with('Box')->get();
         }
-
         foreach ($boxen as $box) {
-            $box['temperatuur'] = $this->ophalenLaatsteWaardePerSensor($box->BoxID, 4);
+            $sensorIDs = SensorBox::join('Sensor', 'SensorBox.SensorID', '=', "Sensor.SensorID")
+                ->join('SensorType', 'Sensor.SensorTypeID', '=', 'SensorType.SensorTypeID')
+                ->where('SensorBox.BoxID', '=', $box->BoxID)->get();
+            /*$result = compact('sensorIDs');
+            Json::dump($result);*/
+            $sensors = array();
+           foreach($sensorIDs as $sensor){
+               array_push($sensors, $this->ophalenLaatsteWaardePerSensor($box->BoxID, $sensor['SensorID']));
+            }
+           $box->sensors = $sensors;
+         /*   $box['temperatuur'] = $this->ophalenLaatsteWaardePerSensor($box->BoxID, 4);
             $box['bodemtemperatuur'] = $this->ophalenLaatsteWaardePerSensor($box->BoxID, 7);
             $box['luchtvochtigheid'] = $this->ophalenLaatsteWaardePerSensor($box->BoxID, 3);
             $box['bodemvochtigheid'] = $this->ophalenLaatsteWaardePerSensor($box->BoxID, 8);
             $box['zonlicht'] = $this->ophalenLaatsteWaardePerSensor($box->BoxID, 1);
-            $box['luchtkaliteit'] = $this->ophalenLaatsteWaardePerSensor($box->BoxID, 5);
+            $box['luchtkaliteit'] = $this->ophalenLaatsteWaardePerSensor($box->BoxID, 5);*/
         }
 
         $result = compact('boxen');
@@ -168,13 +178,39 @@ class MeasurementController extends Controller
 
     }
 
-    public function ophalenLaatsteWaardePerSensor($BoxID, $SensorTypeID)
+    public function ophalenLaatsteWaardePerSensor($BoxID, $SensorID)
     {
-        return Measurement::orderBy('TimeStamp', 'desc')
+       /* return (DB::raw('Select * from "Measurement" join "Sensor" on "Measurement.SensorID" = "Sensor.SensorID"
+    join "SensorType" on "Sensor.SensorTypeID" =  "SensorType.SensorTypeID"
+where "Measurement.BoxID" = '.$BoxID.' AND "SensorType.SensorTypeID" = '.$SensorTypeID.' Order By "Measurement.TimeStamp" desc
+'));*/
+       /* return Measurement::orderBy('TimeStamp', 'desc')
             ->join('Sensor', 'Measurement.SensorID', '=', "Sensor.SensorID")
+
             ->join('SensorType', 'Sensor.SensorTypeID', '=', 'SensorType.SensorTypeID')
             ->where('Measurement.BoxID', 'like', $BoxID)
-            ->where('SensorType.SensorTypeID', 'like', $SensorTypeID)->first();
+            ->where('SensorType.SensorTypeID', 'like', $SensorTypeID)
+            ->selectRaw('Sensor.Name AS min_price ')->first();*/
+
+       /* return Sensor::orderBy('TimeStamp', 'desc')
+            ->selectRaw('"Sensor"."Name" as "SensorName", "Measurement"."MeasurementID", "Measurement"."BoxID",
+            "Sensor"."SensorID", "Measurement"."Value", "Measurement"."TimeStamp", "Sensor"."SensorTypeID",
+            "SensorType"."Unit", "SensorType"."Name" ')
+            ->join('Measurement', 'Measurement.SensorID', '=', "Sensor.SensorID")
+            ->join('SensorType', 'Sensor.SensorTypeID', '=', 'SensorType.SensorTypeID')
+            ->where('Measurement.BoxID', 'like', $BoxID)
+            ->where('SensorType.SensorTypeID', 'like', $SensorTypeID)
+            ->first();*/
+
+        return Sensor::orderBy('TimeStamp', 'desc')
+            ->selectRaw('"Sensor"."Name" as "SensorName", "Measurement"."MeasurementID", "Measurement"."BoxID",
+            "Sensor"."SensorID", "Measurement"."Value", "Measurement"."TimeStamp", "Sensor"."SensorTypeID",
+            "SensorType"."Unit", "SensorType"."Name" ')
+            ->join('Measurement', 'Measurement.SensorID', '=', "Sensor.SensorID")
+            ->join('SensorType', 'Sensor.SensorTypeID', '=', 'SensorType.SensorTypeID')
+            ->where('Measurement.BoxID', 'like', $BoxID)
+            ->where('Sensor.SensorID', 'like', $SensorID)
+            ->first();
 
     }
 
@@ -190,13 +226,11 @@ class MeasurementController extends Controller
 
         foreach ($boxen as $box) {
             $box->SensorTypeID = $SensorTypeID;
-
-
-            $sensorIDs = SensorBox::join('Sensor', 'SensorBox.SensorID', '=', "Sensor.SensorID")
+           /* $sensorIDs = SensorBox::join('Sensor', 'SensorBox.SensorID', '=', "Sensor.SensorID")
                 ->join('SensorType', 'Sensor.SensorTypeID', '=', 'SensorType.SensorTypeID')
                 ->where('SensorBox.BoxID', '=', $box->BoxID)
                 ->where('SensorType.SensorTypeID', '=', $SensorTypeID)
-                ->pluck("Sensor.SensorID");
+                ->pluck("Sensor.SensorID");*/
 
             /*$result = compact('sensorIDs');
             Json::dump($result);*/
