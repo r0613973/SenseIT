@@ -2,7 +2,9 @@
 
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans&display=swap');
 @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css');
-//@import '~bootstrap/scss/bootstrap';
+@import '~noty/src/noty';
+@import '~noty/src/themes/bootstrap-v4';
+@import '~bootstrap/scss/bootstrap';
 // Variables
 
 // material design
@@ -49,6 +51,7 @@
 @import "shrine-Drawer";
 @import "bottomnav";
 @import "create_box";
+@import "overview_box";
 
 
 

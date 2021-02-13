@@ -1,12 +1,13 @@
 @extends('layouts.template')
-@section('title', 'Nieuwe box aanmaken')
+@section('title', 'Box updaten')
 @section('main')
-    <div class="container " id="new_box">
-        <h1>Nieuwe box aanmaken</h1>
+    <div class="container " id="update_box">
+
         <div class="row text-center justify-content-center d-flex align-items-center mt-5 pt-5">
             <div class="col-sm-12 col-md-12 col-lg-8 col-xl-8  text-left card " id="new_box_form">
-                <h2 class="card-header">Nieuwe box</h2>
-                <form action="/box" method="post" id="create_box_form">
+                <h2 class="card-header text-center">Box updaten</h2>
+                <form action="/box/{{$box['BoxID']}}" id="update_box_form">
+                    @method('PUT')
                     @csrf
                     <div class="card-body">
                         <div class="row ">
@@ -15,8 +16,9 @@
                                 <select class="form-control" name="user" id="user">
                                     @foreach($users as $user)
                                         @if($user['UserTypeID'] != 1)
+
                                             <option
-                                                    value="{{$user['UserID']}}">{{$user['FirstName'] ." ". $user['LastName']}}</option>
+                                                    value="{{$user['UserID']}}" {{ ($boxUser->UserID == $user->UserID) ? 'selected="selected"' : '' }}>{{$user['FirstName'] ." ". $user['LastName']}}</option>
                                         @endif
                                     @endforeach
                                 </select>
@@ -29,7 +31,7 @@
                                        type="text"
                                        title="Vul hier de naam van de box in"
                                        placeholder="Naam van de box"
-                                       value="">
+                                       value="{{$box->Name}}">
                             </div>
 
                             <div class="form-group formulier col-lg-4  col-md-6 mb-3">
@@ -37,8 +39,8 @@
                                 <input type="date" class="form-control" name="startdatum" id="startdatum"
                                        data-toggle="tooltip" data-placement="right"
                                        title="Vul hier de startdatum van het gebruik van de box in"
-                                       placeholder="YYYY/MM/DD"
-                                       value="">
+                                       placeholder="DD/MM/YYYY"
+                                       value="{{Carbon\Carbon::parse($boxUser->StartDate)->format('Y-m-d')}}">
                             </div>
 
                             <div class="form-group formulier col-lg-4  col-md-6 mb-3">
@@ -48,7 +50,7 @@
                                        type="text"
                                        title="Vul hier de latitude in"
                                        placeholder="Latitude"
-                                       value="">
+                                       value="{{$location->Latitude}}">
                             </div>
 
                             <div class="form-group formulier col-lg-4  col-md-6 mb-3">
@@ -58,7 +60,7 @@
                                        type="text"
                                        title="Vul hier de longitude in"
                                        placeholder="Longitude"
-                                       value="">
+                                       value="{{$location->Longitude}}">
                             </div>
 
                             <div class="form-group formulier col-lg-6  col-md-6 mb-3">
@@ -68,7 +70,7 @@
                                        type="text"
                                        title="Vul hier het mac adres  in"
                                        placeholder="Mac adres "
-                                       value="">
+                                       value="{{$box->MacAddress}}">
                             </div>
 
                             <div class="form-group formulier col-lg-6  col-md-12">
@@ -78,13 +80,20 @@
                                        type="text"
                                        title="Vul hier vrijblijvend een comment in"
                                        placeholder="Comment"
-                                       value="">
+                                       value="{{$box->Comment}}">
+                            </div>
+                            <div class="form-group custom-control custom-switch">
+                                <input type="checkbox" name="active" id="active"
+                                       title="selecteer hier of de organisator een hoofdorganisator wordt"
+                                       {{$box->Active == 1 ? 'checked':''}} value="{{$box->Active}}" class="mr-2 custom-control-input">
+                                <label for="active" title="selecteer hier of de box active moet zijn of niet"
+                                       class="custom-control-label ml-3">Active</label>
                             </div>
                         </div>
                         <br>
-
-                        <div class=" ">
-                            <button type="submit" class="btn btn-light">Box toevoegen</button>
+                        <div class="row justify-content-around">
+                            <button type="submit" class="col col-lg-5 col-md-5 col-sm-12 btn btn-light m-2">Box updaten</button>
+                            <a href="/box" class="col col-lg-5 col-md-5 col-sm-12 btn btn-light m-2">Naar box overzicht</a>
                         </div>
                     </div>
                 </form>
@@ -93,9 +102,10 @@
     </div>
 @endsection
 @section('script')
+
     <script>
         $(function () {
-            $('#create_box_form').submit(function (e) {
+            $('#update_box_form').submit(function (e) {
                 // Don't submit the form
                 e.preventDefault();
                 // Get the action property (the URL to submit)
@@ -112,6 +122,7 @@
                             type: data.type,
                             text: data.text
                         }).show();
+                        // Hide the modal
                     })
                     .fail(function (e) {
                         console.log('error', e);
