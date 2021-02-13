@@ -31,15 +31,6 @@
             <div class="mdc-layout-grid__cell">
                 @foreach($boxen as $box)
                     <div class="content">
-                        {{--<div class="mdc-card">
-                            <div class="mdc-card__content"  tabindex="0">
-                            <p>Laatste update op: {{$box->Snapshot->TimeStamp}}</p>
-                              <p>SD capaciteit: {{$box->Snapshot->SdCapacity}}</p>
-                                <p>Batterij: {{$box->Snapshot->BatteryPercentage}}</p>
-                            </div>
-
-
-                        </div>--}}
                         <div class="card">
                             <div class="card-body">
                                 <h5 class="card-title">{{$box->Box->Name}}</h5>
