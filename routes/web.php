@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\MeasurementController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -21,6 +22,7 @@ Route::post('/login', 'LoginController@Login')->name('login');
 Route::view('/login','auth.login');
 
 Route::middleware(['auth'])->group(function () {
+    Route::get('/overzicht', 'MeasurementController@overzicht');
     Route::get('/account', 'AccountController@index');
     Route::get('/temperatuur', 'MeasurementController@temperatuur');
     Route::get('/bodemTemperatuur', 'MeasurementController@bodemTemperatuur');
@@ -31,9 +33,11 @@ Route::middleware(['auth'])->group(function () {
     Route::get('/zonlicht', 'MeasurementController@zonlicht');
     Route::get('/tokenQry','MeasurementController@tokenQry');
     Route::get('/maprequeset/{boxid}','MeasurementController@maprequeset')->name('maprequeset.post');
-
+    Route::view('/datatablestest', 'data-schermen/datatablestest');
     Route::get('/sateliet', 'MeasurementController@sateliet');
+    Route::get('/datatable', 'MeasurementController@Datatablestest');
 
+    Route::get('/tempratuurmetingen','MeasurementController@temperatuurmetingen');
     Route::get('/', 'HomeController@index');
 
     Route::resource('box', 'CrudBoxController');

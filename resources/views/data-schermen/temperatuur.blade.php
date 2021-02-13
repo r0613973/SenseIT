@@ -1,5 +1,10 @@
 @extends('layouts.template')
+@section('imports')
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.23/css/jquery.dataTables.min.css">
 
+
+
+@endsection
 
 @section('title', 'Temperatuur')
 @section('main')
@@ -8,19 +13,24 @@
 
 
 
-            <div class="mdc-layout-grid__cell" style="padding-bottom: 15vh">
+    <div class="mdc-layout-grid__cell" style="padding-bottom: 15vh">
 
-                @include('data-schermen.datatemplate')
+
             </div>
+
     <div class="container">
-        <div class="row" >
+        <div class="row">
 
 
-            </div>
-            <div class="col" >
-
-            </div>
         </div>
+        <div class="col">
+
+
+                @include('data-schermen.datatemplate', ['metingvalue' => 'tempratuurmetingen'])
+            </div>
+
+        </div>
+    </div>
     </div>
 
 
@@ -31,9 +41,9 @@
 @endsection
 @section('script')
     <script>
-    $('#temperatuurIcon').addClass('mdc-bottom-navigation__list-item--activated');
+        $('#temperatuurIcon').addClass('mdc-bottom-navigation__list-item--activated');
     </script>
- @yield('script2')
+    @yield('script2')
 
 
 

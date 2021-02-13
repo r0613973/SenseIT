@@ -23906,6 +23906,11 @@ body {
   padding-left: 0px;
 }
 
+.openmap {
+  height: 400px;
+  width: 100%;
+}
+
 .header {
   text-align: center;
 }
