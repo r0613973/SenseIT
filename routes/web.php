@@ -23,7 +23,7 @@ Route::view('/login','auth.login');
 
 Route::middleware(['auth'])->group(function () {
     Route::get('/overzicht', 'MeasurementController@overzicht');
-    Route::get('/account', 'AccountController@index');
+
     Route::get('/temperatuur', 'MeasurementController@temperatuur');
     Route::get('/bodemTemperatuur', 'MeasurementController@bodemTemperatuur');
     Route::get('/luchtkwaliteit', 'MeasurementController@luchtkwaliteit');
@@ -38,6 +38,8 @@ Route::middleware(['auth'])->group(function () {
     Route::get('/datatable', 'MeasurementController@Datatablestest');
 
 
+
+    Route::resource('/account', 'AccountController');
 
     //datatabels calls
 
