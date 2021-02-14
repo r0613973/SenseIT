@@ -13,7 +13,7 @@
                             @foreach($boxen as $box)
                                 <button class="mdc-tab mdc-tab" role="tab" aria-selected="true" tabindex="0">
           <span class="mdc-tab__content">
-            <span class="mdc-tab__text-label">Box iD: {{$box->BoxID}}</span>
+            <span class="mdc-tab__text-label">{{$box->box->Name}}</span>
           </span>
                                     <span class="mdc-tab-indicator">
             <span class="mdc-tab-indicator__content mdc-tab-indicator__content--underline"></span>
@@ -36,7 +36,7 @@
                                 <h5 class="card-title">{{$box->Box->Name}}</h5>
                                 <h6 class="card-subtitle mb-2 text-muted">Mac Address: {{$box->Box->MacAddress}}</h6>
                                 <p class="card-text">{{$box->Box->Comment}}</p>
-                                <div class="form-check form-switch">
+                                <div class="form-check form-switch" style="margin-left: 20px">
                                     <input class="form-check-input" type="checkbox" id="flexSwitchCheckCheckedDisabled"
                                            {{$box->Box->Active ? 'checked' : ''}} disabled>
                                     <label class="form-check-label"
@@ -54,8 +54,9 @@
                                 </ul>
 
 
-                                <iframe src="http://20.73.164.205:3000/d-solo/xIkhwMLGk/sensoren-metingen-dashboard?orgId=1&var-Box_Admin=All&var-Box_Boer={{$box->BoxID}}&from=1611734741265&to=1612339541265&panelId=7"
-                                        height="200" frameborder="0">
+                                <iframe
+                                    src="http://20.73.164.205:3000/d-solo/xIkhwMLGk/sensoren-metingen-dashboard?orgId=1&var-Box_Admin=All&var-Box_Boer={{$box->BoxID}}&from=1611734741265&to=1612339541265&panelId=7"
+                                    height="200" frameborder="0">
 
                                 </iframe>
                                 @if($box->BoxID == 5 )
@@ -72,7 +73,9 @@
                                 @endif
                             </div>
                             <div class="card-footer">
-                                <small class="text-muted">Laatste update: {{$box->Snapshot->TimeStamp}}</small>
+                                @if($box->Snapshot !=null)
+                                    <small class="text-muted">Laatste update: {{$box->Snapshot->TimeStamp}}</small>
+                                @endif
                             </div>
                         </div>
                     </div>
