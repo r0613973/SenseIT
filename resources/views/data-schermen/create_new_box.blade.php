@@ -4,7 +4,7 @@
     <div class="container " id="new_box">
         <h1>Nieuwe box aanmaken</h1>
         <div class="row text-center justify-content-center d-flex align-items-center mt-5 pt-5">
-            <div class="col-sm-12 col-md-12 col-lg-8 col-xl-8  text-left card " id="new_box_form">
+            <div class="col-sm-12 col-md-12 col-lg-8 col-xl-8  text-left card new_box_form">
                 <h2 class="card-header">Nieuwe box</h2>
                 <form action="/box" method="post" id="create_box_form">
                     @csrf
@@ -15,8 +15,7 @@
                                 <select class="form-control" name="user" id="user">
                                     @foreach($users as $user)
                                         @if($user['UserTypeID'] != 1)
-                                            <option
-                                                    value="{{$user['UserID']}}">{{$user['FirstName'] ." ". $user['LastName']}}</option>
+                                            <option value="{{$user['UserID']}}">{{$user['FirstName'] ." ". $user['LastName']}}</option>
                                         @endif
                                     @endforeach
                                 </select>

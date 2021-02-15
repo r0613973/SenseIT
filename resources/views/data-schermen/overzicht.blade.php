@@ -36,17 +36,19 @@
                         sensor</H2>
 
                     @foreach($box->sensors as $sensor)
-
-                        <div class="col">
-                            <div class="card ">
-                                <div class="card-body">
-                                    <h5 class="card-title"><b>{{$sensor->Name}} [{{$sensor->Unit}}] </b>- Laatste
-                                        update {{Str::substr($sensor->TimeStamp, 0, 19)}}</h5>
-                                    <h6 class="card-subtitle mb-2 text-muted"> {{$sensor->SensorName}}</h6>
-                                    <p class="card-text"><b>Waarde: </b>{{$sensor->Value . $sensor->Unit}}</p>
+                        @if ($sensor != null)
+                            <div class="col">
+                                <div class="card ">
+                                    <div class="card-body">
+                                        <h5 class="card-title"><b>{{$sensor->Name}} [{{$sensor->Unit}}] </b>- Laatste
+                                            update {{Str::substr($sensor->TimeStamp, 0, 19)}}</h5>
+                                        <h6 class="card-subtitle mb-2 text-muted"> {{$sensor->SensorName}}</h6>
+                                        <p class="card-text"><b>Waarde: </b>{{$sensor->Value . $sensor->Unit}}</p>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
+                        @endif
+
 
                     @endforeach
                 </div>

@@ -72,7 +72,7 @@
                                 @endif
                             </div>
                             <div class="card-footer">
-                                <small class="text-muted">Laatste update: {{$box->Snapshot->TimeStamp}}</small>
+                                <small class="text-muted">Laatste update: {{$box->Snapshot->TimeStamp ?? "Geen Snapshot gevonden voor deze box"}}</small>
                             </div>
                         </div>
                     </div>

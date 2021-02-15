@@ -29008,7 +29008,8 @@ body {
   font-family: Roboto Mono, monospace;
 }
 
-#new_box_form {
+.update_box_form,
+.new_box_form {
   background-color: #009688;
   color: white;
   opacity: 75%;
@@ -29051,5 +29052,55 @@ body {
   color: white !important;
   opacity: 75% !important;
   border-color: #009688 !important;
+}
+
+#btn_user_create {
+  background-color: #009688;
+  color: white;
+  opacity: 75%;
+  box-shadow: 4px 6px 6px -2px rgba(0, 0, 0, 0.52);
+  transition: 0.3s;
+}
+
+#btn_user_create:hover {
+  opacity: 100%;
+}
+
+.custom-control-input:checked ~ .custom-control-label::before {
+  border-color: #5cb85c !important;
+  background-color: #5cb85c !important;
+}
+
+.page-item.active .page-link {
+  background-color: #009688 !important;
+  color: white !important;
+  opacity: 75% !important;
+  border-color: #009688 !important;
+}
+
+.page-link {
+  background-color: white !important;
+  color: #009688 !important;
+  opacity: 75% !important;
+  border-color: #009688 !important;
+}
+
+.page-link:hover {
+  background-color: #009688 !important;
+  color: white !important;
+  opacity: 75% !important;
+  border-color: #009688 !important;
+}
+
+#user_overview body {
+  overflow-y: hidden;
+}
+
+.update_user_form,
+.create_user_form {
+  background-color: #009688;
+  color: white;
+  opacity: 75%;
+  box-shadow: 6px 8px 8px -2px rgba(0, 0, 0, 0.52);
 }
 

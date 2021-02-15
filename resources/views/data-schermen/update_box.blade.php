@@ -4,7 +4,7 @@
     <div class="container " id="update_box">
 
         <div class="row text-center justify-content-center d-flex align-items-center mt-5 pt-5">
-            <div class="col-sm-12 col-md-12 col-lg-8 col-xl-8  text-left card " id="new_box_form">
+            <div class="col-sm-12 col-md-12 col-lg-8 col-xl-8  text-left card update_box_form">
                 <h2 class="card-header text-center">Box updaten</h2>
                 <form action="/box/{{$box['BoxID']}}" id="update_box_form">
                     @method('PUT')
@@ -85,15 +85,19 @@
                             <div class="form-group custom-control custom-switch">
                                 <input type="checkbox" name="active" id="active"
                                        title="selecteer hier of de organisator een hoofdorganisator wordt"
-                                       {{$box->Active == 1 ? 'checked':''}} value="{{$box->Active}}" class="mr-2 custom-control-input">
+                                       {{$box->Active == 1 ? 'checked':''}} value="{{$box->Active}}"
+                                       class="mr-2 custom-control-input">
                                 <label for="active" title="selecteer hier of de box active moet zijn of niet"
                                        class="custom-control-label ml-3">Active</label>
                             </div>
                         </div>
                         <br>
                         <div class="row justify-content-around">
-                            <button type="submit" class="col col-lg-5 col-md-5 col-sm-12 btn btn-light m-2">Box updaten</button>
-                            <a href="/box" class="col col-lg-5 col-md-5 col-sm-12 btn btn-light m-2">Naar box overzicht</a>
+                            <button type="submit" class="col col-lg-5 col-md-5 col-sm-12 btn btn-light m-2">Box
+                                updaten
+                            </button>
+                            <a href="/box" class="col col-lg-5 col-md-5 col-sm-12 btn btn-light m-2">Naar box
+                                overzicht</a>
                         </div>
                     </div>
                 </form>

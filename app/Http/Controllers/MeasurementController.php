@@ -83,17 +83,6 @@ class MeasurementController extends Controller
         return view('data-schermen.luchtkwaliteit', $result);
     }
 
-    public function sateliet()
-    {
-        $boxen = $this->ophalendata(5);
-
-        $result = compact('boxen');
-        Json::dump($result);
-
-        return view('data-schermen.sateliet', $result);
-
-    }
-
     public function overzicht()
     {
         $user = auth()->user();
@@ -255,7 +244,7 @@ where "Measurement.BoxID" = '.$BoxID.' AND "SensorType.SensorTypeID" = '.$Sensor
 
     public function sateliet()
     {
-        $boxen = $this->ophalendata(5, 5);
+        $boxen = $this->ophalendata(5);
 
         $result = compact('boxen' );
         Json::dump($result);
@@ -264,7 +253,7 @@ where "Measurement.BoxID" = '.$BoxID.' AND "SensorType.SensorTypeID" = '.$Sensor
 
     }
     public function Datatablestest()
-    {    $boxen = $this->ophalendata(5, 5);
+    {    $boxen = $this->ophalendata(5);
 
         $result = compact('boxen' );
 

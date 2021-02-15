@@ -43,6 +43,9 @@ Route::middleware(['auth'])->group(function () {
     Route::resource('box', 'CrudBoxController');
     Route::get('qryBoxen', 'CrudBoxController@qryBoxen');
 
+    Route::resource('user', 'CrudUserController');
+    Route::get('qryUsers', 'CrudUserController@qryUsers');
+
 });
 
 Route::middleware(['auth'])->prefix('admin')->group(function () {
