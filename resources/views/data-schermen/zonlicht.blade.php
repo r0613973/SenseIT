@@ -1,9 +1,13 @@
 @extends('layouts.template')
+@section("imports")
 
+@endsection
 @section('title', 'Zonlicht')
 @section('main')
 
-    @include('data-schermen.datatemplate')
+    <div class="mdc-layout-grid__cell" style="padding-bottom: 15vh">
+                @include('data-schermen.datatemplate', ['metingvalue' => 'zonlichtmetingen'])
+    </div>
 
 
 
