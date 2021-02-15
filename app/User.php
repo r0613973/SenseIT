@@ -12,25 +12,6 @@ use Illuminate\Database\Eloquent\Collection;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 
-/**
- * Class User
- *
- * @property int $UserID
- * @property character varying $LastName
- * @property character varying $FirstName
- * @property character varying $Email
- * @property character varying $Password
- * @property character varying|null $Address
- * @property character varying|null $PostalCode
- * @property character varying|null $City
- * @property int $UserTypeID
- *
- * @property UserType $user_type
- * @property Collection|Box[] $boxes
- *
- * @package App\Models
- * @noinspection Annotator
- */
 class User extends  Authenticatable
 {
     protected $table = 'User';

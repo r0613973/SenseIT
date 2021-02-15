@@ -132,17 +132,6 @@ class MeasurementController extends Controller
     }
 
 
-    public function sateliet()
-    {
-        $boxen = $this->ophalendata(5);
-
-        $result = compact('boxen');
-        Json::dump($result);
-
-        return view('data-schermen.sateliet', $result);
-
-    }
-
     public function overzicht()
     {
         $user = auth()->user();
@@ -303,8 +292,14 @@ where "Measurement.BoxID" = '.$BoxID.' AND "SensorType.SensorTypeID" = '.$Sensor
     }
 
 
+    public function sateliet()
+    {
+        $boxen = $this->ophalendata(5);
+
+
+
     public function Datatablestest()
-    {    $boxen = $this->ophalendata(5, 5);
+    {    $boxen = $this->ophalendata(5);
 
         $result = compact('boxen' );
 

@@ -73,9 +73,9 @@
                                 @endif
                             </div>
                             <div class="card-footer">
-                                @if($box->Snapshot !=null)
-                                    <small class="text-muted">Laatste update: {{$box->Snapshot->TimeStamp}}</small>
-                                @endif
+
+                                <small class="text-muted">Laatste update: {{$box->Snapshot->TimeStamp ?? "Geen Snapshot gevonden voor deze box"}}</small>
+
                             </div>
                         </div>
                     </div>

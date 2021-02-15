@@ -10,12 +10,6 @@
             <a class="mdc-list-item mdc-list-item" href="/" tabindex="0" aria-current="page">
                 <span class="mdc-list-item__text">Home</span>
             </a>
-            @if (auth()->user()->UserTypeID == 1)
-                <a class="mdc-list-item" href="/box">
-                    <span class="mdc-list-item__text">Overzicht van boxen</span>
-                </a>
-            @endif
-
             <a class="mdc-list-item" href="/temperatuur">
 
                 <span class="mdc-list-item__text">Metingen</span>
@@ -24,6 +18,17 @@
 
                 <span class="mdc-list-item__text">Overzicht</span>
             </a>
+
+            @if (auth()->user()->UserTypeID == 1)
+                <a class="mdc-list-item" href="/box">
+                    <span class="mdc-list-item__text">Overzicht van boxen</span>
+                </a>
+
+                <a class="mdc-list-item" href="/user">
+                    <span class="mdc-list-item__text">Overzicht van users</span>
+                </a>
+            @endif
+
             <a class="mdc-list-item" href="/account" tabindex="0">
                 <span class="mdc-list-item__text">Account</span>
             </a>

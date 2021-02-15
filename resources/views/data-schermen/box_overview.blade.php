@@ -220,7 +220,7 @@
                             "sLengthMenu": "Toon _MENU_ per pagina",
                             "emptyTable": "Er zijn geen boxen gevonden",
                             "info": "Toont _START_ tot _END_ van _TOTAL_ gevonden boxen",
-                            "infoEmpty": "Toont 0 - 0 van de 0 organisatoren",
+                            "infoEmpty": "Toont 0 - 0 van de 0 boxen",
                             "infoFiltered": "(gefiltered van _MAX_ boxen)",
                             "infoPostFix": "",
                             "loadingRecords": "Aan het laden...",
