@@ -21,7 +21,7 @@
     <link rel="stylesheet" href="{{ mix('css/app.css') }}">
 
 
-    <title>@yield('title', 'SenseIT')</title>
+    <title style="font-size: 5vw">@yield('title', 'SenseIT')</title>
 
 
     <link rel="apple-touch-icon" sizes="144x144" href="/images/favicon/apple-touch-icon.png">
@@ -49,7 +49,7 @@
 
     <!--<div class="shrine-body">-->
         <main class="{{--mdc-top-app-bar--fixed-adjust--}}">
-            <div class="container">
+            <div class="container" style="padding-top: 60px">
                 <div class="mdc-layout-grid">
                     <div class="mdc-layout-gird__inner">
             @endif

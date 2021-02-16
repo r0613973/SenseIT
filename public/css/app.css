@@ -23911,6 +23911,15 @@ body {
   width: 100%;
 }
 
+.form-check-input {
+  border-color: #5cb85c !important;
+  background-color: #5cb85c !important;
+}
+
+.form-switch {
+  margin-left: 10px;
+}
+
 .header {
   text-align: center;
 }

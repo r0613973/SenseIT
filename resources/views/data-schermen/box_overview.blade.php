@@ -2,7 +2,6 @@
 @section('title', 'Overzicht van alle boxen')
 @section('main')
     <div class="container " id="box_overview">
-        <h1>Overzicht van alle boxen</h1>
         <p class="justify-content-start">
             <a href="/box/create" class="btn" id="btn_create"
                title="Klik hier om een nieuwe box toe te voegen">
