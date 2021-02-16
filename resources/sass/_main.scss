@@ -130,6 +130,7 @@ body{
 }
 
 
+
 #overzichtstabel{
     margin-bottom: 56px;
 }
@@ -156,3 +157,13 @@ background-color: #009688;
 .overzichtText{
     font-size: 18px;
 }
+
+.form-check-input {
+    border-color: #5cb85c !important;
+    background-color: #5cb85c !important;
+}
+
+.form-switch {
+    margin-left: 10px;
+}
+

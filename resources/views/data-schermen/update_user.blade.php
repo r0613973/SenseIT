@@ -28,7 +28,7 @@
                                        type="text"
                                        title="Vul hier de achternaam van de user in"
                                        placeholder="Achternaam van de user"
-                                       value="{{$user->FirstName}}">
+                                       value="{{$user->LastName}}">
                             </div>
 
                             <div class="form-group formulier col-lg-6  col-md-6 mb-3">

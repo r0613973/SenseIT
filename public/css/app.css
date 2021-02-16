@@ -23911,9 +23911,11 @@ body {
   width: 100%;
 }
 
+
 #overzichtstabel {
   margin-bottom: 56px;
 }
+
 
 .form-check-input {
   border-color: #5cb85c !important;
@@ -23923,6 +23925,7 @@ body {
 .form-switch {
   margin-left: 10px;
 }
+
 
 #new_box_form {
   background-color: #009688;
@@ -23938,6 +23941,7 @@ body {
 .overzichtText {
   font-size: 18px;
 }
+
 
 .header {
   text-align: center;

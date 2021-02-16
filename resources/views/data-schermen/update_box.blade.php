@@ -35,12 +35,11 @@
                             </div>
 
                             <div class="form-group formulier col-lg-4  col-md-6 mb-3">
-                                <label for="startdatum">Startdatum: </label>
-                                <input type="date" class="form-control" name="startdatum" id="startdatum"
+                                <label for="startdatum">Startdatum locatie: </label>
+                                <input type="datetime-local" class="form-control" name="startdatum" id="startdatum"
                                        data-toggle="tooltip" data-placement="right"
-                                       title="Vul hier de startdatum van het gebruik van de box in"
-                                       placeholder="DD/MM/YYYY"
-                                       value="{{Carbon\Carbon::parse($boxUser->StartDate)->format('Y-m-d')}}">
+                                       title="Vul hier de startdatum van het gebruik van de box in" required
+                                       value="{{Carbon\Carbon::parse($location->StartDate)->format('Y-m-d\TH:i:s')}}">
                             </div>
 
                             <div class="form-group formulier col-lg-4  col-md-6 mb-3">
@@ -145,6 +144,12 @@
                         }).show();
                     });
             });
+
+            //onclick toggle switch
+            $('#update_box_form').on("change", ".custom-switch", function () {
+                $('#active').val($('.custom-switch').find('#active').prop('checked') ? 1 : 0)
+            });
+
         });
     </script>
 @endsection

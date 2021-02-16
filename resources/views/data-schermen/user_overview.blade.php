@@ -2,7 +2,6 @@
 @section('title', 'Overzicht van alle users')
 @section('main')
     <div class="container " id="user_overview">
-        <h1>Overzicht van alle users</h1>
         <p class="justify-content-start">
             <a href="/user/create" class="btn" id="btn_user_create"
                title="Klik hier om een nieuwe user toe te voegen">
