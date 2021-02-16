@@ -113,7 +113,7 @@ class MeasurementController extends Controller
     public function luchtkwaliteit()
     {
         //TODO Juiste sensor toevoegen
-        $boxen = $this->ophalendata(5);
+        $boxen = $this->ophalendata(11);
 
         $result = compact('boxen');
         Json::dump($result);
@@ -214,15 +214,18 @@ where "Measurement.BoxID" = '.$BoxID.' AND "SensorType.SensorTypeID" = '.$Sensor
         }
 
         foreach ($boxen as $box) {
+            $box->UserTypeID= $user->UserTypeID;
             $box->SensorTypeID = $SensorTypeID;
-           /* $sensorIDs = SensorBox::join('Sensor', 'SensorBox.SensorID', '=', "Sensor.SensorID")
+
+            $sensorIDs = SensorBox::join('Sensor', 'SensorBox.SensorID', '=', "Sensor.SensorID")
                 ->join('SensorType', 'Sensor.SensorTypeID', '=', 'SensorType.SensorTypeID')
                 ->where('SensorBox.BoxID', '=', $box->BoxID)
                 ->where('SensorType.SensorTypeID', '=', $SensorTypeID)
-                ->pluck("Sensor.SensorID");*/
+                ->pluck("Sensor.SensorID");
+            $box->SensorIDs=$sensorIDs;
 
-            /*$result = compact('sensorIDs');
-            Json::dump($result);*/
+                /*$result = compact('sensorIDs');
+                Json::dump($result);*/
 
             /*foreach ($sensorIDs as $sensorID ){
                 $box->= Measurement::orderBy('TimeStamp', 'desc')
@@ -246,9 +249,23 @@ where "Measurement.BoxID" = '.$BoxID.' AND "SensorType.SensorTypeID" = '.$Sensor
 
             $unit = '%';
             $vorigewaarde = 0 ; /*$box['sensoren']->first()->first();*/
+
             foreach ($box['sensoren'] as $sensor) {
                   $sensor->first()->sensor = Sensor::findOrFail( $sensor->first()->SensorID);
-                foreach ($sensor as $measurement) {
+                $sensorArray= $sensor;
+                for($i =1 ; $i<$sensor->count()-1 ;$i++){
+
+
+                    if ($sensorArray[$i-1]['Value'] == $sensorArray[$i]['Value']) {
+                        $sensorArray[$i-1]['Arrow'] = '<i class="fas fa-arrow-circle-right"></i>';
+                    } else if ($sensorArray[$i-1]['Value']> $sensorArray[$i]['Value']) {
+                        $sensorArray[$i-1]['Arrow'] = '<i class="fas fa-arrow-circle-up"></i>';
+                    } else {
+                        $sensorArray[$i-1]['Arrow'] = '<i class="fas fa-arrow-circle-down"></i>';
+                    }
+                }
+                $sensor = $sensorArray;
+                /*foreach ($sensor as $measurement) {
                     if ($measurement->Value == $vorigewaarde) {
                         $measurement->Arrow = '<i class="fas fa-arrow-circle-right"></i>';
                     } else if ($measurement->Value > $vorigewaarde) {
@@ -260,7 +277,7 @@ where "Measurement.BoxID" = '.$BoxID.' AND "SensorType.SensorTypeID" = '.$Sensor
                     $unit = $measurement->Unit;
                     $vorigewaarde = $measurement->Value;
 
-                }
+                }*/
             }
             $box->Unit = $unit;
 
@@ -295,6 +312,7 @@ where "Measurement.BoxID" = '.$BoxID.' AND "SensorType.SensorTypeID" = '.$Sensor
     public function sateliet()
     {
         $boxen = $this->ophalendata(5);
+    }
 
 
 

@@ -128,3 +128,31 @@ body{
     height: 400px;
     width: 100%;
 }
+
+
+#overzichtstabel{
+    margin-bottom: 56px;
+}
+.form-check-input {
+border-color: #5cb85c !important;
+    background-color: #5cb85c !important;
+}
+
+ .form-switch {
+margin-left: 10px;
+ }
+
+#new_box_form{
+background-color: #009688;
+    color: white;
+    opacity: 75%;
+    box-shadow: 6px 8px 8px -2px rgba(0,0,0,0.52);
+}
+
+
+.overzichtTitle{
+   font-size: 16px;
+}
+.overzichtText{
+    font-size: 18px;
+}
