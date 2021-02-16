@@ -7,8 +7,10 @@ use App\Models\BoxUser;
 use App\Models\Location;
 use App\Models\User;
 use App\Models\UserType;
+use DateTime;
 use Facades\App\Helpers\Json;
 use Illuminate\Http\Request;
+use Illuminate\Support\Carbon;
 use Log;
 use Symfony\Component\Console\Output\ConsoleOutput;
 
@@ -116,9 +118,9 @@ class CrudBoxController extends Controller
     public function edit($id)
     {
         $users = User::orderBy('FirstName', 'DESC')->get();
-        $boxUser = BoxUser::where('BoxID', 'like', $id)->first();
-        $location = Location::where('BoxUserID', 'like', $boxUser->BoxUserID)->first();
-        $box = Box::where('BoxID', 'like', $id)->first();
+        $boxUser = BoxUser::where('BoxID', 'like', $id)->where('EndDate', '=', null)->first();
+        $location = Location::where('BoxUserID', '=', $boxUser->BoxUserID)->first();
+        $box = Box::where('BoxID', '=', $id)->first();
         $result = compact('box', 'users', 'boxUser', 'location');
 
         return view('data-schermen.update_box', $result);
@@ -133,9 +135,24 @@ class CrudBoxController extends Controller
      */
     public function update(Request $request, $id)
     {
-        $box = Box::find($id);
-        $boxUser = BoxUser::where('BoxID', 'like', $id)->first();
+        $box = Box::with('Users')->find($id);
+        $boxUser = BoxUser::where('BoxID', 'like', $id)->where('EndDate', '=', null)->first();
+
         $location = Location::where('BoxUserID', 'like', $boxUser->BoxUserID)->first();
+
+        if ($box->users->first()->UserID != $request->User) {
+            $boxUser->EndDate = (new DateTime ("now", new \DateTimeZone("Europe/Brussels")))->format('Y-m-d H:i:s');
+            $boxUser->save();
+            Log::error($boxUser);
+            $boxUser = new BoxUser();
+            $location->EndDate = (new DateTime ("now", new \DateTimeZone("Europe/Brussels")))->format('Y-m-d H:i:s');
+            $location->save();
+            $location = new Location();
+        } else if ($box->longtitude == $request->longitude && $box->lat == $request->latitude) {
+            $location->EndDate = (new DateTime ("now", new \DateTimeZone("Europe/Brussels")))->format('Y-m-d H:i:s');
+            $location->save();
+            $location = new Location();
+        }
 
         $this->validate($request, [
             'user' => 'required',
@@ -147,6 +164,7 @@ class CrudBoxController extends Controller
             'comment' => 'required'
         ]);
 
+        Log::error($request);
 
         $box->MacAddress = $request->macadres;
         $box->Name = $request->boxnaam;
@@ -158,6 +176,11 @@ class CrudBoxController extends Controller
         $boxUser->BoxID = $box->BoxID;
         $boxUser->StartDate = $request->startdatum;
         $boxUser->save();
+
+        $boxUser = BoxUser::where('BoxID', '=', $boxUser->BoxID)
+            ->where('UserID', '=', $boxUser->UserID)
+            ->where('StartDate', '=', $boxUser->StartDate)->first();
+
 
         $location->BoxUserID = $boxUser->BoxUserID;
         $location->Latitude = $request->latitude;
