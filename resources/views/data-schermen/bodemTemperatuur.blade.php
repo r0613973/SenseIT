@@ -5,18 +5,9 @@
 
     <div class="mdc-layout-grid__cell" style="padding-bottom: 15vh">
 
-        @include('data-schermen.datatemplate')
+        @include('data-schermen.datatemplate', ['metingvalue' => 'bodemTemperatuurmetingen'])
     </div>
-    <div class="container">
-        <div class="row" >
 
-
-        </div>
-        <div class="col" >
-
-        </div>
-    </div>
-    </div>
 
 
 

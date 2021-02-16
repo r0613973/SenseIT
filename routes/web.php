@@ -23,7 +23,7 @@ Route::view('/login','auth.login');
 
 Route::middleware(['auth'])->group(function () {
     Route::get('/overzicht', 'MeasurementController@overzicht');
-    Route::get('/account', 'AccountController@index');
+
     Route::get('/temperatuur', 'MeasurementController@temperatuur');
     Route::get('/bodemTemperatuur', 'MeasurementController@bodemTemperatuur');
     Route::get('/luchtkwaliteit', 'MeasurementController@luchtkwaliteit');
@@ -37,7 +37,21 @@ Route::middleware(['auth'])->group(function () {
     Route::get('/sateliet', 'MeasurementController@sateliet');
     Route::get('/datatable', 'MeasurementController@Datatablestest');
 
-    Route::get('/tempratuurmetingen','MeasurementController@temperatuurmetingen');
+
+
+    Route::resource('/account', 'AccountController');
+
+    //datatabels calls
+
+    Route::get('/temperatuurmetingen', 'MeasurementController@temperatuurmetingen');
+    Route::get('/bodemTemperatuurmetingen', 'MeasurementController@bodemTemperatuurmetingen');
+    Route::get('/luchtvochtigheidmetingen', 'MeasurementController@luchtvochtigheidmetingen');
+    Route::get('/bodemvochtigheidmetingen', 'MeasurementController@bodemvochtigheidmetingen');
+    Route::get('/zonlichtmetingen', 'MeasurementController@zonlichtmetingen');
+    Route::get('/luchtkwaliteitMeting', 'MeasurementController@luchtkwaliteitMeting');
+
+
+
     Route::get('/', 'HomeController@index');
 
     Route::resource('box', 'CrudBoxController');
