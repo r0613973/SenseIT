@@ -105,7 +105,7 @@
                             type: data.type,
                             text: data.text
                         }).show();
-                        window.setTimeout(function(){window.location = "/home"},1500)
+                        window.setTimeout(function(){window.location = "/home"},1)
                         // Hide the modal
                     })
                     .fail(function (e) {
