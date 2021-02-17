@@ -4,7 +4,7 @@
     <div class="container " id="new_box">
         <h1>Nieuwe box aanmaken</h1>
         <div class="row text-center justify-content-center d-flex align-items-center mt-5 pt-5">
-            <div class="col-sm-12 col-md-12 col-lg-8 col-xl-8  text-left card " id="new_box_form">
+            <div class="col-sm-12 col-md-12 col-lg-8 col-xl-8  text-left card new_box_form">
                 <h2 class="card-header">Nieuwe box</h2>
                 <form action="/box" method="post" id="create_box_form">
                     @csrf
@@ -15,8 +15,7 @@
                                 <select class="form-control" name="user" id="user">
                                     @foreach($users as $user)
                                         @if($user['UserTypeID'] != 1)
-                                            <option
-                                                    value="{{$user['UserID']}}">{{$user['FirstName'] ." ". $user['LastName']}}</option>
+                                            <option value="{{$user['UserID']}}">{{$user['FirstName'] ." ". $user['LastName']}}</option>
                                         @endif
                                     @endforeach
                                 </select>
@@ -33,11 +32,10 @@
                             </div>
 
                             <div class="form-group formulier col-lg-4  col-md-6 mb-3">
-                                <label for="startdatum">Startdatum: </label>
-                                <input type="date" class="form-control" name="startdatum" id="startdatum"
+                                <label for="startdatum">Startdatum locatie: </label>
+                                <input type="datetime-local" class="form-control" name="startdatum" id="startdatum"
                                        data-toggle="tooltip" data-placement="right"
-                                       title="Vul hier de startdatum van het gebruik van de box in"
-                                       placeholder="YYYY/MM/DD"
+                                       title="Vul hier de startdatum van het gebruik van de box in" required
                                        value="">
                             </div>
 
@@ -83,8 +81,12 @@
                         </div>
                         <br>
 
-                        <div class=" ">
-                            <button type="submit" class="btn btn-light">Box toevoegen</button>
+                        <div class="row justify-content-around">
+                            <button type="submit" class="col col-lg-5 col-md-5 col-sm-12 btn btn-light m-2">Box
+                                toevoegen
+                            </button>
+                            <a href="/box" class="col col-lg-5 col-md-5 col-sm-12 btn btn-light m-2">Naar box
+                                overzicht</a>
                         </div>
                     </div>
                 </form>

@@ -54,28 +54,41 @@
                                 </ul>
 
 
-                                <iframe
-                                    src="http://20.73.164.205:3000/d-solo/xIkhwMLGk/sensoren-metingen-dashboard?orgId=1&var-Box_Admin=All&var-Box_Boer={{$box->BoxID}}&from=1611734741265&to=1612339541265&panelId=7"
-                                    height="200" frameborder="0">
+                                <iframe src="https://20.71.209.149:3000/d-solo/k7fNW2PGz/sensoren-metingen-dashboard?orgId=1&refresh=1m
+                                    &from=1613440215934&to=1613461815934&var-User_Name=1&var-Box_Admin=All&var-Box_Boer={{$box->BoxID}}&var-Sensor_type=1
+                                    &var-Unit=X&var-X_Coordinaten=&var-Y_Coordinaten=&var-SensorID=All&var-query0=&panelId=14&theme=light"
+                                        width="450" height="200" frameborder="0"></iframe>
 
                                 </iframe>
-                                @if($box->BoxID == 5 )
-                                    <iframe
-                                        src="http://20.73.164.205:3000/d-solo/xIkhwMLGk/sensoren-metingen-dashboard?var-Box_Admin=All&var-Box_Boer={{$box->BoxID}}&var-X_Coordinaten=51.0152&var-Y_Coordinaten=4.71502&refresh=5m&from=1611446516245&to=1612656116245&orgId=1&panelId=9"
-                                        height="200" frameborder="0">
 
-                                    </iframe>
-                                    <iframe
-                                        src="http://20.73.164.205:3000/d-solo/xIkhwMLGk/sensoren-metingen-dashboard?var-Box_Admin=All&var-Box_Boer=5&var-X_Coordinaten=51.0152&var-Y_Coordinaten=4.71502&refresh=5m&from=1611446516245&to=1612656116245&orgId=1&panelId=11"
-                                        height="200" frameborder="0">
+                                <iframe src="https://20.71.209.149:3000/d-solo/k7fNW2PGz/sensoren-metingen-dashboard?orgId=1&refresh=1m
+                                &from=1613440238619&to=1613461838619&var-User_Name=1&var-Box_Admin=All&var-Box_Boer={{$box->BoxID}}
+                                    &var-Sensor_type=1&var-Unit=X&var-X_Coordinaten=&var-Y_Coordinaten=&var-SensorID=All&var-query0=
+                                    &panelId=18&theme=light" width="450" height="200" frameborder="0"></iframe>
 
-                                    </iframe>
-                                @endif
+
+                                <iframe src="https://20.71.209.149:3000/d-solo/k7fNW2PGz/sensoren-metingen-dashboard?orgId=1&refresh=1m
+                                    &from=1613440266102&to=1613461866102&var-User_Name=1&var-Box_Admin=All&var-Box_Boer={{$box->BoxID}}
+                                    &var-Sensor_type=1&var-Unit=X&var-X_Coordinaten=&var-Y_Coordinaten=&var-SensorID=All
+                                    &var-query0=&panelId=19&theme=light" width="450" height="200"
+                                        frameborder="0"></iframe>
+
+                                {{--<iframe src="https://20.71.209.149:3000/d-solo/k7fNW2PGz/sensoren-metingen-dashboard?orgId=1
+                                &refresh=1m&from=1613440285801&to=1613461885801&var-User_Name=1&var-Box_Admin=All&var-Box_Boer={{$box->BoxID}}
+                                &var-Sensor_type=1&var-Unit=X&var-X_Coordinaten=&var-Y_Coordinaten=&var-SensorID=All&var-query0=
+                                &panelId=27&theme=light" width="450" height="200" frameborder="0"></iframe>--}}
+
+                                <iframe src="https://20.73.164.205:3000/d-solo/xIkhwMLGk/sensoren-metingen-dashboard?orgId=1
+                                &refresh=1m&var-User_Name=1&var-Box_Admin=All&var-Box_Boer=5&var-Sensor_type=6&var-Unit=lon;lat
+                                &var-X_Coordinaten=51.0152&var-Y_Coordinaten=4.71502&var-SensorID=17&from=now-4d&to=now%2B1h
+                                &panelId=44" width="450" height="200" frameborder="0"></iframe>
+
                             </div>
                             <div class="card-footer">
-                                @if($box->Snapshot !=null)
-                                    <small class="text-muted">Laatste update: {{$box->Snapshot->TimeStamp}}</small>
-                                @endif
+
+                                <small class="text-muted">Laatste
+                                    update: {{Str::substr($box->Snapshot->TimeStamp, 0, 19) ?? "Geen Snapshot gevonden voor deze box"}}</small>
+
                             </div>
                         </div>
                     </div>

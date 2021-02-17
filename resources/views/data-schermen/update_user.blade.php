@@ -1,81 +1,93 @@
 @extends('layouts.template')
-@section('title', 'Profiel')
+@section('title', 'User updaten')
 @section('main')
-    <div class="container " id="update_box">
+    <div class="container " id="update_user">
 
         <div class="row text-center justify-content-center d-flex align-items-center mt-5 pt-5">
-            <div class="col-sm-12 col-md-12 col-lg-8 col-xl-8  text-left card " id="new_box_form">
-                <h2 class="card-header text-center">Profiel updaten</h2>
-                <form action="/account/{{$user->UserID}}"  method="post" id="update_box_form" onautocomplete="on">
+            <div class="col-sm-12 col-md-12 col-lg-8 col-xl-8  text-left card update_user_form">
+                <h2 class="card-header text-center">User updaten</h2>
+                <form action="/user/{{$user['UserID']}}" id="update_user_form">
                     @method('PUT')
                     @csrf
                     <div class="card-body">
                         <div class="row ">
-                            <div class="form-group formulier col-lg-12 col-md-12 mb-3">
-                                <label for="email">Email</label>
-                                <input class="form-control" name="email" id="email" data-toggle="tooltip"
-                                       data-placement="right"
-                                       type="email"
-                                       title="Vul hier je email in"
-                                       placeholder="Email"
-                                       value="{{$user->Email}}" autofocus>
-                            </div>
-
                             <div class="form-group formulier col-lg-6  col-md-6 mb-3">
-                                <label for="voornaam">Voornaam</label>
+                                <label for="voornaam">Voornaam: </label>
                                 <input class="form-control" name="voornaam" id="voornaam" data-toggle="tooltip"
                                        data-placement="right"
                                        type="text"
-                                       title="Vul hier je voornaam in"
-                                       placeholder="Voornaam"
+                                       title="Vul hier de voornaam van de user in"
+                                       placeholder="Voornaam van de user"
                                        value="{{$user->FirstName}}">
                             </div>
 
                             <div class="form-group formulier col-lg-6  col-md-6 mb-3">
-                                <label for="achternaam">Achternaam</label>
-                                <input  class="form-control" name="achternaam" id="achternaam"
-                                       data-toggle="tooltip" data-placement="right"
-                                       title="Vul hier je achternaam in"
-                                       placeholder="Achternaam"
+                                <label for="achternaam">Achternaam: </label>
+                                <input class="form-control" name="achternaam" id="achternaam" data-toggle="tooltip"
+                                       data-placement="right"
+                                       type="text"
+                                       title="Vul hier de achternaam van de user in"
+                                       placeholder="Achternaam van de user"
                                        value="{{$user->LastName}}">
                             </div>
 
-                            <div class="form-group formulier col-lg-8  col-md-8 mb-3">
-                                <label for="adres">Adres & Nr</label>
+                            <div class="form-group formulier col-lg-6  col-md-6 mb-3">
+                                <label for="email">Email: </label>
+                                <input class="form-control" name="email" id="email" data-toggle="tooltip"
+                                       data-placement="right"
+                                       type="text"
+                                       title="Vul hier de email van de user in"
+                                       placeholder="Email van de user"
+                                       value="{{$user->Email}}">
+                            </div>
+
+                            <div class="form-group formulier col-lg-6  col-md-6 mb-3">
+                                <label for="adres">Adres: </label>
                                 <input class="form-control" name="adres" id="adres" data-toggle="tooltip"
                                        data-placement="right"
                                        type="text"
-                                       title="Vul hier je adres en nummer in"
-                                       placeholder="Adres & nummer"
+                                       title="Vul hier het adres van de user in"
+                                       placeholder="Adres van de user"
                                        value="{{$user->Address}}">
                             </div>
 
                             <div class="form-group formulier col-lg-4  col-md-6 mb-3">
-                                <label for="postcode">PostCode</label>
+                                <label for="postcode">Postcode: </label>
                                 <input class="form-control" name="postcode" id="postcode" data-toggle="tooltip"
                                        data-placement="right"
                                        type="text"
-                                       title="Vul hier je postcode in"
-                                       placeholder="Postcode"
+                                       title="Vul hier de postcode van de user in"
+                                       placeholder="Postcode van de user"
                                        value="{{$user->PostalCode}}">
                             </div>
 
-                            <div class="form-group formulier col-lg-12  col-md-12 mb-3">
-                                <label for="woonplaats">Woonplaats</label>
-                                <input class="form-control" name="woonplaats" id="woonplaats" data-toggle="tooltip"
+                            <div class="form-group formulier col-lg-4  col-md-6 mb-3">
+                                <label for="stad">Stad: </label>
+                                <input class="form-control" name="stad" id="stad" data-toggle="tooltip"
                                        data-placement="right"
                                        type="text"
-                                       title="Vul hier je woonplaats  in"
-                                       placeholder="Woonplaats "
+                                       title="Vul hier de stad van de user in"
+                                       placeholder="Stad van de user"
                                        value="{{$user->City}}">
                             </div>
 
-
+                            <div class="form-group formulier col-lg-4 col-md-6 mb-3">
+                                <label for="usertype">User type: </label>
+                                <select class="form-control" name="usertype" id="usertype">
+                                    @foreach($userTypes as $userType)
+                                        <option
+                                                value="{{$userType['UserTypeID']}}" {{ ($userType->UserTypeID == $user->UserTypeID) ? 'selected="selected"' : '' }}>{{$userType['UserTypeName']}}</option>
+                                    @endforeach
+                                </select>
+                            </div>
                         </div>
                         <br>
                         <div class="row justify-content-around">
-                            <button type="submit" class="col col-lg-5 col-md-5 col-sm-12 btn btn-light m-2">Profiel updaten</button>
-
+                            <button type="submit" class="col col-lg-5 col-md-5 col-sm-12 btn btn-light m-2">User
+                                updaten
+                            </button>
+                            <a href="/user" class="col col-lg-5 col-md-5 col-sm-12 btn btn-light m-2">Naar user
+                                overzicht</a>
                         </div>
                     </div>
                 </form>
@@ -87,7 +99,7 @@
 
     <script>
         $(function () {
-            $('#update_box_form').submit(function (e) {
+            $('#update_user_form').submit(function (e) {
                 // Don't submit the form
                 e.preventDefault();
                 // Get the action property (the URL to submit)
@@ -100,12 +112,10 @@
                     .done(function (data) {
                         console.log(data);
                         // Noty success message
-
                         new Noty({
                             type: data.type,
                             text: data.text
                         }).show();
-                        window.setTimeout(function(){window.location = "/home"},1)
                         // Hide the modal
                     })
                     .fail(function (e) {
@@ -128,4 +138,3 @@
         });
     </script>
 @endsection
-

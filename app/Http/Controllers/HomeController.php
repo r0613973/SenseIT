@@ -47,6 +47,8 @@ class HomeController extends Controller
                 ->get()
                 ->first();
 
+
+
             $box['Sensoren'] = SensorBox::where('SensorBox.BoxID', "=" ,$box['BoxID'])
                 ->with('Sensor')
                 ->join('Sensor', 'SensorBox.SensorID', '=', "Sensor.SensorID")

@@ -2,7 +2,6 @@
 @section('title', 'Overzicht van alle boxen')
 @section('main')
     <div class="container " id="box_overview">
-        <h1>Overzicht van alle boxen</h1>
         <p class="justify-content-start">
             <a href="/box/create" class="btn" id="btn_create"
                title="Klik hier om een nieuwe box toe te voegen">
@@ -220,7 +219,7 @@
                             "sLengthMenu": "Toon _MENU_ per pagina",
                             "emptyTable": "Er zijn geen boxen gevonden",
                             "info": "Toont _START_ tot _END_ van _TOTAL_ gevonden boxen",
-                            "infoEmpty": "Toont 0 - 0 van de 0 organisatoren",
+                            "infoEmpty": "Toont 0 - 0 van de 0 boxen",
                             "infoFiltered": "(gefiltered van _MAX_ boxen)",
                             "infoPostFix": "",
                             "loadingRecords": "Aan het laden...",
