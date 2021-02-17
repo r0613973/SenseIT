@@ -182,7 +182,7 @@
                         lagenvolgorden.push(laag);
                         asynccounter ++;
                         L.marker([data[0], data[1]]).addTo(mymap)
-                            .bindPopup('A pretty CSS3 popup.<br> Easily customizable.')
+                          .bindPopup('box: '+ data[3])
                             .openPopup();
                         console.log(asynccounter);
                         console.log(countersync);
