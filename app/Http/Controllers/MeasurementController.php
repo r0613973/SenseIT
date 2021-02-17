@@ -312,6 +312,10 @@ where "Measurement.BoxID" = '.$BoxID.' AND "SensorType.SensorTypeID" = '.$Sensor
     public function sateliet()
     {
         $boxen = $this->ophalendata(5);
+        $result = compact('boxen' );
+        Json::dump($result);
+
+        return view('data-schermen.sateliet', $result );
     }
 
 
