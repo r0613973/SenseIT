@@ -263,7 +263,11 @@ where "Measurement.BoxID" = '.$BoxID.' AND "SensorType.SensorTypeID" = '.$Sensor
                     } else {
                         $sensorArray[$i-1]['Arrow'] = '<i class="fas fa-arrow-circle-down"></i>';
                     }
+
+
                 }
+                $box->Unit=  $sensorArray[1]['Unit'];
+
                 $sensor = $sensorArray;
                 /*foreach ($sensor as $measurement) {
                     if ($measurement->Value == $vorigewaarde) {
@@ -279,7 +283,7 @@ where "Measurement.BoxID" = '.$BoxID.' AND "SensorType.SensorTypeID" = '.$Sensor
 
                 }*/
             }
-            $box->Unit = $unit;
+
 
         }
 

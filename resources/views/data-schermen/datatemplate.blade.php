@@ -61,9 +61,9 @@
                                             width="450" height="250"
                                             frameborder="0"></iframe>
                                 @else
-                                    <iframe src="https://20.71.209.149:3000/d-solo/k7fNW2PGz/sensoren-metingen-dashboard?orgId=1&refresh=1m&from=now-4d&to=now%2B1h
+                                    <iframe id="locatie" src="https://20.71.209.149:3000/d-solo/k7fNW2PGz/sensoren-metingen-dashboard?orgId=1&refresh=1m&from=now-4d&to=now%2B1h
                                 &var-User_Name=&var-Box_Admin=All&var-Box_Boer={{$box->BoxID}}&var-Sensor_type={{$box->SensorTypeID}}&var-Unit={{$box->Unit}}&var-X_Coordinaten=
-                                &var-Y_Coordinaten=&var-SensorID={{$box->SensorIDs->first()}}&var-query0=&var-SensorID2=&var-SensorIDname=1&panelId=34&theme=light"
+                                &var-Y_Coordinaten=&var-SensorID={{$box->SensorIDs->first()}}&var-query0=&var-SensorID2=&var-SensorIDname=1&panelId=32&theme=light"
                                             width="450" height="250"
                                             frameborder="0"></iframe>
 

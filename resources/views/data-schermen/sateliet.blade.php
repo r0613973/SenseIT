@@ -29,7 +29,7 @@
                                 @foreach($boxen as $box)
                                     <button class="mdc-tab mdc-tab tabbutton" id="{{$box->BoxID}}" role="tab" aria-selected="true" tabindex="0">
           <span class="mdc-tab__content">
-            <span class="mdc-tab__text-label">Box iD: {{$box->BoxID}}</span>
+            <span class="mdc-tab__text-label">{{$box['box']->Name}}</span>
           </span>
                                         <span class="mdc-tab-indicator">
             <span class="mdc-tab-indicator__content mdc-tab-indicator__content--underline"></span>
@@ -182,7 +182,7 @@
                         lagenvolgorden.push(laag);
                         asynccounter ++;
                         L.marker([data[0], data[1]]).addTo(mymap)
-                            .bindPopup('A pretty CSS3 popup.<br> Easily customizable.')
+                            .bindPopup('box: '+ data[3])
                             .openPopup();
                         console.log(asynccounter);
                         console.log(countersync);
@@ -285,7 +285,7 @@
 
 
 
-
+            $('#temperatuurIcon').removeClass('mdc-bottom-navigation__list-item--activated');
             $('#satelieticoon').addClass('mdc-bottom-navigation__list-item--activated');
             $('#contentboxen').children().each(function () {
                 console.log(this.id) // "this" is the current element in the loop
