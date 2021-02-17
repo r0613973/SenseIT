@@ -181,6 +181,9 @@
                         var laag = {boxid: this.id, laagindex: boxlagen.length-1, long: data[1], lat: data[0], active: false};
                         lagenvolgorden.push(laag);
                         asynccounter ++;
+                        L.marker([data[0], data[1]]).addTo(mymap)
+                            .bindPopup('A pretty CSS3 popup.<br> Easily customizable.')
+                            .openPopup();
                         console.log(asynccounter);
                         console.log(countersync);
                         if(asynccounter === countersync)
