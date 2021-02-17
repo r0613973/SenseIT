@@ -249,7 +249,7 @@ where "Measurement.BoxID" = '.$BoxID.' AND "SensorType.SensorTypeID" = '.$Sensor
                 ->join('SensorType', 'Sensor.SensorTypeID', '=', 'SensorType.SensorTypeID')
                 ->where('Measurement.BoxID', 'like', $box->BoxID)
                 ->where('SensorType.SensorTypeID', 'like', $SensorTypeID)
-                ->paginate(1000);
+                ->paginate(500);
 
 
             $box['sensoren'] = $box['sensoren2']->groupBy('SensorID');
