@@ -182,7 +182,10 @@
                         lagenvolgorden.push(laag);
                         asynccounter ++;
                         L.marker([data[0], data[1]]).addTo(mymap)
-                            .bindPopup('box: '+ data[3])
+
+
+                          .bindPopup('box: '+ data[3])
+
                             .openPopup();
                         console.log(asynccounter);
                         console.log(countersync);
